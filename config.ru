@@ -1,5 +1,5 @@
 use Rack::Static,
-  :urls => ["/img", "/js", "/css", "/assets"],
+  :urls => ["/img", "/js", "/css", "/assets", "permissions.html"],
   :root => "public"
 
 run lambda { |env|
@@ -12,5 +12,3 @@ run lambda { |env|
     File.open('public/index.html', File::RDONLY)
   ]
 }
-
-run Rack::File.new("permissions.html")
