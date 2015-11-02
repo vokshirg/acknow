@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>        
+        <!-- META SECTION -->
+        <title>Atlant - Responsive Bootstrap Admin Template</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+
+        <!-- LESSCSS INCLUDE -->   
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
+        <script type="text/javascript" src="js/plugins/lesscss/less.min.js"></script>                
+        <!-- EOF LESSCSS INCLUDE -->   
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container page-navigation-toggled page-navigation-toggled-hover page-navigation-top-fixed">
+
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar page-sidebar-fixed scroll">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation x-navigation-minimized x-navigation-custom ">
+                    <li class="xn-logo">
+                        <a href="#">Инвейдерс Знания</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li class="xn-button">
+                        <button type="button" class="btn btn-lg btn-block btn-danger">
+                            <span class="fa fa-edit"></span>
+                            <span class="xn-text"> Создать статью</span>
+                        </button>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="xn-text">Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span class="xn-text">Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="xn-text">Пользователи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o"></i>
+                            <span class="xn-text">Статья</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="xn-text">Словарь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="xn-text">Файлы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="xn-text">Статистика</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="xn-text">Категории</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span class="xn-text">Эксперты</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+
+                <!-- NAVIGATION -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button hidden">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Поиск...">
+                        </form>
+                    </li>   
+                    <!-- END SEARCH -->                  
+                    <!-- POWER OFF -->
+                    <li class="xn-icon-button pull-right last">
+                        <a href="#"><span class="fa fa-power-off"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li> 
+                    <!-- END POWER OFF -->
+                    <!-- USER -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-user"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li> 
+                    <!-- END USER --> 
+                    
+
+                    <!-- Notifications -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><i class="fa fa-bell-o"></i></a>
+                        <div class="informer informer-danger">4</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging notifications">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bell"></i> Уведомления</h3>                                
+                                <div class="pull-right">
+                                    <span class="label label-danger">4 новых</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+
+                            </div>  
+                            <div class="panel-footer text-center">
+                                <a href="pages-messages.html">Показать все уведомления</a>
+                            </div>                            
+                        </div>                        
+                    </li>
+                    <!-- END Notifications -->
+
+
+                    <!-- SETTINGS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-cogs"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li>
+                                <a href="#"><span class="fa fa-language"></span> Язык</a>
+                                <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                                    <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
+                                    <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
+                                    <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Lock Screen</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+
+                        </ul>                        
+                    </li> 
+                    <!-- END SETTINGS -->  
+
+
+                    <!-- LANG BAR 
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="flag flag-ru"></span></a>
+                        <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                            <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
+                            <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
+                            <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
+                        </ul>                        
+                    </li> 
+                    <!-- END LANG BAR -->
+                </ul><!-- EOF NAVIGATION -->
+
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li class="active">Active</li>
+                </ul>
+
+                
+                <!-- MAIN CONTENT -->
+                <div class="page-content-wrap">
+                            
+          
+                    <div class="row">
+                        
+
+                        <div class="col-md-9">
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Категории</h3>
+                                        <span>Для установки привелегий, отметьте необходимую роль справа</span>
+                                    </div>
+                                </div>
+                                <div class="panel-body list-group ">                                
+                                    <ol class="list-group-category">
+                                        <li class="list-group-item cat-openable">                                    
+                                            
+                                            <span class="category-title ">Lorem ipsum dolor sit amet.
+                                                <span id="need-for-openable"></span>
+                                                <div class="category-permissions">
+                                                    <div class="permission-radio candidate">
+                                                      <input name="permission-cat-1" type="radio" value="None" checked id="cat-1-candidate"   />
+                                                      <label for="cat-1-candidate"></label>
+                                                    </div>
+                                                    <div class="permission-radio contributor">
+                                                      <input name="permission-cat-1" type="radio" value="None" id="cat-1-contributor"   />
+                                                      <label for="cat-1-contributor"></label>
+                                                    </div>
+                                                    <div class="permission-radio publisher">
+                                                      <input name="permission-cat-1" type="radio" value="None" id="cat-1-publisher"   />
+                                                      <label for="cat-1-publisher"></label>
+                                                    </div>
+                                                </div>
+                                                </span>
+                                            <ol class="list-group-category nested">
+                                                <li class="list-group-item ">                                    
+                                                    
+                                                    <span class="category-title ">Soluta distinctio, dignissimos ipsam officia.
+                                                        <span id="need-for-openable"></span>
+                                                        <div class="category-permissions">
+                                                            <div class="permission-radio candidate">
+                                                              <input name="permission-cat-1-1" type="radio" value="None"  id="cat-1-1-candidate"   />
+                                                              <label for="cat-1-1-candidate"></label>
+                                                            </div>
+                                                            <div class="permission-radio contributor">
+                                                              <input name="permission-cat-1-1" type="radio" value="None" id="cat-1-1-contributor"   />
+                                                              <label for="cat-1-1-contributor"></label>
+                                                            </div>
+                                                            <div class="permission-radio publisher">
+                                                              <input name="permission-cat-1-1" type="radio" value="None" checked id="cat-1-1-publisher"   />
+                                                              <label for="cat-1-1-publisher"></label>
+                                                            </div>
+                                                        </div>
+                                                        </span>
+                                                    
+                                                </li>                                
+                                                <li class="list-group-item">                                    
+                                                    
+                                                    <span class="category-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        <span id="need-for-openable"></span>
+                                                        <div class="category-permissions">
+                                                            <div class="permission-radio candidate">
+                                                              <input name="permission-cat-1-2" type="radio" value="None" id="cat-1-2-candidate"   />
+                                                              <label for="cat-1-2-candidate"></label>
+                                                            </div>
+                                                            <div class="permission-radio contributor">
+                                                              <input name="permission-cat-1-2" type="radio" checked value="None" id="cat-1-2-contributor"   />
+                                                              <label for="cat-1-2-contributor"></label>
+                                                            </div>
+                                                            <div class="permission-radio publisher">
+                                                              <input name="permission-cat-1-2" type="radio" value="None" id="cat-1-2-publisher"   />
+                                                              <label for="cat-1-2-publisher"></label>
+                                                            </div>
+                                                        </div>
+                                                        </span>
+                                                    
+                                                </li>
+                                                <li class="list-group-item cat-openable">                                    
+                                                    
+                                                    <span class="category-title">Lorem ipsum dolor sit amet, consectetur.
+                                                        <span id="need-for-openable"></span>
+                                                        <div class="category-permissions">
+                                                            <div class="permission-radio candidate">
+                                                              <input name="permission-cat-1-3" type="radio" value="None" checked id="cat-1-3-candidate"   />
+                                                              <label for="cat-1-3-candidate"></label>
+                                                            </div>
+                                                            <div class="permission-radio contributor">
+                                                              <input name="permission-cat-1-3" type="radio" value="None" id="cat-1-3-contributor"   />
+                                                              <label for="cat-1-3-contributor"></label>
+                                                            </div>
+                                                            <div class="permission-radio publisher">
+                                                              <input name="permission-cat-1-3" type="radio" value="None" id="cat-1-3-publisher"   />
+                                                              <label for="cat-1-3-publisher"></label>
+                                                            </div>
+                                                        </div>
+                                                        </span>
+                                                    <ol class="list-group-category nested">
+                                                        <li class="list-group-item admin-of-cat cat-openable">                                    
+                                                            
+                                                            <span class="category-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur illum omnis amet quo voluptatum laudantium quae debitis, quisquam quas dicta.
+                                                                <span id="need-for-openable"></span>
+                                                                <div class="category-permissions">
+                                                                    <div class="permission-radio candidate">
+                                                                      <input name="permission-cat-1-3-1" type="radio" value="None" checked id="cat-1-3-1-candidate"   />
+                                                                      <label for="cat-1-3-1-candidate"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio contributor">
+                                                                      <input name="permission-cat-1-3-1" type="radio" value="None" id="cat-1-3-1-contributor"   />
+                                                                      <label for="cat-1-3-1-contributor"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio publisher">
+                                                                      <input name="permission-cat-1-3-1" type="radio" value="None" id="cat-1-3-1-publisher"   />
+                                                                      <label for="cat-1-3-1-publisher"></label>
+                                                                    </div>
+                                                                </div>
+                                                                </span>
+                                                            <ol class="list-group-category nested">
+                                                                <li class="list-group-item">                                    
+                                                                    
+                                                                    <span class="category-title">Fugit delectus repellat voluptate aperiam!
+                                                                        <span id="need-for-openable"></span>
+                                                                        <div class="category-permissions">
+                                                                            <div class="permission-radio candidate">
+                                                                              <input name="permission-cat-1-3-1-1" type="radio" value="None" checked id="cat-1-3-1-1-candidate"   />
+                                                                              <label for="cat-1-3-1-1-candidate"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio contributor">
+                                                                              <input name="permission-cat-1-3-1-1" type="radio" value="None" id="cat-1-3-1-1-contributor"   />
+                                                                              <label for="cat-1-3-1-1-contributor"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio publisher">
+                                                                              <input name="permission-cat-1-3-1-1" type="radio" value="None" id="cat-1-3-1-1-publisher"   />
+                                                                              <label for="cat-1-3-1-1-publisher"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                        </span>
+                                                                    
+                                                                </li>                                
+                                                                <li class="list-group-item">                                    
+                                                                    
+                                                                    <span class="category-title">Laboriosam sint dolor, facilis esse, repellat vitae illo!
+                                                                        <span id="need-for-openable"></span>
+                                                                        <div class="category-permissions">
+                                                                            <div class="permission-radio candidate">
+                                                                              <input name="permission-cat-1-3-1-2" type="radio" value="None" checked id="cat-1-3-1-2-candidate"   />
+                                                                              <label for="cat-1-3-1-2-candidate"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio contributor">
+                                                                              <input name="permission-cat-1-3-1-2" type="radio" value="None" id="cat-1-3-1-2-contributor"   />
+                                                                              <label for="cat-1-3-1-2-contributor"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio publisher">
+                                                                              <input name="permission-cat-1-3-1-2" type="radio" value="None" id="cat-1-3-1-2-publisher"   />
+                                                                              <label for="cat-1-3-1-2-publisher"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                        </span>
+                                                                    
+                                                                </li>
+                                                                <li class="list-group-item cat-openable">
+                                                                    
+                                                                    <span class="category-title">Ipsum nostrum, incidunt porro odit laboriosam.
+                                                                        <span id="need-for-openable"></span>
+                                                                        <div class="category-permissions">
+                                                                            <div class="permission-radio candidate">
+                                                                              <input name="permission-cat-1-3-1-3" type="radio" value="None" checked id="cat-1-3-1-3-candidate"   />
+                                                                              <label for="cat-1-3-1-3-candidate"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio contributor">
+                                                                              <input name="permission-cat-1-3-1-3" type="radio" value="None" id="cat-1-3-1-3-contributor"   />
+                                                                              <label for="cat-1-3-1-3-contributor"></label>
+                                                                            </div>
+                                                                            <div class="permission-radio publisher">
+                                                                              <input name="permission-cat-1-3-1-3" type="radio" value="None" id="cat-1-3-1-3-publisher"   />
+                                                                              <label for="cat-1-3-1-3-publisher"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                        </span>
+                                                                    <ol class="list-group-category nested">
+                                                                        <li class="list-group-item">                                    
+                                                                            
+                                                                            <span class="category-title">Aliquam id placeat, illo itaque?
+                                                                                <span></spa id="need-for-openable"n>
+                                                                                <div class="category-permissions">
+                                                                                    <div class="permission-radio candidate">
+                                                                                      <input name="permission-cat-1-3-1-3-1" type="radio" value="None" checked id="cat-1-3-1-3-1-candidate"   />
+                                                                                      <label for="cat-1-3-1-3-1-candidate"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio contributor">
+                                                                                      <input name="permission-cat-1-3-1-3-1" type="radio" value="None" id="cat-1-3-1-3-1-contributor"   />
+                                                                                      <label for="cat-1-3-1-3-1-contributor"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio publisher">
+                                                                                      <input name="permission-cat-1-3-1-3-1" type="radio" value="None" id="cat-1-3-1-3-1-publisher"   />
+                                                                                      </span>
+                                                                                  <label for="cat-1-3-1-3-1-publisher"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </li>                                
+                                                                        <li class="list-group-item ">                                    
+                                                                            
+                                                                            <span class="category-title">Facere exercitationem tempore labore. Ad enim, distinctio qui!
+                                                                                <span></spa id="need-for-openable"n>
+                                                                                <div class="category-permissions">
+                                                                                    <div class="permission-radio candidate">
+                                                                                      <input name="permission-cat-1-3-1-3-2" type="radio" value="None" checked id="cat-1-3-1-3-2-candidate"   />
+                                                                                      <label for="cat-1-3-1-3-2-candidate"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio contributor">
+                                                                                      <input name="permission-cat-1-3-1-3-2" type="radio" value="None" id="cat-1-3-1-3-2-contributor"   />
+                                                                                      <label for="cat-1-3-1-3-2-contributor"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio publisher">
+                                                                                      <input name="permission-cat-1-3-1-3-2" type="radio" value="None" id="cat-1-3-1-3-2-publisher"   />
+                                                                                      </span>
+                                                                                  <label for="cat-1-3-1-3-2-publisher"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </li>
+                                                                        <li class="list-group-item">                                    
+                                                                            
+                                                                            <span class="category-title">Voluptate, eius magni fugiat nesciunt itaque?
+                                                                                <span></spa id="need-for-openable"n>
+                                                                                <div class="category-permissions">
+                                                                                    <div class="permission-radio candidate">
+                                                                                      <input name="permission-cat-1-3-1-3-3" type="radio" value="None" checked id="cat-1-3-1-3-3-candidate"   />
+                                                                                      <label for="cat-1-3-1-3-3-candidate"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio contributor">
+                                                                                      <input name="permission-cat-1-3-1-3-3" type="radio" value="None" id="cat-1-3-1-3-3-contributor"   />
+                                                                                      <label for="cat-1-3-1-3-3-contributor"></label>
+                                                                                    </div>
+                                                                                    <div class="permission-radio publisher">
+                                                                                      <input name="permission-cat-1-3-1-3-3" type="radio" value="None" id="cat-1-3-1-3-3-publisher"   />
+                                                                                      </span>
+                                                                                  <label for="cat-1-3-1-3-3-publisher"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </li>
+                                                                    </ol> 
+                                                                </li>
+                                                            </ol> 
+                                                            
+                                                        </li>                                
+                                                        <li class="list-group-item">                                    
+                                                            
+                                                            <span class="category-title">Ipsum commodi aut, soluta, et labore ducimus voluptas.
+                                                                <span id="need-for-openable"></span>
+                                                                <div class="category-permissions">
+                                                                    <div class="permission-radio candidate">
+                                                                      <input name="permission-cat-1-3-2" type="radio" value="None" checked id="cat-1-3-2-candidate"   />
+                                                                      <label for="cat-1-3-2-candidate"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio contributor">
+                                                                      <input name="permission-cat-1-3-2" type="radio" value="None" id="cat-1-3-2-contributor"   />
+                                                                      <label for="cat-1-3-2-contributor"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio publisher">
+                                                                      <input name="permission-cat-1-3-2" type="radio" value="None" id="cat-1-3-2-publisher"   />
+                                                                      <label for="cat-1-3-2-publisher"></label>
+                                                                    </div>
+                                                                </div>
+                                                                </span>
+                                                            
+                                                        </li>
+                                                        <li class="list-group-item">                                    
+                                                            
+                                                            <span class="category-title">Beatae in odio totam, recusandae officiis.
+                                                                <span id="need-for-openable"></span>
+                                                                <div class="category-permissions">
+                                                                    <div class="permission-radio candidate">
+                                                                      <input name="permission-cat-1-3-3" type="radio" value="None" checked id="cat-1-3-3-candidate"   />
+                                                                      <label for="cat-1-3-3-candidate"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio contributor">
+                                                                      <input name="permission-cat-1-3-3" type="radio" value="None" id="cat-1-3-3-contributor"   />
+                                                                      <label for="cat-1-3-3-contributor"></label>
+                                                                    </div>
+                                                                    <div class="permission-radio publisher">
+                                                                      <input name="permission-cat-1-3-3" type="radio" value="None" id="cat-1-3-3-publisher"   />
+                                                                      <label for="cat-1-3-3-publisher"></label>
+                                                                    </div>
+                                                                </div>
+                                                                </span>
+                                                            
+                                                        </li>
+                                                    </ol>  
+                                                    
+                                                </li>
+                                            </ol>                                   
+                                        </li>                                
+                                        <li class="list-group-item">                                    
+                                            
+                                            <span class="category-title">Voluptatibus quas adipisci, assumenda rerum distinctio quidem totam!
+                                                <span id="need-for-openable"></span>
+                                                <div class="category-permissions">
+                                                    <div class="permission-radio candidate">
+                                                      <input name="permission-cat-2" type="radio" value="None" checked id="cat-2-candidate"   />
+                                                      <label for="cat-2-candidate"></label>
+                                                    </div>
+                                                    <div class="permission-radio contributor">
+                                                      <input name="permission-cat-2" type="radio" value="None" id="cat-2-contributor"   />
+                                                      <label for="cat-2-contributor"></label>
+                                                    </div>
+                                                    <div class="permission-radio publisher">
+                                                      <input name="permission-cat-2" type="radio" value="None" id="cat-2-publisher"   />
+                                                      <label for="cat-2-publisher"></label>
+                                                    </div>
+                                                </div>
+                                                </span>
+                                        </li>
+                                        <li class="list-group-item">                                    
+                                            
+                                            <span class="category-title">Facilis repudiandae numquam, vitae cupiditate ratione.
+                                                <span id="need-for-openable"></span>
+                                                <div class="category-permissions">
+                                                    <div class="permission-radio candidate">
+                                                      <input name="permission-cat-3" type="radio" value="None" checked id="cat-3-candidate"   />
+                                                      <label for="cat-3-candidate"></label>
+                                                    </div>
+                                                    <div class="permission-radio contributor">
+                                                      <input name="permission-cat-3" type="radio" value="None" id="cat-3-contributor"   />
+                                                      <label for="cat-3-contributor"></label>
+                                                    </div>
+                                                    <div class="permission-radio publisher">
+                                                      <input name="permission-cat-3" type="radio" value="None" id="cat-3-publisher"   />
+                                                      <label for="cat-3-publisher"></label>
+                                                    </div>
+                                                </div>
+                                                </span>
+                                        </li>
+                                    </ol>
+                                </div>                         
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <h3>Обозначения</h3>
+                                    <div class="permissions-legend">
+                                        <div class="permission-radio candidate">
+                                          <input name="permission-legend" disabled="true" type="checkbox" value="None" checked id="legend-candidate"   />
+                                          <label for="legend-candidate"><span>Сотрудник</span></label>
+                                        </div>
+                                        <div class="permission-radio contributor">
+                                          <input name="permission-legend" disabled="true" type="checkbox" value="None" checked id="legend-contributor"   />
+                                          <label for="legend-contributor"><span>Помощник редактора</span></label>
+                                        </div>
+                                        <div class="permission-radio publisher">
+                                          <input name="permission-legend" disabled="true" type="checkbox" value="None" checked id="legend-publisher"   />
+                                          <label for="legend-publisher"><span>Редактор</span></label>
+                                        </div>
+                                    </div>
+
+                                </div>                           
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div><!-- EOF MAIN CONTENT -->
+            
+            </div>
+        </div>
+                
+
+
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        <!--<script type="text/javascript" src="js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="js/plugins/owl/owl.carousel.min.js"></script>                 
+        <script type="text/javascript" src="js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- END THIS PAGE PLUGINS--> 
+
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>
+
+
+    </body>
+</html>

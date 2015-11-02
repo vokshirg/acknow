@@ -1,0 +1,1100 @@
+
+/* X-Dashboard */
+.x-dashboard-dark{
+    .page-container{
+        .page-content{
+            margin-left: 0px;
+            background: #F2F3F5;
+            
+            .page-content-wrap{
+                .x-hnavigation{
+                    position: absolute;
+                    z-index: 10;
+                    width: 100%;
+                    background: #2D3945;
+                    line-height: 70px;
+                    height: 70px;
+                    .shadow(0px 3px 8px rgba(0,0,0,0.1));
+                    
+                    .x-hnavigation-logo{
+                        float: left;
+                        width: 180px;
+                        height: 70px;                        
+                        
+                        > a{
+                            float: left;
+                            width: 100%;
+                            height: 70px;
+                            background: url("../img/logo-white.png") left center no-repeat;
+                            font-size: 0px;
+                            text-indent: 9999px;
+                            overflow: hidden;
+                        }
+                    }
+                    
+                    > ul{
+                        float: left;
+                        display: block;
+                        list-style: none;
+                        padding: 0px;
+                        margin: 0px;                        
+                        
+                        > li{
+                            float: left;
+                            position: relative;
+                            
+                            > a{
+                                display: block;
+                                float: left;
+                                line-height: 70px;
+                                padding: 0px 5px;
+                                margin: 0px 25px;
+                                font-size: 14px;
+                                font-weight: 600;                      
+                                border-top: 3px solid transparent;
+                                color: #92ABB8;
+                                .box-transition-all(200ms);
+                                position: relative;
+                            }
+                            
+                            &:hover,&.active{
+                                > a{                                    
+                                    color: #FFF;
+                                    text-decoration: none;
+                                }
+                            }
+                            
+                            &.xn-openable{
+                                > a{
+                                    margin-right: 40px;
+                                    
+                                    &:after{
+                                        position: absolute;
+                                        font-family: "FontAwesome";
+                                        content: "\f107";
+                                        font-size: 14px;
+                                        height: 14px;
+                                        line-height: 20px;
+                                        width: 15px;
+                                        height: 20px;
+                                        right: -15px;
+                                        top: 25px;
+                                    }
+                                }
+                                
+                                
+                                ul{
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 0px;
+                                    list-style: none;
+                                    width: 200px;
+                                    background: #374655;
+                                    padding: 0px;
+                                    margin: 0px;
+                                    .shadow(1px 2px 6px rgba(0,0,0,0.1));
+                                    display: none;
+                                    z-index: 10;
+                                    
+                                    li{
+                                        float: left;
+                                        width: 100%;
+                                        position: relative;
+                                        
+                                        a{
+                                            display: block;
+                                            float: left;
+                                            width: 100%;
+                                            line-height: 24px;
+                                            padding: 10px 15px;
+                                            font-size: 12px;
+                                            font-weight: 600;                                                                                        
+                                            color: #92ABB8;
+                                            text-decoration: none;
+                                            .box-transition-all(200ms);
+                                            position: relative;
+                                            
+                                            span{
+                                                width: 20px;
+                                                height: 24px;
+                                                margin-right: 10px;
+                                                font-size: 14px;
+                                                line-height: 24px;
+                                                text-align: center;                                                
+                                                color: #92ABB8;
+                                            }
+                                            
+                                            &:hover{
+                                                background: #2D3945;                                                
+                                                //color: @xn-background-logo;
+                                            }
+                                        }
+                                        
+                                        &.xn-openable{
+                                            > a{
+                                                padding-right: 30px;
+
+                                                &:after{
+                                                    position: absolute;
+                                                    font-family: "FontAwesome";
+                                                    content: "\f105";
+                                                    font-size: 14px;
+                                                    height: 14px;
+                                                    line-height: 24px;
+                                                    width: 20px;
+                                                    height: 24px;
+                                                    right: 0px;
+                                                    top: 10px;
+                                                }
+                                            }
+                                            
+                                            > ul{
+                                                top: 0px;
+                                                right: -200px;
+                                                left: auto;                                                
+                                                .shadow(2px 0px 6px rgba(0,0,0,0.1));                                                
+                                            }
+                                            
+                                            &:hover{
+                                                > ul{
+                                                    display: block;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                                
+                                > ul{
+                                    top: 70px;
+                                    left: 15px;
+                                }
+                                
+                                &:hover{
+                                    > ul{
+                                        display: block;
+                                    }
+                                }
+                            }    
+                        }
+                    }
+                    
+                    .x-features{
+                        float: right;
+                        height: 70px;
+                        
+                        .x-features-nav-open{
+                            float: left;
+                            width: 36px;
+                            height: 36px;
+                            margin: 17px 15px 17px 0px;
+                            text-align: center;
+                            line-height: 36px;
+                            font-size: 21px;    
+                            color: #8699AA;
+                            cursor: pointer;
+                            display: none;
+                        }
+                        
+                        .x-features-search{
+                            float: left;
+                            width: 36px;
+                            height: 36px;
+                            .border-radius(18px);
+                            background: #313F4D;
+                            margin: 17px 15px 17px 0px;
+                            position: relative;
+                            cursor: pointer;
+                            .box-transition-all(200ms);
+                            
+                            input[type="text"]{
+                                width: 26px;
+                                height: 26px;
+                                margin: 5px;
+                                line-height: 26px;
+                                border: 0px;
+                                background: transparent;
+                                padding: 0px;
+                                float: left;
+                                display: none;                                
+                            }
+                            
+                            input[type="submit"]{
+                                display: none;
+                            }
+                            
+                            &:after{
+                                position: absolute;
+                                font-family: "FontAwesome";
+                                content: "\f002";
+                                width: 26px;
+                                height: 26px;
+                                line-height: 26px;
+                                text-align: center;
+                                font-size: 14px;
+                                color: #8699AA;
+                                left: 5px;
+                                top: 5px;
+                            }
+                            
+                            &.active{
+                                width: 150px;
+                                padding-left: 30px;                                
+                                
+                                input[type="text"]{
+                                    width: 100px;
+                                    display: block;
+                                }
+                            }
+                        }
+                        
+                        .x-features-profile{
+                            float: left;
+                            width: 56px;
+                            height: 36px;
+                            .border-radius(18px);                            
+                            margin: 17px 15px 17px 0px;
+                            position: relative;
+                            padding-right: 20px;
+                            cursor: pointer;
+                            
+                            > img{
+                                width: 36px;
+                                height: 36px;
+                                .border-radius(18px);
+                                float: left;
+                            }
+                            
+                            &:after{
+                                position: absolute;
+                                font-family: "FontAwesome";
+                                content: "\f107";
+                                font-size: 14px;                                
+                                line-height: 36px;
+                                width: 15px;
+                                height: 36px;
+                                right: 0px;
+                                top: 0px;
+                                text-align: center;
+                            }
+                            
+                            > ul{
+                                width: 200px;
+                                padding: 0px;
+                                margin: 0px;
+                                position: absolute;
+                                overflow: visible;
+                                display: none;
+                                .border-radius(3px);
+                                .shadow(0px 2px 1px 0px rgba(0, 0, 0, 0.1));
+                                z-index: 3;
+                                top: 70px;
+                                right: 0px;
+                                background: #FFF;
+                                
+                                li{
+                                    float: left;
+                                    display: block;
+                                    width: 100%;
+                                    padding: 0px;
+                                    margin: 0px;
+                                    
+                                    a{
+                                        font-size: 12px;
+                                        font-weight: 600;                                                                                        
+                                        color: #666;
+                                        line-height: 24px;                                        
+                                        padding: 10px 15px;
+                                        display: block;
+                                        float: left;
+                                        width: 100%;                                        
+                                        text-decoration: none;
+                                        border-bottom: 1px solid #FDFDFD;
+                                        vertical-align: text-bottom;
+                                        
+                                        span{
+                                            width: 20px;
+                                            height: 24px;
+                                            margin-right: 10px;
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                            text-align: center;                                                
+                                            color: #92ABB8;
+                                        }
+                                        
+                                        &:hover{
+                                            background: #FBFBFB;                                                
+                                            color: @xn-background-logo;
+                                        }
+                                    }
+                                }
+                                
+                                &:after{
+                                    bottom: 100%;
+                                    right: 32px;
+                                    border: solid transparent;
+                                    content: " ";
+                                    height: 0;
+                                    width: 0;
+                                    position: absolute;
+                                    pointer-events: none;
+                                    border-color: rgba(0, 0, 0, 0);
+                                    border-bottom-color: #FFF;
+                                    border-width: 5px;
+                                    margin-left: -5px;
+                                }
+                            }
+                            
+                            &.active{
+                                ul{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .x-content{
+                    float: left;
+                    width: 100%;
+                    padding: 0px;
+                    background: #FFF;
+                    margin-top: 70px;
+                                        
+                    .x-content-title{
+                        float: left;
+                        width: 100%;
+                        padding: 10px 20px;
+                        
+                        h1{
+                            float: left;
+                            font-size: 24px;
+                            font-weight: 600;
+                            color: #1F1F1F;
+                            line-height: 40px;
+                            margin: 0px;
+                            padding: 0px;
+                        }
+                        
+                        .btn{
+                            padding: 9px 15px;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    .x-chart-widget{
+                        float: left;
+                        width: 100%;
+                        
+                        .x-chart-widget-head{
+                            float: left;
+                            width: 100%;
+                            padding: 10px 0px 25px 20px;
+                            
+                            .x-chart-widget-title{
+                                float: left;
+                                
+                                h3{
+                                    font-size: 18px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                    font-weight: 400;
+                                    color: #202020;
+                                    line-height: 25px;
+                                    margin-bottom: 5px;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    color: #93ABB9;
+                                    margin: 0px;
+                                    
+                                    span{
+                                        color: #FF4C4C;
+                                    }
+                                }                                
+                            }
+                            .btn{
+                                padding: 9px 15px; 
+                                font-weight: 600;
+                                
+                                .btn-default{
+                                    color: #202020;                                    
+                                }
+                            }
+                        }
+                        
+                        .x-chart-widget-content{
+                            float: left;
+                            width: 100%;
+                            background: #2D3945;
+                            padding: 42px 20px 20px;
+                            
+                            .x-chart-widget-content-head{
+                                float: left;
+                                width: 100%;
+                                margin-bottom: 10px;
+                                
+                                h4{
+                                    font-size: 13px;
+                                    color: #95ABBB;
+                                    float: left;
+                                    line-height: 30px;
+                                    margin-bottom: 0px;
+                                }
+                            }
+                            
+                            .x-chart-widget-informer{
+                                float: left;
+                                width: 100%;
+                                background: #313F4D;
+                                .border-radius(3px);
+                                
+                                .x-chart-widget-informer-item{
+                                    float: left;
+                                    width: 100%;
+                                    padding: 15px;                                    
+                                    
+                                    .count{
+                                        float: left;
+                                        width: 100%;
+                                        font-size: 26px;
+                                        color: #94ABBA;
+                                        line-height: 35px;
+                                        
+                                        span{
+                                            font-size: 11px;
+                                            color: #93ABB9;
+                                            vertical-align: bottom;
+                                            margin-left: 5px;
+                                            
+                                            .fa{
+                                                font-size: 8px;
+                                            }
+                                            
+                                            &.negative{
+                                                color: #F26732;
+                                            }
+                                        }
+                                    }
+                                    .title{
+                                        font-size: 13px;
+                                        color: #93ABB9;
+                                    }
+                                    
+                                    &.last{
+                                        border-right: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .x-chart-holder{
+                            margin: 20px 0px;
+                        }
+
+                    }
+                    
+                    .buttons-panel{
+                        float: right;
+                        
+                        > .btn{
+                            background: #415365;
+                            color: #FFF;
+                            margin-bottom: 15px;
+                            padding: 9px 20px;
+                        }
+                        
+                        .btn-group{
+                            > .btn.btn-primary{
+                                background: #415365;
+                                color: #94ABBA;
+                                
+                                &.active{
+                                    background: #27323D;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .x-widget-timeline{
+                        float: left;
+                        width: 100%;
+                        background: #374655;
+                        padding: 20px 0px 0px;
+                        .shadow(0px 12px 15px rgba(0,0,0,0.15));
+
+                        .x-widget-timelime-head{
+                            float: left;
+                            width: 100%;
+                            margin-bottom: 20px;
+                            padding: 0px 20px;
+
+                            h3{
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 20px;
+                                float: left;
+                                color: #FFF;
+                                margin: 0px;
+                                padding: 0px;
+                            }
+
+                            a{
+                                font-size: 13px;
+                                color: #FFF;
+                                line-height: 20px;
+
+                                span{
+                                    font-size: 14px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+
+                        .x-widget-timeline-content{
+                            float: left;
+                            width: 100%;
+                            padding: 10px 20px 15px;                          
+                            
+                            .item{
+                                float: left;                                                                
+                                padding: 0px 15px 15px;                                
+                                position: relative;
+                                background: #374655;
+                                line-height: 20px;
+                                font-size: 13px;
+                                vertical-align: top;
+                                color: #92ABB8;
+                                clear: both;
+
+                                a{
+                                    color: #05AAE5;                                    
+                                }
+
+                                span{
+                                    float: left;
+                                    color: #94ABBA;
+                                    font-size: 11px;
+                                    width: 100%;
+                                    margin-top: 5px;
+                                }
+                                strong{
+                                    color: #FFFFFF;
+                                    font-weight: 400;
+                                }
+                                
+                                &:after{
+                                    position: absolute;
+                                    display: block;
+                                    content: " ";
+                                    width: 11px;
+                                    height: 11px;
+                                    .border-radius(50%);
+                                    left: -6px;
+                                    top: 5px;
+                                    border: 3px solid #C1CDDB;
+                                    background: #374655;
+                                }
+
+                                &.item-blue{
+                                    &:after{
+                                        border-color: #3FBAE4;
+                                    }
+                                }
+                                &.item-green{
+                                    &:after{
+                                        border-color: #95B75D;
+                                    }
+                                }
+                                &.item-red{
+                                    &:after{
+                                        border-color: #E34724;
+                                    }
+                                }                                
+                            } 
+                            .btn{
+                                margin-top: 15px;
+                                float: left; 
+                                background: transparent; 
+                                border-color: #445664; 
+                                color: #94ABBA;
+                                
+                                &:hover{
+                                    background-color: #445664;
+                                }
+                            }
+                        }
+
+                    }
+                    .x-content-inner{
+                        background: #F2F4F7;
+                        float: left;
+                        width: 100%;
+                        padding: 50px 0px;
+                    }
+                    .x-block{
+                        float: left;
+                        width: 100%;
+                        
+                        .x-block-head{
+                            float: left;
+                            width: 100%;
+                            height: 35px;
+                            margin-bottom: 10px;
+                            
+                            h3{
+                                float: left;
+                                line-height: 35px;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                            
+                            .btn{
+                                padding: 7px 15px 6px;                                
+                                font-size: 12px;
+                                
+                                &.btn-default{
+                                    color: #1F1F1F;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                        .x-block-content{
+                            float: left;
+                            width: 100%;
+                            background: #FFF;
+                            
+                            .x-table{
+                                margin-bottom: 0px;
+                                
+                                tr{
+                                    td,th{
+                                        border-bottom: 1px solid #DEE4EC;
+                                        padding: 25px 15px;                                        
+                                        background: #FFF;
+                                    }
+                                    th{
+                                        font-size: 13px;
+                                        color: #8BA5B4;
+                                        font-weight: 600;
+                                        
+                                        .check{
+                                            margin: 0px;
+                                            line-height: 18px;
+                                        }
+                                    }
+                                    td{
+                                        color: #526C7F;
+                                        font-size: 13px;
+                                        
+                                        span{
+                                            color: #93ABB9;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    
+                                    &:last-child{
+                                        td{
+                                            border-bottom: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            a.x-user{
+                                color: #1F1F1F;
+                                font-size: 13px;
+                                line-height: 40px;
+                                margin-bottom: 5px;
+                                float: left;
+                                width: 100%;
+                                font-weight: 600;
+                                
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                    .border-radius(20px);
+                                    float: left;
+                                    margin-right: 10px;
+                                }
+                                > span{
+                                    color: #1F1F1F !important;                                    
+                                    font-size: 13px !important;
+                                }
+                            }
+                            
+                            &.x-todo{
+                                
+                                .x-todo-header{
+                                    float: left;
+                                    width: 100%;
+                                    line-height: 40px;
+                                    padding: 15px 20px;
+                                    border-bottom: 1px solid #EAEDF2;
+                                    
+                                    label{
+                                        float: left;                                        
+                                        margin: 8px 10px 0px 0px;
+                                    }
+                                    
+                                    h3{
+                                        float: left;
+                                        font-size: 13px;
+                                        color: #93ABB9;
+                                        margin: 0px;
+                                        line-height: 35px;
+                                        padding: 0px;
+                                    }
+                                    
+                                    .btn{
+                                        padding: 7px 15px 6px;                                
+                                        font-size: 12px;
+                                    }
+                                }
+                                .x-todo-content{
+                                    float: left;
+                                    width: 100%;
+                                    
+                                    .item{
+                                        float: left;
+                                        width: 100%;
+                                        padding: 20px 0px;
+                                        border-bottom: 1px solid #EAEDF2;
+                                        
+                                        .head{
+                                            float: left;
+                                            width: 100%;
+                                            line-height: 20px;
+                                            color: #526C7F;
+                                            padding: 0px 20px;
+                                            margin-bottom: 20px;
+                                            
+                                            .pull-left{
+                                                margin-right: 20px; 
+                                            }
+                                            .pull-right{
+                                                color: #93ABB9;
+                                            }
+                                            
+                                            .status{
+                                                float: left;
+                                                width: 10px;
+                                                height: 10px;
+                                                margin-right: 10px;
+                                                .border-radius(5px);
+                                                background: #CCC;
+                                                border: 0px;
+                                                
+                                                &.status-high{
+                                                    background: #E34724;
+                                                }
+                                                &.status-medium{
+                                                    background: #95B75D;
+                                                }
+                                                &.status-low{
+                                                    background: #3FBAE4;
+                                                }
+                                            }
+                                        }
+                                        .title{
+                                            float: left;
+                                            width: 100%;
+                                            padding: 10px 20px;
+                                            
+                                            h4{
+                                                color: #1F1F1F;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                float: left;        
+                                                margin: 0px;
+                                                padding: 0px;
+                                                line-height: 20px;
+                                            }
+                                            label{
+                                                float: left;                                                
+                                                margin: 0px;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                        .content{
+                                            float: left;
+                                            width: 100%;
+                                            padding: 10px 20px;
+                                            font-size: 13px;
+                                            color: #526C7F;
+                                        }
+                                    }
+                                }
+                                .x-todo-footer{
+                                    height: 45px;
+                                    line-height: 45px;
+                                    padding: 0px 20px;
+                                    
+                                    a{
+                                        font-size: 13px;
+                                        color: #92ABB8;
+                                        font-weight: 600;                                        
+                                        
+                                        span{
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                    .pagination{
+                        > li{
+                            > a{
+                                background: transparent;
+                                border: 0px;
+                                color: #526C7F;
+                            }
+                            &.disabled{
+                                > a{
+                                    color: #999;
+                                }
+                            }
+                            &.active{
+                                > a{
+                                    background: #33414E;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .x-content-footer{
+                    float: left;
+                    width: 100%;
+                    padding: 20px;
+                    background: #E8EBF0;
+                    font-size: 12px;
+                    color: #526C7F;
+                }
+            }            
+        }
+    }
+}
+/* END X-Dashboard */
+
+@media only screen and (max-width: 768px){
+    
+}
+
+@media only screen and (max-width: 1024px){
+    
+    .x-dashboard-dark{
+        .page-container{
+            .page-content{                
+                .page-content-wrap{
+                    
+                    .x-hnavigation{
+                        height: auto;
+                        display: block;
+                        position: relative;
+                        
+                        
+                        .x-hnavigation-logo{
+                            width: 100%;
+                            background: #2D3945;
+                            
+                            > a{
+                                background-position: center center;
+                            }
+                        }
+                        .x-features{
+                            width: 100%;
+                            background-color: darken(#2D3945,2%);
+                            padding: 0px 20px;
+                            
+                            .x-features-nav-open{
+                                display: block;
+                            }                            
+                        }
+                        
+                        > ul{
+                            float: left;
+                            width: 100%;
+                            padding-bottom: 10px;
+                            display: none;
+                            background: #2D3945;
+                            
+                            > li{
+                                float: left;
+                                width: 100%;
+                                
+                                > a{                                                                        
+                                    width: 100%;
+                                    line-height: 30px;
+                                    color: #FFF;
+                                    padding: 5px 0px;
+                                    margin: 0px !important;
+                                    padding-left: 20px;
+                                    
+                                    &:hover{
+                                        background: darken(#2D3945,2%);
+                                    }
+                                }
+                                
+                                &.active,&:hover{
+                                    > a{
+                                        border-top: 3px solid transparent;
+                                    }
+                                }
+                                &.xn-openable{
+                                    
+                                    > a{
+                                        color: #FFF;
+                                        
+                                        &:after{                                            
+                                            position: absolute;
+                                            font-family: "FontAwesome";
+                                            content: "\f107";
+                                            font-size: 14px;
+                                            height: 14px;
+                                            line-height: 20px;
+                                            width: 15px;
+                                            height: 20px;
+                                            right: 32px;
+                                            top: 10px;
+                                        }                                                                                
+                                    }
+                                    
+                                    ul{
+                                        position: relative;
+                                        float: left;
+                                        width: 100%;
+                                        left: auto;
+                                        top: auto;                                        
+                                        .shadow(none);
+                                        
+                                        > li{
+                                            > a{                                    
+                                                padding-left: 40px;                                    
+                                            }
+                                        }
+                                        
+                                        li.xn-openable{
+                                            > a{
+                                                &:after{
+                                                    content: "\f107";
+                                                    right: 25px;
+                                                }
+                                            }
+                                            > ul{
+                                                right: auto;
+                                                .shadow(none);
+                                                
+                                                li{
+                                                    > a{
+                                                        padding-left: 60px;
+                                                    }
+                                                }                                                
+                                            }
+                                            
+                                            &:hover{
+                                                > ul{
+                                                    display: none;
+                                                }
+                                            }
+                                            
+                                            &.active{
+                                                > ul{
+                                                    display: block;
+                                                }
+                                            }                                            
+                                        }
+                                    }
+                                    
+                                    &:hover{
+                                        > ul{
+                                            display: none;
+                                        }
+                                    }
+                                    &.active{
+                                        > ul{
+                                            display: block;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                        &.active{
+                            > ul{
+                                display: block;
+                            }
+                        }
+
+                    }
+                    
+                    .x-content{
+                        margin-top: 0px;
+                        
+                        .x-chart-widget{
+                            .x-chart-widget-head{
+                                padding: 10px 20px 20px;
+                            }
+                        }
+                        
+                        a.x-user{
+                            img{
+                                clear: both;                                                                
+                            }
+                            span{
+                                float: left;
+                                width: 100%;
+                                line-height: 16px;
+                                margin-top: 5px;
+                            }
+                        }
+                        
+                        .buttons-panel{
+                            float: left;
+                            width: 100%;
+                            margin-top: 10px;
+                            
+                            > .btn{
+                                float: left;                                
+                                margin-bottom: 0px;
+                            }
+                            > .btn-group{
+                                float: right;
+                                margin-top: 5px;
+                            }
+                            .clearfix{
+                                display: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+}
+
+.morris-hover{
+    background: #415365 !important;
+    border-color: #415365 !important;
+    text-align: center;
+    padding: 5px 20px !important;
+    border-radius: 3px !important;
+    .shadow(0px 2px 5px rgba(0,0,0,0.1));
+
+    .morris-hover-row-label{
+        font-size: 13px !important;
+        color: #92ABB8 !important;
+        font-weight: 600 !important;
+    }
+    .morris-hover-point{
+        font-size: 13px !important;
+        color: #FFF !important;
+        font-weight: 400 !important;
+    }
+}
