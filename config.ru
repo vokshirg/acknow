@@ -11,7 +11,7 @@ require 'vienna'
 run Vienna
 
 static_page_mappings = {
-  '/permissions.html' => 'permissions.html'
+  'permissions.html' => 'permissions.html'
   '/pages-edit-profile.html'   => '/pages-edit-profile.html',
 }
 
