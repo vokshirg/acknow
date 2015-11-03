@@ -1,14 +1,11 @@
 use Rack::Static,
-  :urls => ["/img", "/js", "/css", "/assets", "permissions.html"],
-  :root => "public"
+  :urls => Dir.glob("#{root}/*").map { |fn| fn.gsub(/#{root}/, '')},
+  :root => root,
+  :index => 'index.html',
+  :header_rules => [[:all, {'Cache-Control' => 'public, max-age=3600'}]]
 
-run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400'
-    },
-    File.open('public/index.html', File::RDONLY)
-  ]
-}
+headers = {'Content-Type' => 'text/html', 'Content-Length' => '9'}
+run lambda { |env| [404, headers, ['Not Found']] }
+
+require 'vienna'
+run Vienna
