@@ -9,445 +9,319 @@
         
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
-        
-        <!-- LESSCSS INCLUDE -->        
+
+        <!-- LESSCSS INCLUDE -->   
         <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
         <script type="text/javascript" src="js/plugins/lesscss/less.min.js"></script>                
-        <!-- EOF LESSCSS INCLUDE -->                                       
+        <!-- EOF LESSCSS INCLUDE -->   
     </head>
     <body>
         <!-- START PAGE CONTAINER -->
-        <div class="page-container">
-            
+        <div class="page-container page-container-wide page-navigation-toggled page-navigation-toggled-hover page-navigation-top-fixed">
+
             <!-- START PAGE SIDEBAR -->
-            <div class="page-sidebar">
+            <div class="page-sidebar page-sidebar-fixed scroll">
                 <!-- START X-NAVIGATION -->
-                <ul class="x-navigation">
+                <ul class="x-navigation x-navigation-minimized x-navigation-custom ">
                     <li class="xn-logo">
-                        <a href="index.html">ATLANT</a>
+                        <a href="#">Инвейдерс Знания</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
-                    <li class="xn-profile">
-                        <a href="#" class="profile-mini">
-                            <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
+                    <li class="xn-button">
+                        <button type="button" class="btn btn-lg btn-block btn-danger">
+                            <span class="fa fa-edit"></span>
+                            <span class="xn-text"> Создать статью</span>
+                        </button>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="xn-text">Главная</span>
                         </a>
-                        <div class="profile">
-                            <div class="profile-image">
-                                <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
-                            </div>
-                            <div class="profile-data">
-                                <div class="profile-data-name">John Doe</div>
-                                <div class="profile-data-title">Web Developer/Designer</div>
-                            </div>
-                            <div class="profile-controls">
-                                <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span></a>
-                                <a href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
-                            </div>
-                        </div>                                                                        
                     </li>
-                    <li class="xn-title">Navigation</li>
-                    <li class="xn-openable active">
-                        <a href="#"><span class="fa fa-dashboard"></span> <span class="xn-text">Dashboards</span></a>
-                        <ul>
-                            <li class="active"><a href="index.html"><span class="xn-text">Dashboard 1</span></a></li>
-                            <li><a href="dashboard.html"><span class="xn-text">Dashboard 2</span></a><div class="informer informer-danger">New!</div></li>
-                            <li><a href="dashboard-dark.html"><span class="xn-text">Dashboard 3</span></a><div class="informer informer-danger">New!</div></li>
-                        </ul>
-                    </li>                    
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
-                        <ul>
-                            <li><a href="pages-gallery.html"><span class="fa fa-image"></span> Gallery</a></li>
-                            <li><a href="pages-invoice.html"><span class="fa fa-dollar"></span> Invoice</a></li>
-                            <li><a href="pages-edit-profile.html"><span class="fa fa-wrench"></span> Edit Profile</a></li>
-                            <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
-                            <li><a href="pages-address-book.html"><span class="fa fa-users"></span> Address Book</a></li>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-clock-o"></span> Timeline</a>
-                                <ul>
-                                    <li><a href="pages-timeline.html"><span class="fa fa-align-center"></span> Default</a></li>
-                                    <li><a href="pages-timeline-simple.html"><span class="fa fa-align-justify"></span> Full Width</a></li>
-                                </ul>
-                            </li>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-envelope"></span> Mailbox</a>
-                                <ul>
-                                    <li><a href="pages-mailbox-inbox.html"><span class="fa fa-inbox"></span> Inbox</a></li>
-                                    <li><a href="pages-mailbox-message.html"><span class="fa fa-file-text"></span> Message</a></li>
-                                    <li><a href="pages-mailbox-compose.html"><span class="fa fa-pencil"></span> Compose</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="pages-messages.html"><span class="fa fa-comments"></span> Messages</a></li>
-                            <li><a href="pages-calendar.html"><span class="fa fa-calendar"></span> Calendar</a></li>
-                            <li><a href="pages-tasks.html"><span class="fa fa-edit"></span> Tasks</a></li>
-                            <li><a href="pages-content-table.html"><span class="fa fa-columns"></span> Content Table</a></li>
-                            <li><a href="pages-faq.html"><span class="fa fa-question-circle"></span> FAQ</a></li>
-                            <li><a href="pages-search.html"><span class="fa fa-search"></span> Search</a></li>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-file"></span> Blog</a>
-                                
-                                <ul>                                    
-                                    <li><a href="pages-blog-list.html"><span class="fa fa-copy"></span> List of Posts</a></li>
-                                    <li><a href="pages-blog-post.html"><span class="fa fa-file-o"></span>Single Post</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Lock Screen</a></li>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-sign-in"></span> Login</a>
-                                <ul>                                                                        
-                                    <li><a href="pages-login.html">Login v1</a></li>
-                                    <li><a href="pages-login-v2.html">Login v2</a></li>
-                                    <li><a href="pages-login-inside.html">Login v2 Inside</a></li>
-                                    <li><a href="pages-login-website.html">Website Login</a></li>
-                                    <li><a href="pages-login-website-light.html"> Website Login Light</a></li>
-                                </ul>
-                            </li>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-plus"></span> Registration</a>
-                                <ul>                                                                        
-                                    <li><a href="pages-registration.html">Default</a></li>
-                                    <li><a href="pages-registration-login.html">With Login</a></li>                                    
-                                </ul>
-                            </li>
-                            <li><a href="pages-forgot-password.html"><span class="fa fa-question"></span> Forgot Password</a></li>                            
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-warning"></span> Error Pages</a>
-                                <ul>                                    
-                                    <li><a href="pages-error-404.html">Error 404 Sample 1</a></li>
-                                    <li><a href="pages-error-404-2.html">Error 404 Sample 2</a></li>
-                                    <li><a href="pages-error-500.html"> Error 500</a></li>
-                                </ul>
-                            </li>                            
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Layouts</span></a>
-                        <ul>
-                            <li><a href="layout-boxed.html">Boxed</a></li>
-                            <li><a href="layout-nav-toggled.html">Navigation Toggled</a></li>
-                            <li><a href="layout-nav-toggled-hover.html">Nav Toggled (Hover)</a></li>
-                            <li><a href="layout-nav-toggled-item-hover.html">Nav Toggled (Item Hover)</a></li>
-                            <li><a href="layout-nav-top.html">Navigation Top</a></li>
-                            <li><a href="layout-nav-right.html">Navigation Right</a></li>
-                            <li><a href="layout-nav-top-fixed.html">Top Navigation Fixed</a></li>
-                            <li><a href="layout-nav-custom.html">Custom Navigation</a></li>
-                            <li><a href="layout-nav-top-custom.html">Custom Top Navigation</a></li>
-                            <li><a href="layout-frame-left.html">Frame Left Column</a></li>
-                            <li><a href="layout-frame-right.html">Frame Right Column</a></li>
-                            <li><a href="layout-search-left.html">Search Left Side</a></li>
-                            <li><a href="layout-page-sidebar.html">Page Sidebar</a></li>
-                            <li><a href="layout-page-loading.html">Page Loading</a></li>
-                            <li><a href="layout-rtl.html">Layout RTL</a></li>
-                            <li><a href="layout-tabbed.html">Page Tabbed</a></li>
-                            <li><a href="layout-custom-header.html">Custom Header</a></li>
-                            <li><a href="layout-adaptive-panels.html">Adaptive Panels</a></li>                            
-                            <li><a href="blank.html">Blank Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="xn-title">Components</li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">UI Kits</span></a>                        
-                        <ul>
-                            <li><a href="ui-widgets.html"><span class="fa fa-heart"></span> Widgets</a></li>                            
-                            <li><a href="ui-elements.html"><span class="fa fa-cogs"></span> Elements</a></li>
-                            <li><a href="ui-buttons.html"><span class="fa fa-square-o"></span> Buttons</a></li>                            
-                            <li><a href="ui-panels.html"><span class="fa fa-pencil-square-o"></span> Panels</a></li>
-                            <li><a href="ui-icons.html"><span class="fa fa-magic"></span> Icons</a><div class="informer informer-warning">+679</div></li>
-                            <li><a href="ui-typography.html"><span class="fa fa-pencil"></span> Typography</a></li>
-                            <li><a href="ui-portlet.html"><span class="fa fa-th"></span> Portlet</a></li>
-                            <li><a href="ui-sliders.html"><span class="fa fa-arrows-h"></span> Sliders</a></li>
-                            <li><a href="ui-alerts-popups.html"><span class="fa fa-warning"></span> Alerts & Popups</a></li>                            
-                            <li><a href="ui-lists.html"><span class="fa fa-list-ul"></span> Lists</a></li>
-                            <li><a href="ui-tour.html"><span class="fa fa-random"></span> Tour</a></li>
-                            <li><a href="ui-nestable.html"><span class="fa fa-sitemap"></span> Nestable List</a></li>
-                            <li><a href="ui-autocomplete.html"><span class="fa fa-search-plus"></span> Autocomplete</a></li>
-                            <li><a href="ui-slide-menu.html"><span class="fa fa-angle-right"></span> Slide Menu</a></li>
-                        </ul>
-                    </li>                    
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
-                        <ul>
-                            <li class="xn-openable">
-                                <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>                                
-                                <ul>
-                                    <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
-                                    <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
-                                    <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
-                                    <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
-                                </ul> 
-                            </li>
-                            <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a><div class="informer informer-danger">New!</div></li>
-                            <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
-                            <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
-                            <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
-                            <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
-                        <ul>                            
-                            <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
-                            <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
-                            <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>                            
-                        </ul>
-                    </li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Charts</span></a>
-                        <ul>
-                            <li><a href="charts-morris.html">Morris</a></li>
-                            <li><a href="charts-nvd3.html">NVD3</a></li>
-                            <li><a href="charts-rickshaw.html">Rickshaw</a></li>
-                            <li><a href="charts-other.html">Other</a></li>
-                        </ul>
-                    </li>                    
                     <li>
-                        <a href="maps.html"><span class="fa fa-map-marker"></span> <span class="xn-text">Maps</span></a>
-                    </li>                    
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-sitemap"></span> <span class="xn-text">Navigation Levels</span></a>
-                        <ul>                            
-                            <li class="xn-openable">
-                                <a href="#">Second Level</a>
-                                <ul>
-                                    <li class="xn-openable">
-                                        <a href="#">Third Level</a>
-                                        <ul>
-                                            <li class="xn-openable">
-                                                <a href="#">Fourth Level</a>
-                                                <ul>
-                                                    <li><a href="#">Fifth Level</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>                            
-                        </ul>
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span class="xn-text">Новости</span>
+                        </a>
                     </li>
-                    
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="xn-text">Пользователи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o"></i>
+                            <span class="xn-text">Статья</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="xn-text">Словарь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="xn-text">Файлы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="xn-text">Статистика</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="xn-text">Категории</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span class="xn-text">Эксперты</span>
+                        </a>
+                    </li>
                 </ul>
-                <!-- END X-NAVIGATION -->
             </div>
-            <!-- END PAGE SIDEBAR -->
-            
-            <!-- PAGE CONTENT -->
+            <!-- <div class="xn-button-minimize">
+                <a href="#" class="x-navigation-minimize"><span class="fa fa-indent"></span></a>
+            </div> -->
+
+
+
             <div class="page-content">
-                
-                <!-- START X-NAVIGATION VERTICAL -->
+
+    
+                <!-- NAVIGATION -->
                 <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
                     <!-- TOGGLE NAVIGATION -->
-                    <li class="xn-icon-button">
+                    <li class="xn-icon-button hidden">
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
                     <!-- END TOGGLE NAVIGATION -->
                     <!-- SEARCH -->
                     <li class="xn-search">
                         <form role="form">
-                            <input type="text" name="search" placeholder="Search..."/>
+                            <input type="text" name="search" placeholder="Поиск...">
                         </form>
                     </li>   
-                    <!-- END SEARCH -->                    
+                    <!-- END SEARCH -->                  
                     <!-- POWER OFF -->
                     <li class="xn-icon-button pull-right last">
                         <a href="#"><span class="fa fa-power-off"></span></a>
                         <ul class="xn-drop-left animated zoomIn">
-                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Lock Screen</a></li>
-                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
                         </ul>                        
                     </li> 
-                    <!-- END POWER OFF -->                    
-                    <!-- MESSAGES -->
+                    <!-- END POWER OFF -->
+                    <!-- USER -->
                     <li class="xn-icon-button pull-right">
-                        <a href="#"><span class="fa fa-comments"></span></a>
+                        <a href="#"><span class="fa fa-user"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li> 
+                    <!-- END USER --> 
+                    
+
+                    <!-- Notifications -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><i class="fa fa-bell-o"></i></a>
                         <div class="informer informer-danger">4</div>
-                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging notifications">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><span class="fa fa-comments"></span> Messages</h3>                                
+                                <h3 class="panel-title"><i class="fa fa-bell"></i> Уведомления</h3>                                
                                 <div class="pull-right">
-                                    <span class="label label-danger">4 new</span>
+                                    <span class="label label-danger">4 новых</span>
                                 </div>
                             </div>
                             <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
-                                <a href="#" class="list-group-item">
-                                    <div class="list-group-status status-online"></div>
-                                    <img src="assets/images/users/user2.jpg" class="pull-left" alt="John Doe"/>
-                                    <span class="contacts-title">John Doe</span>
-                                    <p>Praesent placerat tellus id augue condimentum</p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="list-group-status status-away"></div>
-                                    <img src="assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk"/>
-                                    <span class="contacts-title">Dmitry Ivaniuk</span>
-                                    <p>Donec risus sapien, sagittis et magna quis</p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="list-group-status status-away"></div>
-                                    <img src="assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali"/>
-                                    <span class="contacts-title">Nadia Ali</span>
-                                    <p>Mauris vel eros ut nunc rhoncus cursus sed</p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="list-group-status status-offline"></div>
-                                    <img src="assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader"/>
-                                    <span class="contacts-title">Darth Vader</span>
-                                    <p>I want my money back!</p>
-                                </a>
-                            </div>     
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+
+                            </div>  
                             <div class="panel-footer text-center">
-                                <a href="pages-messages.html">Show all messages</a>
+                                <a href="pages-messages.html">Показать все уведомления</a>
                             </div>                            
                         </div>                        
                     </li>
-                    <!-- END MESSAGES -->
-                    <!-- TASKS -->
+                    <!-- END Notifications -->
+
+
+                    <!-- SETTINGS -->
                     <li class="xn-icon-button pull-right">
-                        <a href="#"><span class="fa fa-tasks"></span></a>
-                        <div class="informer informer-warning">3</div>
-                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><span class="fa fa-tasks"></span> Tasks</h3>                                
-                                <div class="pull-right">
-                                    <span class="label label-warning">3 active</span>
-                                </div>
-                            </div>
-                            <div class="panel-body list-group scroll" style="height: 200px;">                                
-                                <a class="list-group-item" href="#">
-                                    <strong>Phasellus augue arcu, elementum</strong>
-                                    <div class="progress progress-small progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
-                                    </div>
-                                    <small class="text-muted">John Doe, 25 Sep 2015 / 50%</small>
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <strong>Aenean ac cursus</strong>
-                                    <div class="progress progress-small progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
-                                    </div>
-                                    <small class="text-muted">Dmitry Ivaniuk, 24 Sep 2015 / 80%</small>
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <strong>Lorem ipsum dolor</strong>
-                                    <div class="progress progress-small progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">95%</div>
-                                    </div>
-                                    <small class="text-muted">John Doe, 23 Sep 2015 / 95%</small>
-                                </a>
-                                <a class="list-group-item" href="#">
-                                    <strong>Cras suscipit ac quam at tincidunt.</strong>
-                                    <div class="progress progress-small">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
-                                    </div>
-                                    <small class="text-muted">John Doe, 21 Sep 2015 /</small><small class="text-success"> Done</small>
-                                </a>                                
-                            </div>     
-                            <div class="panel-footer text-center">
-                                <a href="pages-tasks.html">Show all tasks</a>
-                            </div>                            
-                        </div>                        
-                    </li>
-                    <!-- END TASKS -->
-                    <!-- LANG BAR -->
+                        <a href="#"><span class="fa fa-cogs"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li>
+                                <a href="#"><span class="fa fa-language"></span> Язык</a>
+                                <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                                    <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
+                                    <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
+                                    <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Lock Screen</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+
+                        </ul>                        
+                    </li> 
+                    <!-- END SETTINGS -->  
+
+
+                    <!-- LANG BAR 
                     <li class="xn-icon-button pull-right">
-                        <a href="#"><span class="flag flag-gb"></span></a>
+                        <a href="#"><span class="flag flag-ru"></span></a>
                         <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                            <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
                             <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
-                            <li><a href="#"><span class="flag flag-de"></span> Deutsch</a></li>
                             <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
                         </ul>                        
                     </li> 
                     <!-- END LANG BAR -->
-                </ul>
-                <!-- END X-NAVIGATION VERTICAL -->                     
 
-                <!-- START BREADCRUMB -->
-                <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>                    
-                    <li class="active">Dashboard</li>
                 </ul>
-                <!-- END BREADCRUMB -->                       
+
+                <!-- EOF NAVIGATION -->
+
+
+
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li class="active">Active</li>
+                </ul>
+
                 
-                <!-- PAGE CONTENT WRAPPER -->
+                <!-- MAIN CONTENT -->
+
                 <div class="page-content-wrap">
-                    
                     <!-- START WIDGETS -->                    
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3  col-sm-6 col-xs-6">
                             
                             <!-- START WIDGET SLIDER -->
-                            <div class="widget widget-default widget-carousel">
+                            <div class="widget widget-default widget-carousel widget-item-icon widget-hidden-controls">
                                 <div class="owl-carousel" id="owl-example">
                                     <div>                                    
-                                        <div class="widget-title">Total Visitors</div>                                                                        
-                                        <div class="widget-subtitle">27/08/2015 15:23</div>
-                                        <div class="widget-int">3,548</div>
+                                        <div class="widget-item-left">
+                                            <span class="fa fa-file-text-o"></span>
+                                        </div>                             
+                                        <div class="widget-data">
+                                            <div class="widget-int num-count">148</div>
+                                            <div class="widget-title">Статей</div>
+                                            <div class="widget-subtitle">Создано в системе</div>
+                                        </div> 
                                     </div>
                                     <div>                                    
-                                        <div class="widget-title">Returned</div>
-                                        <div class="widget-subtitle">Visitors</div>
-                                        <div class="widget-int">1,695</div>
+                                        <div class="widget-item-left">
+                                            <span class="fa fa-user"></span>
+                                        </div>
+                                        <div class="widget-data">
+                                            <div class="widget-int num-count">89</div>
+                                            <div class="widget-title">Пользователей</div>
+                                            <div class="widget-subtitle">Всего в системе</div>
+                                        </div>
                                     </div>
-                                    <div>                                    
-                                        <div class="widget-title">New</div>
-                                        <div class="widget-subtitle">Visitors</div>
-                                        <div class="widget-int">1,977</div>
+                                    <div>  
+                                        <div class="widget-item-left">
+                                            <span class="fa fa-th"></span>
+                                        </div>   
+                                        <div class="widget-data">                               
+                                            <div class="widget-int num-count">12</div>
+                                            <div class="widget-title">Категорий</div>
+                                            <div class="widget-subtitle">Создано в системе</div>
+                                        </div>
                                     </div>
                                 </div>                            
                                 <div class="widget-controls">                                
-                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                    <a href="#" class="widget-control-right widget-refresh" data-toggle="tooltip" data-placement="top" title="Обновить виджет"><span class="fa fa-refresh"></span></a>
+
                                 </div>                             
                             </div>         
                             <!-- END WIDGET SLIDER -->
                             
                         </div>
-                        <div class="col-md-3">
-                            
-                            <!-- START WIDGET MESSAGES -->
-                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
-                                <div class="widget-item-left">
-                                    <span class="fa fa-envelope"></span>
-                                </div>                             
-                                <div class="widget-data">
-                                    <div class="widget-int num-count">48</div>
-                                    <div class="widget-title">New messages</div>
-                                    <div class="widget-subtitle">In your mailbox</div>
-                                </div>      
-                                <div class="widget-controls">                                
-                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
-                                </div>
-                            </div>                            
-                            <!-- END WIDGET MESSAGES -->
-                            
-                        </div>
-                        <div class="col-md-3">
+
+
+                        <div class="col-md-3  col-sm-6 col-xs-6">
                             
                             <!-- START WIDGET REGISTRED -->
-                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                            <div class="widget widget-success widget-item-icon widget-hidden-controls" onclick="location.href='pages-address-book.html';">
                                 <div class="widget-item-left">
                                     <span class="fa fa-user"></span>
                                 </div>
                                 <div class="widget-data">
-                                    <div class="widget-int num-count">375</div>
-                                    <div class="widget-title">Registred users</div>
-                                    <div class="widget-subtitle">On your website</div>
+                                    <div class="widget-int num-count">27</div>
+                                    <div class="widget-title">Пользователей онлайн</div>
+                                    <!-- <div class="widget-subtitle">On your website</div> -->
                                 </div>
                                 <div class="widget-controls">                                
-                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                    <a href="#" class="widget-control-right widget-refresh" data-toggle="tooltip" data-placement="top" title="Обновить виджет"><span class="fa fa-refresh"></span></a>
                                 </div>                            
                             </div>                            
                             <!-- END WIDGET REGISTRED -->
                             
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-md-3  col-sm-6 col-xs-6">
+                            
+                            <!-- START WIDGET MESSAGES -->
+                            <a href="#" class="tile tile-info tile-valign">
+                                1,892
+                                <div class="informer informer-default">Мой рейтинг</div>
+                                <div class="informer informer-default dir-br"><span class="fa fa-trophy"></span></div>
+                            </a>                       
+                            <!-- END WIDGET MESSAGES -->
+                            
+                        </div>
+
+                        <div class="col-md-3  col-sm-6 col-xs-6">
                             
                             <!-- START WIDGET CLOCK -->
-                            <div class="widget widget-danger widget-padding-sm">
+                            <div class="widget widget-danger widget-padding-sm widget-hidden-controls">
                                 <div class="widget-big-int plugin-clock">00:00</div>                            
                                 <div class="widget-subtitle plugin-date">Loading...</div>
                                 <div class="widget-controls">                                
-                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="left" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                    <a href="#" class="widget-control-right widget-refresh" data-toggle="tooltip" data-placement="top" title="Обновить виджет"><span class="fa fa-refresh"></span></a>
                                 </div>                            
-                                <div class="widget-buttons widget-c3">
-                                    <div class="col">
+                                <div class="widget-buttons widget-c3" style="padding-top: 10px;">
+                                    Ваш последний визит 10.05.2015
+                                    <!-- <div class="col">
                                         <a href="#"><span class="fa fa-clock-o"></span></a>
                                     </div>
                                     <div class="col">
@@ -455,315 +329,579 @@
                                     </div>
                                     <div class="col">
                                         <a href="#"><span class="fa fa-calendar"></span></a>
-                                    </div>
+                                    </div> -->
                                 </div>                            
                             </div>                        
                             <!-- END WIDGET CLOCK -->
                             
                         </div>
+
                     </div>
-                    <!-- END WIDGETS -->                    
-                    
+                    <!-- END WIDGETS -->          
+          
                     <div class="row">
-                        <div class="col-md-8">
-                            
-                            <!-- START SALES BLOCK -->
+                        
+
+                        <div class="col-md-6  col-sm-6">
+
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Sales</h3>
-                                        <span>Sales activity by period you selected</span>
-                                    </div>                                     
-                                    <ul class="panel-controls panel-controls-title">                                        
-                                        <li>
-                                            <div id="reportrange" class="dtrange">                                            
-                                                <span></span><b class="caret"></b>
-                                            </div>                                     
-                                        </li>                                
-                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
-                                    </ul>                                    
-                                    
+                                <div class="panel-body profile bg-info">
+
+                                    <div class="profile-image">
+                                        <img src="assets/images/users/user2.jpg" alt="John Doe">
+                                    </div>
+                                    <div class="profile-data">
+                                        <div class="profile-data-name">John Doe</div>
+                                        <div class="profile-data-title">UI/UX Designer</div>
+                                    </div>
+                                    <div class="profile-controls">
+                                        <a href="pages-edit-profile.html" class="profile-control-left"><i class="fa fa-pencil"></i></a>
+                                        <a href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
+                                    </div>
+
                                 </div>
-                                <div class="panel-body">                                    
-                                    <div class="row stacked">
-                                        <div class="col-md-4">                                            
-                                            <div class="progress-list">                                               
-                                                <div class="pull-left"><strong>In Queue</strong></div>
-                                                <div class="pull-right">75%</div>                                                
-                                                <div class="progress progress-small progress-striped active">
-                                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div>
-                                                </div>
+                                <div class="panel-body list-group panel-body-table">
+                                    <table class="table table-middle ">
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Мои достижения</b></td>
+                                                <td>
+                                                    <div class="badges">
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Lorem."><img src="img/badges/badge_13.png"></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Facere."><img src="img/badges/badge_11.png"></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Dignissimos."><img src="img/badges/badge_24.png"></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Suscipit!"><img src="img/badges/badge_04.png"></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Enim."><img src="img/badges/badge_14.png"></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик Magni!"><img src="img/badges/badge_12.png"></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Мои навыки</b></td>
+                                                <td>
+                                                    
+                                                    <ol class="skills-list">
+                                                        <li class="skill">
+                                                            <span class="skill-count">5</span>
+                                                            <span class="skill-name">Frontlopment</span>
+                                                        </li>
+                                                        <li class="skill">
+                                                            <span class="skill-count">15</span>
+                                                            <span class="skill-name">Front-end Development</span>
+                                                        </li>
+                                                        <li class="skill">
+                                                            <span class="skill-count">145</span>
+                                                            <span class="skill-name">end </span>
+                                                        </li>
+                                                        <li class="skill">
+                                                            <span class="skill-count">51</span>
+                                                            <span class="skill-name">Front-end Development</span>
+                                                        </li>
+                                                        <li class="skill">
+                                                            <span class="skill-count">4</span>
+                                                            <span class="skill-name">end </span>
+                                                        </li>
+                                                        <li class="skill">
+                                                            <span class="skill-count">2</span>
+                                                            <span class="skill-name">Front-end </span>
+                                                        </li>
+                                                    </ol>    
+
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Рейтинг</b></td>
+                                                <td><a href="#" class="dashboard-rating" data-toggle="tooltip" data-placement="top" title="Рейтинг пользователей"><i class="fa fa-trophy"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="panel-body list-group list-group-contacts">
+                                        <a href="#" class="list-group-item">
+                                            <button type="button" class="btn btn-xs btn-danger  btn-rounded">32</button>
+                                            <img src="assets/images/users/user6.jpg" class="" alt="Darth Vader">
+                                            <span class="contacts-title">Darth Vader</span>
+                                            <div class="list-group-controls">
+                                                <button class="btn btn-sm btn-danger">1961</button>
                                             </div>
-                                            <div class="progress-list">                                               
-                                                <div class="pull-left"><strong>Shipped Products</strong></div>
-                                                <div class="pull-right">450/500</div>                                                
-                                                <div class="progress progress-small progress-striped active">
-                                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">90%</div>
-                                                </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <button type="button" class="btn btn-xs btn-info  btn-rounded">33</button>
+                                            <img src="assets/images/users/user2.jpg" class="" alt="John Doe">
+                                            <span class="contacts-title">John Doe</span>
+                                            <div class="list-group-controls">
+                                                <button class="btn btn-sm btn-info">1892</button>
                                             </div>
-                                            <div class="progress-list">                                               
-                                                <div class="pull-left"><strong class="text-danger">Returned Products</strong></div>
-                                                <div class="pull-right">25/500</div>                                                
-                                                <div class="progress progress-small progress-striped active">
-                                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">5%</div>
-                                                </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <button type="button" class="btn btn-xs btn-success  btn-rounded">34</button>
+                                            <img src="assets/images/users/user.jpg" class="" alt="Dmitry Ivaniuk">
+                                            <span class="contacts-title">Dmitry Ivaniuk</span>
+                                            <div class="list-group-controls">
+                                                <button class="btn btn-sm btn-success">1891</button>
                                             </div>
-                                            <div class="progress-list">                                               
-                                                <div class="pull-left"><strong class="text-warning">Progress Today</strong></div>
-                                                <div class="pull-right">75/150</div>                                                
-                                                <div class="progress progress-small progress-striped active">
-                                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
-                                                </div>
-                                            </div>
-                                            <p><span class="fa fa-warning"></span> Data update in end of each hour. You can update it manual by pressign update button</p>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div id="dashboard-map-seles" style="width: 100%; height: 200px"></div>
-                                        </div>
-                                    </div>                                    
-                                </div>
+                                        </a>
+                                        
+                                    </div>
+                                </div>                            
                             </div>
-                            <!-- END SALES BLOCK -->
-                            
                         </div>
-                        <div class="col-md-4">
-                            
-                            <!-- START PROJECTS BLOCK -->
-                            <div class="panel panel-default">
+
+                        <div class="col-md-6  col-sm-6">
+                            <!-- Статус моих статей -->
+                            <div class="panel panel-default panel-hidden-controls">
                                 <div class="panel-heading">
                                     <div class="panel-title-box">
-                                        <h3>Projects</h3>
-                                        <span>Projects activity</span>
-                                    </div>                                    
+                                        <h3>Статус моих статей</h3>
+                                        <span>Статус статей по состоянию на вчерашний день</span>
+                                    </div>
                                     <ul class="panel-controls" style="margin-top: 2px;">
-                                        <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
                                         <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>                                        
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
-                                                <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
-                                            </ul>                                        
-                                        </li>                                        
+                                                                          
                                     </ul>
                                 </div>
-                                <div class="panel-body panel-body-table">
+                                <div class="panel-body padding-0">
+                                    <div class="chart-holder" id="dashboard-donut-1" style="height: 475px; padding: 30px 0px;"></div>
+                                </div>
+                            </div><!-- EOF Статус моих статей -->
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            
+                            <!-- Статьи на модерации -->
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h1>Статьи на модерации</h1>
                                     
-                                    <div class="table-responsive">
-                                        <table class="table table-condensed table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th width="50%">Project</th>
-                                                    <th width="20%">Status</th>
-                                                    <th width="30%">Activity</th>
-                                                </tr>
-                                            </thead>
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <!-- Я автор -->
+                                            <div class="panel panel-default panel-hidden-controls xn-drop-left xn-panel-dragging">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Я автор</h3>
+                                                    <ul class="panel-controls" style="margin-top: 2px;">
+                                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>                                       
+                                                    </ul>
+                                                </div>
+                                                <div class="panel-body panel-body-table scroll" style="height: 180px;">
+                                                    <table class="table table-hover table-middle table-striped">
+                                                        <col width="90%">
+                                                        <col width="10%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#">Mark</a></td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Jacob </td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Larry</td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div><!-- EOF Я автор -->
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <!-- Я эксперт -->
+                                            <div class="panel panel-default panel-hidden-controls xn-drop-left xn-panel-dragging">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Я эксперт</h3>
+                                                    <ul class="panel-controls" style="margin-top: 2px;">
+                                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>                                       
+                                                    </ul>
+                                                </div>
+                                                <div class="panel-body panel-body-table scroll" style="height: 180px;">
+                                                    <table class="table table-hover table-middle table-striped">
+                                                        <col >
+                                                        <col width="50%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#">Mark</a></td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Jacob </td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>[FXO] Какие методы идентификации абонента (номера) поддерживает ТАУ32М?</td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garry</td>
+                                                                <td>
+                                                                    <button class="btn btn-success btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-info btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-share"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-condensed btn-sm">
+                                                                        <span class="fa fa-edit"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div><!-- EOF Я эксперт -->
+
+                                        </div>
+                                    </div>
+                                    
+                                        
+                                </div>
+                            </div><!-- EOF Статьи на модерации -->
+
+                        </div>
+
+                        <div class="col-md-12">
+
+                            <div class="col-md-6">
+
+                                <!-- Последние редактированные статьи -->
+                                <div class="panel panel-default panel-hidden-controls xn-drop-left xn-panel-dragging">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Последние редактированные статьи</h3>
+                                        <ul class="panel-controls" style="margin-top: 2px;">
+                                            <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="panel-body panel-body-table scroll" style="height: 136px;">
+                                        <table class="table table-hover table-middle table-striped">
+                                            <col >
+                                            <col >
                                             <tbody>
                                                 <tr>
-                                                    <td><strong>Atlant</strong></td>
-                                                    <td><span class="label label-danger">Developing</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">85%</div>
-                                                        </div>
-                                                    </td>
+                                                    <td><a href="#">Mark</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><strong>Gemini</strong></td>
-                                                    <td><span class="label label-warning">Updating</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
-                                                        </div>
-                                                    </td>
-                                                </tr>                                                
-                                                <tr>
-                                                    <td><strong>Taurus</strong></td>
-                                                    <td><span class="label label-warning">Updating</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">72%</div>
-                                                        </div>
-                                                    </td>
+                                                    <td><a href="#">Mark</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><strong>Leo</strong></td>
-                                                    <td><span class="label label-success">Support</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
-                                                        </div>
-                                                    </td>
+                                                    <td><a href="#">Mark</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><strong>Virgo</strong></td>
-                                                    <td><span class="label label-success">Support</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
-                                                        </div>
-                                                    </td>
-                                                </tr>                                                
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
                                                 <tr>
-                                                    <td><strong>Aquarius</strong></td>
-                                                    <td><span class="label label-success">Support</span></td>
-                                                    <td>
-                                                        <div class="progress progress-small progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
-                                                        </div>
-                                                    </td>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    
-                                </div>
+                                </div><!-- EOF Последние редактированные статьи -->
                             </div>
-                            <!-- END PROJECTS BLOCK -->
-                            
+
+                            <div class="col-md-6">
+                                <!-- Мои статьи -->
+                                <div class="panel panel-default panel-hidden-controls xn-drop-left xn-panel-dragging">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Мои статьи</h3>
+                                        <ul class="panel-controls" style="margin-top: 2px;">
+                                            <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="panel-body panel-body-table scroll" style="height: 136px;">
+                                        <table class="table table-hover table-middle table-striped">
+                                            <col >
+                                            <col >
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#">Mark</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!-- EOF Мои статьи -->
+                            </div>
+
                         </div>
                     </div>
-                    
+
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             
-                            <!-- START SALES & EVENTS BLOCK -->
-                            <div class="panel panel-default">
+                            <div class="panel panel-default xn-drop-left xn-panel-dragging">
                                 <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Sales & Event</h3>
-                                        <span>Event "Purchase Button"</span>
-                                    </div>
-                                    <ul class="panel-controls" style="margin-top: 2px;">
-                                        <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
-                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>                                        
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
-                                                <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
-                                            </ul>                                        
-                                        </li>                                        
-                                    </ul>
+                                    <h3 class="panel-title">Последние новости</h3>
+                                    <!-- <ul class="panel-controls">
+                                        <li class="label-control"><span class="label label-info">Some label text</span></li>
+                                    </ul> -->
                                 </div>
-                                <div class="panel-body padding-0">
-                                    <div class="chart-holder" id="dashboard-line-1" style="height: 200px;"></div>
+                                <div class="panel-body panel-body-table scroll" style="height: 129px;">
+                                    <table class="table table-hover table-middle table-striped">
+                                        <col >
+                                        <col >
+                                        <tbody>
+                                            <tr>
+                                                <td><button class="btn btn-news btn-primary"><span class="fa fa-refresh"></span></button>Обновлена статья <a href="#"><b>Не работает принтер</a></b></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button><a href="#">Администратор</a> статья обновил учетную запись <a href="#">Иванов Иван</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button><a href="#">Администратор</a> статья обновил учетную запись <a href="#">Иванов Иван</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button><a href="#">Администратор</a> статья обновил учетную запись <a href="#">Иванов Иван</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button><a href="#">Администратор</a> статья обновил учетную запись <a href="#">Иванов Иван</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a href="pages-messages.html">Показать все новости</a>
                                 </div>
                             </div>
-                            <!-- END SALES & EVENTS BLOCK -->
                             
-                        </div>
-                        <div class="col-md-4">
-                            
-                            <!-- START USERS ACTIVITY BLOCK -->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Users Activity</h3>
-                                        <span>Users vs returning</span>
-                                    </div>                                    
-                                    <ul class="panel-controls" style="margin-top: 2px;">
-                                        <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
-                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>                                        
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
-                                                <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
-                                            </ul>                                        
-                                        </li>                                        
-                                    </ul>                                    
-                                </div>                                
-                                <div class="panel-body padding-0">
-                                    <div class="chart-holder" id="dashboard-bar-1" style="height: 200px;"></div>
-                                </div>                                    
-                            </div>
-                            <!-- END USERS ACTIVITY BLOCK -->
-                            
-                        </div>
-                        <div class="col-md-4">
-                            
-                            <!-- START VISITORS BLOCK -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title-box">
-                                        <h3>Visitors</h3>
-                                        <span>Visitors (last month)</span>
-                                    </div>
-                                    <ul class="panel-controls" style="margin-top: 2px;">
-                                        <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
-                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>                                        
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
-                                                <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
-                                            </ul>                                        
-                                        </li>                                        
-                                    </ul>
+                                    <h3 class="panel-title">Последние одобренные статьи</h3>
                                 </div>
-                                <div class="panel-body padding-0">
-                                    <div class="chart-holder" id="dashboard-donut-1" style="height: 200px;"></div>
-                                </div>
-                            </div>
-                            <!-- END VISITORS BLOCK -->
-                            
-                        </div>
-                    </div>
-                    
-                    <!-- START DASHBOARD CHART -->
-                    <div class="block-full-width">
-                        <div id="dashboard-chart" style="height: 250px; width: 100%; float: left;"></div>
-                        <div class="chart-legend">
-                            <div id="dashboard-legend"></div>
-                        </div>                                                
-                    </div>                    
-                    <!-- END DASHBOARD CHART -->
-                    
-                </div>
-                <!-- END PAGE CONTENT WRAPPER -->                                
-            </div>            
-            <!-- END PAGE CONTENT -->
-        </div>
-        <!-- END PAGE CONTAINER -->
 
-        <!-- MESSAGE BOX-->
-        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
-            <div class="mb-container">
-                <div class="mb-middle">
-                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
-                    <div class="mb-content">
-                        <p>Are you sure you want to log out?</p>                    
-                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
-                    </div>
-                    <div class="mb-footer">
-                        <div class="pull-right">
-                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
-                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                                <div class="panel-body panel-body-table last-proved-articles">                                
+                                    <table class="table table-striped">
+                                            <col width="70%">
+                                            <col width="30%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status status-aproved" data-toggle="tooltip" data-placement="left" title="Одобрена"></span>
+                                                        <h3><a class="article-title" href="#">Title</a></h3>
+                                                        <span class="article-date">05-10-2015</span>
+                                                        <span class="article-category"><a href="#">TDM</a>, <a href="#1">Системы управления и мониторинга</a></span>
+                                                        <ul class="list-tags article-tags small">
+                                                            <li><a href="#">Восстановление</a></li>
+                                                            <li><a href="#">Прошивка</a></li>
+                                                            <li><a href="#">Принтер</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <div class="article-control">
+                                                            <span id="article-score">451</span>
+                                                            <a href="#"><span class="fa fa-thumbs-up"></span></a>
+                                                            <a href="#"><span class="fa fa-thumbs-down"></span></a>
+                                                            <a href="#" id="article-export" data-toggle="tooltip" data-placement="top" title="Экспорт в PDF"><span class="fa fa-file-pdf-o"></span></a>
+
+                                                            <div class="article-authors">
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status status-published" data-toggle="tooltip" data-placement="left" title="Опубликована"></span>
+                                                        <h3><a class="article-title" href="#">Title</a></h3>
+                                                        <span class="article-date">05-10-2015</span>
+                                                        <span class="article-category"><a href="#">TDM</a>, <a href="#">Системы управления и мониторинга</a></span>
+                                                        <ul class="list-tags article-tags">
+                                                            <li><a href="#">Восстановление</a></li>
+                                                            <li><a href="#">Прошивка</a></li>
+                                                            <li><a href="#">Принтер</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <div class="article-control">
+                                                            <span id="article-score">451</span>
+                                                            <a href="#"><span class="fa fa-thumbs-up"></span></a>
+                                                            <a href="#"><span class="fa fa-thumbs-down"></span></a>
+                                                            <a href="#" id="article-export" data-toggle="tooltip" data-placement="top" title="Экспорт в PDF"><span class="fa fa-file-pdf-o"></span></a>
+
+                                                            <div class="article-authors">
+                                                                <a href="#">Иванов Иван</a> , 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="status " data-toggle="tooltip" data-placement="left" title="Черновик"></span>
+                                                        <h3><a class="article-title" href="#">Title</a></h3>
+                                                        <span class="article-date">05-10-2015</span>
+                                                        <span class="article-category"><a href="#">TDM</a>, <a href="#">Системы управления и мониторинга</a></span>
+                                                        <ul class="list-tags article-tags">
+                                                            <li><a href="#">Восстановление</a></li>
+                                                            <li><a href="#">Прошивка</a></li>
+                                                            <li><a href="#">Принтер</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <div class="article-control">
+                                                            <span id="article-score">451</span>
+                                                            <a href="#"><span class="fa fa-thumbs-up"></span></a>
+                                                            <a href="#"><span class="fa fa-thumbs-down"></span></a>
+                                                            <a href="#" id="article-export" data-toggle="tooltip" data-placement="top" title="Экспорт в PDF"><span class="fa fa-file-pdf-o"></span></a>
+
+                                                            <div class="article-authors">
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>, 
+                                                                <a href="#">Иванов Иван</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>                               
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- END MESSAGE BOX-->
+                
+                </div><!-- EOF MAIN CONTENT -->
 
-        <!-- START PRELOADS -->
-        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
-        <!-- END PRELOADS -->                  
-        
-    <!-- START SCRIPTS -->
-        <!-- START PLUGINS -->
+                
+
+            </div><!-- EOF PAGE CONTENT -->
+        </div>
+
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
-        <!-- END PLUGINS -->
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
 
         <!-- START THIS PAGE PLUGINS-->        
         <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>        
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         <script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
-        
         <script type="text/javascript" src="js/plugins/morris/raphael-min.js"></script>
         <script type="text/javascript" src="js/plugins/morris/morris.min.js"></script>       
         <script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
@@ -772,25 +910,26 @@
         <script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
         <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
         <script type="text/javascript" src="js/plugins/owl/owl.carousel.min.js"></script>                 
-        
         <script type="text/javascript" src="js/plugins/moment.min.js"></script>
         <script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
-        <!-- END THIS PAGE PLUGINS-->        
+        <!-- END THIS PAGE PLUGINS--> 
 
-        <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
-        
-        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/actions.js"></script>
-        
-        <script type="text/javascript" src="js/demo_dashboard.js"></script>
-        <!-- END TEMPLATE -->
-    <!-- END SCRIPTS -->         
+
+        <script type="text/javascript">
+            /* Donut dashboard chart */
+            Morris.Donut({
+                element: 'dashboard-donut-1',
+                data: [
+                    {label: "Черновики", value: 2513},
+                    {label: "Одобренные", value: 764},
+                    {label: "Опубликованные", value: 311}
+                ],
+                colors: ['#33414E', '#3FBAE4', '#FEA223'],
+                resize: true
+            });
+            /* END Donut dashboard chart */
+        </script>
     </body>
 </html>
-
-
-
-
-
-
