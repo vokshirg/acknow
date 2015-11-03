@@ -321,11 +321,15 @@ body{
     
     /* NAV HORIZONTAL MODE */
     &.x-navigation-horizontal{height: 50px; background: @xn-horizontal-background;
-        .xn-logo a{border-bottom: 0px; width: 200px;}                
+        .xn-logo a{border-bottom: 0px; width: 200px;}             
         > li{
             &.xn-openable{
                 &:before{display: none;}                
-            }            
+            }    
+            &.xn-profile{
+                border: 0;
+                .profile-mini{display: block;}
+            }        
             > a{padding:15px; border-bottom: 0px; line-height: 20px; color: @xn-horizontal-color; text-shadow: none;
                 &:hover{background: @xn-horizontal-background-hover;
                     .fa,.glyphicon{color: @xn-horizontal-icon-hover;}
