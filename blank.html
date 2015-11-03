@@ -1,36 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>        
         <!-- META SECTION -->
-        <title>TITLE</title>            
+        <title>Инвейдерс Знания - Наш новый Template</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
-        
-        <!-- LESSCSS INCLUDE -->        
+
+        <!-- LESSCSS INCLUDE -->   
         <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
         <script type="text/javascript" src="js/plugins/lesscss/less.min.js"></script>                
-        <!-- EOF LESSCSS INCLUDE -->                                       
+        <!-- EOF LESSCSS INCLUDE -->   
     </head>
     <body>
         <!-- START PAGE CONTAINER -->
-        <div class="page-container">
-            
+        <div class="page-container page-container-wide page-navigation-toggled page-navigation-toggled-hover page-navigation-top-fixed">
+
             <!-- START PAGE SIDEBAR -->
-            <div class="page-sidebar">
+            <div class="page-sidebar page-sidebar-fixed scroll">
                 <!-- START X-NAVIGATION -->
-                <ul class="x-navigation">
+                <ul class="x-navigation x-navigation-minimized x-navigation-custom ">
                     <li class="xn-logo">
-                        <a href="index.html">ATLANT</a>
+                        <a href="#">Инвейдерс Знания</a>
                         <a href="#" class="x-navigation-control"></a>
-                    </li>                                                                      
-                    <li class="xn-title">Navigation</li>
+                    </li>
+                    <li class="xn-button">
+                        <button type="button" class="btn btn-lg btn-block btn-danger">
+                            <span class="fa fa-edit"></span>
+                            <span class="xn-text"> Создать статью</span>
+                        </button>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="xn-text">Главная</span>
+                        </a>
+                    </li>
                     <li>
-                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
-                    </li>                                        
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span class="xn-text">Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="xn-text">Пользователи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-file-text-o"></i>
+                            <span class="xn-text">Статья</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="xn-text">Словарь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="xn-text">Файлы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="xn-text">Статистика</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="xn-text">Категории</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span class="xn-text">Эксперты</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
@@ -38,27 +94,121 @@
             
             <!-- PAGE CONTENT -->
             <div class="page-content">
-                
-                <!-- START X-NAVIGATION VERTICAL -->
+
+    
+                <!-- NAVIGATION -->
                 <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                   
                     <!-- TOGGLE NAVIGATION -->
-                    <li class="xn-icon-button">
+                    <li class="xn-icon-button hidden">
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
-                    </li>
-                    <!-- END TOGGLE NAVIGATION -->                    
-                </ul>
-                <!-- END X-NAVIGATION VERTICAL -->                     
+                    </li><!-- END TOGGLE NAVIGATION -->
+                   
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Поиск...">
+                        </form>
+                    </li><!-- END SEARCH -->                  
+                    
+                    <!-- POWER OFF -->
+                    <li class="xn-icon-button pull-right last">
+                        <a href="#"><span class="fa fa-power-off"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li><!-- END POWER OFF -->
+                    
+                    <!-- USER -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-user"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li><!-- END USER --> 
+
+                    <!-- NOTIFICATIONS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><i class="fa fa-bell-o"></i></a>
+                        <div class="informer informer-danger">4</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging notifications">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bell"></i> Уведомления</h3>                                
+                                <div class="pull-right">
+                                    <span class="label label-danger">4 новых</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+
+                            </div>  
+                            <div class="panel-footer text-center">
+                                <a href="pages-messages.html">Показать все уведомления</a>
+                            </div>                            
+                        </div>                        
+                    </li><!-- END NOTIFICATIONS -->
+
+                    <!-- SETTINGS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-cogs"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li>
+                                <a href="#"><span class="fa fa-language"></span> Язык</a>
+                                <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                                    <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
+                                    <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
+                                    <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Заблокировать экран</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+
+                        </ul>                        
+                    </li><!-- END SETTINGS -->  
                 
+                </ul><!-- EOF NAVIGATION -->
+
+
+
                 <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
                     <li><a href="#">Link</a></li>                    
                     <li class="active">Active</li>
-                </ul>
-                <!-- END BREADCRUMB -->                
-                
-                <div class="page-title">                    
+                </ul><!-- END BREADCRUMB -->  
+
+                <!-- <div class="page-title">                    
                     <h2><span class="fa fa-arrow-circle-o-left"></span> Page Title</h2>
-                </div>                   
+                </div>  --> 
+
                 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
@@ -89,15 +239,15 @@
         <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
             <div class="mb-container">
                 <div class="mb-middle">
-                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Выход</div>
                     <div class="mb-content">
-                        <p>Are you sure you want to log out?</p>                    
-                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                        <p>Вы уверены что хотите выйти?</p>                    
+                        <p>Нажмите Нет если вы хотите продолжить работу. Нажмите Да если вы хотите выйти из текущего профиля.</p>
                     </div>
                     <div class="mb-footer">
                         <div class="pull-right">
-                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
-                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Да</a>
+                            <button class="btn btn-default btn-lg mb-control-close">Нет</button>
                         </div>
                     </div>
                 </div>
@@ -128,9 +278,3 @@
     <!-- END SCRIPTS -->         
     </body>
 </html>
-
-
-
-
-
-

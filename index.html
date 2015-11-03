@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>        
         <!-- META SECTION -->
-        <title>Atlant - Responsive Bootstrap Admin Template</title>            
+        <title>Инвейдерс Знания - Наш новый Template</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -88,30 +88,29 @@
                         </a>
                     </li>
                 </ul>
+                <!-- END X-NAVIGATION -->
             </div>
-            <!-- <div class="xn-button-minimize">
-                <a href="#" class="x-navigation-minimize"><span class="fa fa-indent"></span></a>
-            </div> -->
-
-
-
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
             <div class="page-content">
 
     
                 <!-- NAVIGATION -->
                 <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                   
                     <!-- TOGGLE NAVIGATION -->
                     <li class="xn-icon-button hidden">
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
-                    </li>
-                    <!-- END TOGGLE NAVIGATION -->
+                    </li><!-- END TOGGLE NAVIGATION -->
+                   
                     <!-- SEARCH -->
                     <li class="xn-search">
                         <form role="form">
                             <input type="text" name="search" placeholder="Поиск...">
                         </form>
-                    </li>   
-                    <!-- END SEARCH -->                  
+                    </li><!-- END SEARCH -->                  
+                    
                     <!-- POWER OFF -->
                     <li class="xn-icon-button pull-right last">
                         <a href="#"><span class="fa fa-power-off"></span></a>
@@ -119,8 +118,8 @@
                             <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
                             <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
                         </ul>                        
-                    </li> 
-                    <!-- END POWER OFF -->
+                    </li><!-- END POWER OFF -->
+                    
                     <!-- USER -->
                     <li class="xn-icon-button pull-right">
                         <a href="#"><span class="fa fa-user"></span></a>
@@ -128,11 +127,9 @@
                             <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
                             <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
                         </ul>                        
-                    </li> 
-                    <!-- END USER --> 
-                    
+                    </li><!-- END USER --> 
 
-                    <!-- Notifications -->
+                    <!-- NOTIFICATIONS -->
                     <li class="xn-icon-button pull-right">
                         <a href="#"><i class="fa fa-bell-o"></i></a>
                         <div class="informer informer-danger">4</div>
@@ -178,9 +175,7 @@
                                 <a href="pages-messages.html">Показать все уведомления</a>
                             </div>                            
                         </div>                        
-                    </li>
-                    <!-- END Notifications -->
-
+                    </li><!-- END NOTIFICATIONS -->
 
                     <!-- SETTINGS -->
                     <li class="xn-icon-button pull-right">
@@ -198,38 +193,26 @@
                             <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
 
                         </ul>                        
-                    </li> 
-                    <!-- END SETTINGS -->  
-
-
-                    <!-- LANG BAR 
-                    <li class="xn-icon-button pull-right">
-                        <a href="#"><span class="flag flag-ru"></span></a>
-                        <ul class="xn-drop-left xn-drop-white animated zoomIn">
-                            <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
-                            <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
-                            <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
-                        </ul>                        
-                    </li> 
-                    <!-- END LANG BAR -->
-
-                </ul>
-
-                <!-- EOF NAVIGATION -->
+                    </li><!-- END SETTINGS -->  
+                
+                </ul><!-- EOF NAVIGATION -->
 
 
 
+                <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Link</a>
-                    </li>
+                    <li><a href="#">Link</a></li>                    
                     <li class="active">Active</li>
-                </ul>
+                </ul><!-- END BREADCRUMB -->  
+
+                <!-- <div class="page-title">                    
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Page Title</h2>
+                </div>  --> 
 
                 
-                <!-- MAIN CONTENT -->
-
+                <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
+                    
                     <!-- START WIDGETS -->                    
                     <div class="row">
                         <div class="col-md-3  col-sm-6 col-xs-6">
@@ -778,6 +761,7 @@
                                 </div>
                             </div>
                             
+                            <!-- LAST PROVED ARTICLES -->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Последние одобренные статьи</h3>
@@ -882,21 +866,43 @@
                                         </table>                               
                                 </div>
                             </div>
-
-
+                            <!-- END LAST PROVED ARTICLES -->
                         </div>
                     </div>
-                
-                </div><!-- EOF MAIN CONTENT -->
-
-                
-
-            </div><!-- EOF PAGE CONTENT -->
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                
+            </div>            
+            <!-- END PAGE CONTENT -->
         </div>
+        <!-- END PAGE CONTAINER -->
 
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Выход</div>
+                    <div class="mb-content">
+                        <p>Вы уверены что хотите выйти?</p>                    
+                        <p>Нажмите Нет если вы хотите продолжить работу. Нажмите Да если вы хотите выйти из текущего профиля.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Да</a>
+                            <button class="btn btn-default btn-lg mb-control-close">Нет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
 
         <!-- START THIS PAGE PLUGINS-->        
         <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>        
@@ -913,9 +919,12 @@
         <script type="text/javascript" src="js/plugins/moment.min.js"></script>
         <script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
         <!-- END THIS PAGE PLUGINS--> 
+   
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>        
+        <!-- END TEMPLATE -->
 
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/actions.js"></script>
 
         <script type="text/javascript">
             /* Donut dashboard chart */
