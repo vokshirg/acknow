@@ -41,9 +41,9 @@ var page_actions = function(){
     });    
 
 
-    if ($(".list-group-category li.admin-of-cat").length > 0 ){
-        var aoc = $(".list-group-category li.admin-of-cat");
-        $("li.admin-of-cat").parents(".cat-openable").addClass("opened");
+    if ($(".list-group-category.permissions li.admin-of-cat").length > 0 ){
+        var aoc = $(".list-group-category.permissions li.admin-of-cat");
+        $(".permissions li.admin-of-cat").parents(".cat-openable").addClass("opened");
 
         if(!aoc.hasClass("opened")){
             aoc.addClass("opened");
@@ -704,6 +704,62 @@ function x_navigation(){
     
 }
 /* EOF X-NAVIGATION CONTROL FUNCTIONS */
+
+
+function onRightControlClick() {
+
+    // console.log("privet");
+
+    $(this).parent(".profile-controls").children(".profile-control-right").addClass ("active");
+    $(this).removeClass ("active");
+
+    $(".profile-controls .active").on ("click", onRightControlClick);
+
+}
+
+$(".profile-controls .active").on ("click", onRightControlClick);
+
+function onShowMoreClick() {
+    event.stopPropagation();  
+    var ttd = $(this).closest("td");
+
+
+    
+    if (ttd.children(".opened").length > 0) {
+
+        ttd.removeClass("td-opened");
+        ttd.children(".opened").removeClass("opened");
+        ttd.attr( 'style', 'padding-bottom: 20px;' );
+        ttd.children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
+
+    } else {
+        if (ttd.children(".article-description").length > 0) {
+
+            ttd.addClass("td-opened");
+            var hopened = ttd.children(".article-info").children(".article-description").height() + 100;
+            var httd = ttd.children(".article-info").height();
+            var hltd = $(this).closest("tr").children("td:last-child").children(".article-control").height();
+            var htr = $(this).closest("tr").outerHeight()-15;
+            if (hltd > httd) {
+                var hopened = hopened + Math.abs(hltd - httd);
+            } else {
+                var hopened = hopened;
+            }
+            ttd.children(".article-description").attr( 'style', 'top: '+htr+'px!important;' );
+            ttd.children(".article-description").addClass("opened");
+            ttd.attr( 'style', 'padding-bottom: '+ hopened +'px!important;' );
+            ttd.children(".show-more").children(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
+
+        }
+    }
+
+    onresize();
+    return false;
+}
+
+$(".articles tr .show-more").on("click", onShowMoreClick);
+
+
 
 
 /* PAGE ON RESIZE WITH TIMEOUT */
