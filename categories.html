@@ -619,7 +619,7 @@
                                     <table class="table table-striped articles">
                                         <col width="70%">
                                         <col width="30%">
-                                        <tbody id="articles">
+                                        <tbody>
                                             <tr>
                                                 <td>
                                                     <div class="article-info">
@@ -739,22 +739,7 @@
                         </div>
                     </div>
     
-                    <h4 class='col-md-6'>articles (<span id="total_articles">0</span>)</h4>
-                    <div>
-                      <label class="sr-only" for="searchbox">Search</label>
-                      <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;">
-                      <!-- <span class="glyphicon glyphicon-search search-icon"></span> -->
-                    </div>
-                          <div class="col-md-9">
-                            
-                            <table class="table table-striped articles">
-                                        <col width="70%">
-                                        <col width="30%">
-                                        <tbody >
-                                            <!-- <div class="articles content row" > </div> -->
-                                        </tbody>
-                                    </table>
-                          </div>
+
                     
 
 
@@ -816,152 +801,5 @@
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->     
 
-    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>    
- 
-        <script>
-$(document).ready(function(){
-
-
-  //NOTE: To append in different container
-  var appendToContainer = function(htmlele, record){
-    console.log(record)
-  };
-
-  var FJS = FilterJS(articles, '#articles', {
-    template: '#article-template',
-    search: {ele: '#searchbox'},
-    //search: {ele: '#searchbox', fields: ['runtime']}, // With specific fields
-    callbacks: {
-      afterFilter: function(result){
-        $('#total_articles').text(result.length);
-      }
-    }
-    //appendToContainer: appendToContainer
-  });
-
-  FJS.addCallback('beforeAddRecords', function(){
-    if(this.recordsCount >= 4){
-      this.stopStreaming();
-    }
-  });
-
-  FJS.addCallback('afterAddRecords', function(){
-    var percent = (this.recordsCount - 250)*100/250;
-
-    $('#stream_progress').text(percent + '%').attr('style', 'width: '+ percent +'%;');
-
-    if (percent == 100){
-      $('#stream_progress').parent().fadeOut(1000);
-    }
-  });
-
-  FJS.setStreaming({
-    data_url: 'data/stream_articles.json',
-    stream_after: 1,
-    batch_size: 50
-  });
-
-  FJS.addCriteria({field: 'year', ele: '#year_filter', type: 'range', all: 'all'});
-  FJS.addCriteria({field: 'rating', ele: '#rating_filter', type: 'range'});
-  FJS.addCriteria({field: 'runtime', ele: '#runtime_filter', type: 'range'});
-  FJS.addCriteria({field: 'genre', ele: '#genre_criteria input:checkbox'});
-
-  /*
-   * Add multiple criterial.
-    FJS.addCriteria([
-      {field: 'genre', ele: '#genre_criteria input:checkbox'},
-      {field: 'year', ele: '#year_filter', type: 'range'}
-    ])
-  */
-
-  window.FJS = FJS;
-});
-
-
-        </script>
-
-
-<script id="movie-template" type="text/html">
-  <div class="col-md-3 article">
-    <div class="thumbnail">
-      <span class="label label-success rating"><%= rating %>
-        <i class="glyphicon glyphicon-star"></i>
-      </span>
-      <div class="caption">
-        <h4><%= _fid %>. <%= name %></h4>
-        <div class="outline">
-          <%= outline %>
-          <span class="runtime">
-            <i class="glyphicon glyphicon-time"></i>
-            <%= runtime %> mins.
-          </span>
-        </div>
-        <div class="detail">
-          <dl>
-            <dt>Director</dt>
-            <dd><%= director %></dd>
-            <dt>Actors</dt>
-            <dd><%= stars %></dt>
-            <dt>Year</dt>
-            <dd><%= year %></dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-
-<script id="article-template" type="text/html">
-    <tr>
-        <td>
-            <div class="article-info">
-                <span class="status status-aproved" data-toggle="tooltip" data-placement="left" title="Одобрена"></span>
-                <h3><a class="article-title" href="#"><%= article_title %></a></h3>
-                <span class="article-date"><%= article_date %></span>
-                <span class="article-category"><%= article_category %></span>
-                <ul class="list-tags article-tags small">
-                    <li><a href="#"><%= article_tags %></a></li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-
-            <a href="###" class="show-more"><i class="fa fa-angle-down"></i></a>
-
-            <div class="article-description">
-                <%= article_description %>
-            </div>
-        </td>
-        <td>
-            <div class="article-control">
-                <span id="article-score">451</span>
-                <a href="#"><span class="fa fa-thumbs-up"></span></a>
-                <a href="#"><span class="fa fa-thumbs-down"></span></a>
-                <a href="#" id="article-export" data-toggle="tooltip" data-placement="top" title="Экспорт в PDF"><span class="fa fa-file-pdf-o"></span></a>
-
-                <div class="article-authors">
-                    <%
-                        var authors='';
-                        _.each(article_authors,function(author){
-
-                            authors = authors + "<a href='#'>"+author+"</a>, ";
-
-                        });
-                        authors = authors.slice(0, -2);
-                    %>
-
-                        <%= authors %>
-                </div>
-            </div>
-        </td>
-    </tr>
-     $(".articles tr .show-more").on("click", onShowMoreClick); 
-</script>
-<script id="genre_template" type="text/html">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="<%= genre %>"> <%= genre %>
-    </label>
-  </div>
-</script>
     </body>
 </html>
