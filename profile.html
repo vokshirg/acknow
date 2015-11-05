@@ -238,16 +238,16 @@
                                         
                                         
                                         <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">E-mail</label>
+                                            <div class="col-md-3 col-xs-5"><b>E-mail</b></div>
                                             <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="johndoe@domain.com" class="form-control"/>
+                                                johndoe@domain.com
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Телефон</label>
+                                            <div class="col-md-3 col-xs-5"><b>Телефон</b></div>
                                             <div class="col-md-9 col-xs-7">
-                                                <input type="text" class="mask_phone form-control" value="9999999999"/>
+                                                +7 (999) 999-99-99
                                             </div>
                                         </div>
                                         
@@ -277,7 +277,6 @@
                                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик "><img src="img/badges/badge_24.png"></a>
                                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик "><img src="img/badges/badge_04.png"></a>
                                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик "><img src="img/badges/badge_14.png"></a>
-                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Бейджик "><img src="img/badges/badge_12.png"></a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -314,6 +313,13 @@
                                         </a>
                                         
                                     </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">                                        
+                                            <div class="col-md-12 col-xs-12">
+                                                <a href="profile-edit.html" class="btn btn-info btn-block btn-rounded">Рейтинг пользователей</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>
@@ -327,62 +333,52 @@
                                 <div class="panel panel-default">
                                     <div class="panel-body">
                                         <h3><span class="fa fa-pencil"></span> Профиль</h3>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Имя</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="Иван" class="form-control"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Фамилия</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="Иванов" class="form-control"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Отчество</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="Иванович" class="form-control"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Дата рождения</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <div class="input-group date">
-                                                    <input type="text" id="dp-3" class="form-control" value="25.10.2013"/>
-                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Отдел</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="ИТ департамент" class="form-control"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Должность</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" value="Web-developer" class="form-control"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">Навыки</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <input type="text" id="skills"  value="First,Second,Third"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-5 control-label">О себе</label>
-                                            <div class="col-md-9 col-xs-7">
-                                                <textarea class="form-control" rows="5" placeholder="Расскажите коротко о Ваших профессиональных навыках, чтобы Ваши коллеги смогли найти Вас по данному описанию"></textarea>
-                                            </div>
-                                        </div>                                          
-                                        <div class="form-group">
-                                            <div class="col-md-12 col-xs-5">
-                                                <button class="btn btn-primary btn-rounded pull-right">Сохранить</button>
-                                            </div>
-                                        </div>
+                                        
+                                        <table class="table profile-info">
+                                            <col width="25%">
+                                            <col width="75%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Имя</td>
+                                                    <td>Иван</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Фамилия</td>
+                                                    <td>Иванов</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Отчество</td>
+                                                    <td>Иванович</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Дата рождения</td>
+                                                    <td>10-15-2015</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Отдел</td>
+                                                    <td>ИТ департамент</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Должность</td>
+                                                    <td>Web-developer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Навыки</td>
+                                                    <td><ul class="list-tags small">
+                                                            <li><a href="#">Восстановление</a></li>
+                                                            <li><a href="#">Прошивка</a></li>
+                                                            <li><a href="#">Принтер</a></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>О себе</td>
+                                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quos odit ducimus adipisci, laboriosam obcaecati assumenda voluptatem ut perferendis magni quaerat quod praesentium voluptate facere vitae dolor et. Saepe, minima.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        
                                     </div>
                                 </div>
                             </form>
@@ -1105,15 +1101,6 @@
                 //Datepicker
                 $('#dp-3').datepicker({language: "ru", startView: 2});
                 //End Datepicker
-
-                //tags input
-                $('#skills').tagsInput({
-                    'defaultText':'ещё навык',
-                    'height':'auto',
-                    'width':'100%'
-                });
-                //EOF tagsinput
-
 
                 function onSuccess(){
                     $("#cp_photo").parent("a").find("span").html("Выберите другое фото");
