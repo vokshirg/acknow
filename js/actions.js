@@ -382,15 +382,15 @@ $(document).ready(function(){
 
 
 $(window).resize(function(){
-    x_navigation_onresize();
-    page_content_onresize(); 
+    page_actions();
+    onload();
 });
 
 
 
 function onload(){
-    x_navigation_onresize();    
     page_content_onresize();
+    x_navigation_onresize();    
 }
 
 function page_mode_boxed(){
@@ -774,6 +774,7 @@ $(".articles tr .show-more").on("click", onShowMoreClick);
 
 /* PAGE ON RESIZE WITH TIMEOUT */
 function onresize(timeout){    
+    page_content_onresize();   
     timeout = timeout ? timeout : 200;
     
     setTimeout(function(){
