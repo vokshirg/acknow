@@ -738,6 +738,7 @@ function onShowMoreClick() {
 
         ttd.removeClass("td-opened");
         ttd.children(".opened").removeClass("opened");
+        ttd.children(".article-description").removeAttr("style");
         ttd.attr( 'style', 'padding-bottom: 20px;' );
         ttd.children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
 
