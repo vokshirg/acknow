@@ -41,6 +41,15 @@ var page_actions = function(){
     });    
 
 
+    if ($(".list-group-category.permissions-edit li.admin-of-cat").length > 0 ){
+        var aoc = $(".list-group-category.permissions-edit li.admin-of-cat");
+        $(".permissions-edit li.admin-of-cat").parents(".cat-openable").addClass("opened");
+
+        if(!aoc.hasClass("opened")){
+            aoc.addClass("opened");
+            aoc.find("li").addClass("opened");
+        }
+    }
     if ($(".list-group-category.permissions li.admin-of-cat").length > 0 ){
         var aoc = $(".list-group-category.permissions li.admin-of-cat");
         $(".permissions li.admin-of-cat").parents(".cat-openable").addClass("opened");

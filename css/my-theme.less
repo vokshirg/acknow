@@ -311,7 +311,7 @@
     }
 }
 
-.list-group-category.permissions {
+.list-group-category.permissions-edit {
     .list-group-item {
         padding: 0;
         background: #EEE;
@@ -362,7 +362,7 @@
         }
     }
 }
-.list-group-category.articles {
+.list-group-category.articles, .list-group-category.permissions  {
     a {
         color: @base-background;
     }
@@ -438,6 +438,32 @@
         }
         &.expert label:before{
             content: 'Э';
+        }
+    }
+}
+
+.list-group-category.permissions {
+    .list-group-item.cat-openable {
+        span#need-for-openable{    
+            width: 100%;
+        }
+    }
+    .permission-radio  {
+
+        input[type=radio] {
+            display: none;
+
+            & + label{
+                display: none;
+            }
+        }
+
+        input[type=radio]:checked{
+            display: block;
+            
+            & + label{
+                display: block;
+            }
         }
     }
 }
