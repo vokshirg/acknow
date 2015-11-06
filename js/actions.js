@@ -739,10 +739,10 @@ function onShowMoreClick() {
 
     } else {
         if (ThisA.children(".article-description").length > 0) {
-            $(".articles").children(".article").each(function() {
-                $(this).children(".opened").removeClass("opened"); 
-                $(this).children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down"); 
-            });
+            // $(".articles").children(".article").each(function() {
+            //     $(this).children(".opened").removeClass("opened"); 
+            //     $(this).children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down"); 
+            // });
             ThisA.children(".article-description").addClass("opened");
             ThisA.children(".show-more").children(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
 
