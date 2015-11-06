@@ -728,58 +728,37 @@ function onRightControlClick() {
 
 $(".profile-controls .active").on ("click", onRightControlClick);
 
+
 function onShowMoreClick() {
-    event.stopPropagation();  
-    var ttd = $(this).closest("td");
+    var ThisA = $(this).closest(".article");
+    console.log("hi")
+    if (ThisA.children(".opened").length > 0) {
 
-
-    
-    if (ttd.children(".opened").length > 0) {
-
-        ttd.removeClass("td-opened");
-        ttd.children(".opened").removeClass("opened");
-        ttd.children(".article-description").removeAttr("style");
-        ttd.attr( 'style', 'padding-bottom: 20px;' );
-        ttd.children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
+        ThisA.children(".opened").removeClass("opened");
+        ThisA.children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
 
     } else {
-        if (ttd.children(".article-description").length > 0) {
-
-            ttd.addClass("td-opened");
-            var hopened = ttd.children(".article-info").children(".article-description").height() + 100;
-            var httd = ttd.children(".article-info").height();
-            var hltd = $(this).closest("tr").children("td:last-child").children(".article-control").height();
-            var htr = $(this).closest("tr").outerHeight()-15;
-            if (hltd > httd) {
-                var hopened = hopened + Math.abs(hltd - httd);
-            } else {
-                var hopened = hopened;
-            }
-            ttd.children(".article-description").attr( 'style', 'top: '+htr+'px!important;' );
-            ttd.children(".article-description").addClass("opened");
-            ttd.attr( 'style', 'padding-bottom: '+ hopened +'px!important;' );
-            ttd.children(".show-more").children(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
+        if (ThisA.children(".article-description").length > 0) {
+            $(".articles").children(".article").each(function() {
+                $(this).children(".opened").removeClass("opened"); 
+                $(this).children(".show-more").children(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down"); 
+            });
+            ThisA.children(".article-description").addClass("opened");
+            ThisA.children(".show-more").children(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
 
         }
     }
-
-    onresize();
-    return false;
 }
-
-$(".articles tr .show-more").on("click", onShowMoreClick);
-
+$(".articles .show-more").on("click", onShowMoreClick);
 
 
 
 /* PAGE ON RESIZE WITH TIMEOUT */
-function onresize(timeout){    
-    page_content_onresize();   
+function onresize(timeout){      
     timeout = timeout ? timeout : 200;
     
     setTimeout(function(){
         page_content_onresize();   
-
     },timeout);
 }
 /* EOF PAGE ON RESIZE WITH TIMEOUT */
