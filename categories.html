@@ -604,6 +604,35 @@
                                     <h3 class="panel-title">Статьи в данной категории</h3>
                                 </div>
                                 <div class="panel-body panel-body-table articles">
+                                    <div class="filter row">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span class="fa fa-search"></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Поиск по ключевым словам">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3">                                        
+                                            <select multiple class="form-control select">
+                                                <span class="status status-draft"><option></span>Черновики</option>
+                                                <span class="status status-aproved"><option></span>Одобренные</option>
+                                                <span class="status status-published"><option></span>Опубликованные</option>
+                                            </select>   
+                                        </div>  <!-- 
+                                        <div class="btn-group col-md-3">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle  btn-block" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li role="presentation" class="dropdown-header">Статуст</li>
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>                                                    
+                                            </ul>
+                                        </div> -->
+                                        <div class="btn-group col-md-3">
+                                            <button type="button" class="btn btn-primary  btn-block">Primary</button>
+                                        </div>
+                                    </div>
                                     <div class="article">
                                         <div class="article-info">
                                             <span class="status status-aproved" data-toggle="tooltip" data-placement="left" title="Одобрена"></span>
@@ -720,6 +749,7 @@
         <!-- THIS PAGE PLUGINS -->
         <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>  
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
         
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
         <script type="text/javascript" src="js/plugins/form/jquery.form.js"></script>
