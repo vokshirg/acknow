@@ -151,6 +151,77 @@
 }
 
 
+.filter {
+    padding: 0px 5px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+
+    &.active {
+        padding: 5px;
+        max-height: 500px;
+        overflow: visible;
+
+    }
+    
+    .dropdown-group {
+    
+        .dropdown-panel {
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 35px;
+            width: 400px;
+            z-index: 4;
+            border-top-width: 1px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            left: auto;
+            right: 15px;
+
+            &:after {
+                right: 62px;
+                left: auto;
+                top: -11px;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(0, 0, 0, 0);
+                border-bottom-color: #33414e;
+                border-width: 5px;
+                margin-left: -5px;
+            }
+            .btn-group {
+                width: 100%; 
+                margin-top: 10px;
+                padding: 0 5px;               
+
+                .btn {width: 25%;}
+            }
+        }
+        
+        &.active .dropdown-panel{
+            display: block;
+        }
+
+    }
+
+    .form-group {
+        margin-bottom: 0;
+
+        .control-label {margin-top: 5px;}
+    }
+}
+
+
 /* permission-radio */
 .permission-radio {
     margin: 0px;
@@ -444,7 +515,7 @@
     }
 }
 
-.list-group-category.permissions {
+.list-group-category.articles, .list-group-category.permissions {
     .list-group-item.cat-openable {
         span#need-for-openable{    
             width: 100%;

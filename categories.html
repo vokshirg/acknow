@@ -602,6 +602,10 @@
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Статьи в данной категории</h3>
+                                    
+                                    <ul class="panel-controls">
+                                        <li><a href="#" class="filter-btn"><i class="fa fa-sort-amount-desc"></i></a></li>
+                                    </ul>
                                 </div>
                                 <div class="panel-body panel-body-table articles">
                                     <div class="filter row">
@@ -619,20 +623,39 @@
                                                 <span class="status status-aproved"><option></span>Одобренные</option>
                                                 <span class="status status-published"><option></span>Опубликованные</option>
                                             </select>   
-                                        </div>  <!-- 
-                                        <div class="btn-group col-md-3">
-                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle  btn-block" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li role="presentation" class="dropdown-header">Статуст</li>
-                                                <li><a href="#">Action</a></li>
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>                                                    
-                                            </ul>
-                                        </div> -->
-                                        <div class="btn-group col-md-3">
-                                            <button type="button" class="btn btn-primary  btn-block">Primary</button>
+                                        </div>
+                                        <div class="btn-group col-md-3 dropdown-group">
+                                            <!-- <button type="button" class="btn btn-primary  btn-block">Primary</button> -->
+                                            <a href="#" class="btn btn-primary dropdown-toggle  btn-block"><i class="fa fa-calendar"></i> Дата</a>
+                                            <div class="panel panel-primary dropdown-panel animated zoomIn xn-drop-left">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title-box">
+                                                        <h3><i class="fa fa-calendar"></i> Фильтр по дате</h3>
+                                                        <span>Выберите интервал или период </span>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">Интервал</label>
+                                                        <div class="col-md-9">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control datepicker" value="2015-01-01">
+                                                                <span class="input-group-addon add-on"> - </span>
+                                                                <input type="text" class="form-control datepicker" value="2015-01-05">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-primary">День</button>
+                                                        <button type="button" class="btn btn-primary">Неделя</button>
+                                                        <button type="button" class="btn btn-primary">Месяц</button>
+                                                        <button type="button" class="btn btn-primary">3 месяца</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <div class="article">
                                         <div class="article-info">
                                             <span class="status status-aproved" data-toggle="tooltip" data-placement="left" title="Одобрена"></span>
@@ -750,6 +773,7 @@
         <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>  
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
         
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
         <script type="text/javascript" src="js/plugins/form/jquery.form.js"></script>

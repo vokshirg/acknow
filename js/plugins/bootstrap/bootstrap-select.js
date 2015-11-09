@@ -986,15 +986,22 @@
 
   $.fn.selectpicker.Constructor = Selectpicker;
 
+
   $.fn.selectpicker.defaults = {
     style: 'btn-default',
     size: 'auto',
     title: null,
     selectedTextFormat: 'values',
-    noneSelectedText: 'Nothing selected',
-    noneResultsText: 'No results match',
-    countSelectedText: '{0} of {1} selected',
-    maxOptionsText: ['Limit reached ({n} {var} max)', 'Group limit reached ({n} {var} max)', ['items', 'item']],
+    // noneSelectedText: 'Nothing selected',
+    // noneResultsText: 'No results match',
+    // countSelectedText: '{0} of {1} selected',
+    // maxOptionsText: ['Limit reached ({n} {var} max)', 'Group limit reached ({n} {var} max)', ['items', 'item']],
+    noneSelectedText: 'Ничего не выбрано',
+    noneResultsText: 'Совпадений не найдено {0}',
+    countSelectedText: 'Выбрано {0} из {1}',
+    maxOptionsText: ['Достигнут предел ({n} {var} максимум)', 'Достигнут предел в группе ({n} {var} максимум)', ['items', 'item']],
+    // doneButtonText: 'Закрыть',
+    // multipleSeparator: ', '
     width: false,
     container: false,
     hideDisabled: false,
