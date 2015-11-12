@@ -692,8 +692,13 @@ function x_navigation(){
 
         }else {
             dg.addClass("active");
+            $('[data-toggle="dropdown"]').parent().removeClass('open');
         }
         
+    });
+
+    $(".filter .selectpicker").click(function(){
+        $(".filter .dropdown-group").removeClass("active");
     });
        
     $(".x-navigation li").click(function(event){
@@ -756,7 +761,6 @@ function onRightControlClick() {
     $(".profile-controls .active").on ("click", onRightControlClick);
 
 }
-
 $(".profile-controls .active").on ("click", onRightControlClick);
 
 
@@ -781,6 +785,20 @@ function onShowMoreClick() {
     }
 }
 $(".articles .show-more").on("click", onShowMoreClick);
+
+
+$(".categories-edit .dd3-item .dd3-content").click(function(){
+    var par = $(this).parent(".dd3-item");
+
+    if ($(par).hasClass("active")) {
+        $(par).removeClass("active");
+    } else {
+        $(par).closest(".dd").find(".active").removeClass("active");
+        $(par).addClass("active");
+
+    }
+    
+});
 
 
 

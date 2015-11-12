@@ -212,11 +212,11 @@
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Категории</h3>
+                                    <a href="categories-edit.html" class="btn btn-danger btn-condensed pull-right"><span class="fa fa-pencil"></span></a>
                                 </div>
                                 <div class="panel-body">
                                     <ol class="list-group-category articles">
                                         <li class="list-group-item active cat-openable">                                    
-                                            
                                             <span class="category-title"><a href="#">Lorem ipsum dolor sit amet.</a>
                                                 <span id="need-for-openable"></span>
                                                 <div class="category-permissions">
@@ -593,6 +593,33 @@
                                                 </div>
                                             </span>
                                         </li>
+                                    </ol>
+                                    <br/>
+                                    <ol class="list-group-category articles">
+                                        <li class="list-group-item ">                                    
+                                            
+                                            <span class="category-title"><a href="#">Статьи без категории</a>
+                                                <span id="need-for-openable"></span>
+                                                <div class="category-permissions">
+                                                    <div class="permission-radio candidate">
+                                                      <input name="permission-cat-wocat" type="radio" value="None"  id="cat-wocat-candidate"   />
+                                                      <label for="cat-wocat-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
+                                                    </div>
+                                                    <div class="permission-radio contributor">
+                                                      <input name="permission-cat-wocat" type="radio" value="None" id="cat-wocat-contributor"   />
+                                                      <label for="cat-wocat-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
+                                                    </div>
+                                                    <div class="permission-radio publisher">
+                                                      <input name="permission-cat-wocat" type="radio" value="None" checked id="cat-wocat-publisher"   />
+                                                      <label for="cat-wocat-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
+                                                    </div>
+                                                    <div class="permission-radio expert">
+                                                        <input name="permission-cat-wocat" type="radio" value="None" id="cat-wocat-expert"   />
+                                                        <label for="cat-wocat-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li> 
                                     </ol>
                                 </div>
                             </div>
