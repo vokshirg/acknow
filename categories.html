@@ -212,11 +212,15 @@
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Категории</h3>
-                                    <a href="categories-edit.html" class="btn btn-danger btn-condensed pull-right"><span class="fa fa-pencil"></span></a>
+                                    <div class="pull-right">
+                                        <button class="btn btn-primary btn-condensed btn-cat-open" data-toggle="tooltip" data-placement="top" title="Раскрыть все категории"><span class="fa fa-folder"></span></button>
+                                        <button class="btn btn-info btn-condensed btn-all-articles" data-toggle="tooltip" data-placement="top" title="Показать все статьи"><span class="fa fa-file-text-o"></span></button>
+                                        <a href="categories-edit.html" class="btn btn-danger btn-condensed" data-toggle="tooltip" data-placement="top" title="Редактирвоать категории"><span class="fa fa-pencil"></span></a>
+                                    </div>
                                 </div>
                                 <div class="panel-body">
                                     <ol class="list-group-category articles">
-                                        <li class="list-group-item active cat-openable">                                    
+                                        <li class="list-group-item cat-openable">                                    
                                             <span class="category-title"><a href="#">Lorem ipsum dolor sit amet.</a>
                                                 <span id="need-for-openable"></span>
                                                 <div class="category-permissions">
@@ -626,9 +630,23 @@
 
                         </div>
                         <div class="col-md-7">
+                            <div class="cat-description">
+                                <div class="panel panel-primary">
+                                    <!-- <div class="panel-heading"> -->
+                                        <!-- <h3 class="panel-title">Категория А</h3> -->
+                                    <!-- </div> -->
+                                    <div class="panel-body">
+                                    <h3>Название категории</h3>
+                                        Описание категории
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus ipsam ut, dolore quia, eum amet nesciunt, nemo iusto tenetur, ex voluptates! Similique praesentium minima at quam inventore unde natus.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Статьи в данной категории</h3>
+                                    <h3 class="panel-title">Статьи в категории <i>(287 статей)</i></h3>
                                     
                                     <ul class="panel-controls">
                                         <li><a href="#" class="filter-btn"><i class="fa fa-sort-amount-desc"></i></a></li>

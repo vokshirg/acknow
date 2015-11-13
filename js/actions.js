@@ -725,7 +725,7 @@ function x_navigation(){
 
     // $(".list-group-category li.admin-of-cat").parent(".cat-openable").addClass("opened");
 
-    $(".list-group-category li.cat-openable > span > span").click(function(event){
+    $(".list-group-category li.cat-openable > span > #need-for-openable").click(function(event){
         event.stopPropagation();
 
         var li = $(this).parent().parent("li.cat-openable");
@@ -753,7 +753,6 @@ function x_navigation(){
 
 function onRightControlClick() {
 
-    // console.log("privet");
 
     $(this).parent(".profile-controls").children(".profile-control-right").addClass ("active");
     $(this).removeClass ("active");
@@ -766,7 +765,6 @@ $(".profile-controls .active").on ("click", onRightControlClick);
 
 function onShowMoreClick() {
     var ThisA = $(this).closest(".article");
-    console.log("hi")
     if (ThisA.children(".opened").length > 0) {
 
         ThisA.children(".opened").removeClass("opened");
@@ -783,6 +781,7 @@ function onShowMoreClick() {
 
         }
     }
+    onresize();
 }
 $(".articles .show-more").on("click", onShowMoreClick);
 
@@ -799,6 +798,39 @@ $(".categories-edit .dd3-item .dd3-content").click(function(){
     }
     
 });
+
+
+$(".btn-all-articles").click(function(){
+    $(".articles").find(".active").removeClass("active");
+    $(".cat-description").removeClass("active");
+
+});
+
+$(".btn-cat-open").click(function(){
+    if ($(this).hasClass("opened")) {
+        $(this).removeClass("opened");
+        $(".cat-openable").removeClass("opened");
+        $(this).children(".fa").removeClass("fa-folder-open").addClass("fa-folder");
+    } else {
+        $(this).addClass("opened");
+        $(".cat-openable").addClass("opened");
+        $(this).children(".fa").removeClass("fa-folder").addClass("fa-folder-open");
+    }
+});
+
+$(".articles .list-group-item .category-title").click(function(event){
+    // event.preventDefault();
+    var par = $(this).parent(".list-group-item");
+    if (!$(par).hasClass("active")) {
+
+        $(".articles").find(".active").not(par).removeClass("active");
+        $(par).addClass("active");
+        $(".cat-description").addClass("active");
+        $(this).children("a")[0].click();
+    }
+});
+
+
 
 
 
