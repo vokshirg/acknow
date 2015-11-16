@@ -479,7 +479,7 @@ function page_content_onresize(){
             $("body").addClass("page-container-boxed").data("boxed","");
         }
     }
-    //$(window).trigger("resize");
+    // $(window).trigger("resize");
 }
 
 /* PANEL FUNCTIONS */
@@ -609,7 +609,7 @@ function x_navigation_onresize(){
 
     }
 
-    return false;
+    // return false;
 }
 
 
@@ -823,7 +823,7 @@ $(".categories-edit .dd3-item .dd3-content").click(function(){
 
 
 $(".btn-all-articles").click(function(){
-    $(".articles").find(".active").removeClass("active");
+    $(".categories").find(".active").removeClass("active");
     $(".cat-description").removeClass("active");
     onresize();
 

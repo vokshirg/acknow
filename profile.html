@@ -386,8 +386,8 @@
                                     
 
                                     <div class="tab-pane panel-body-table panel-body articles active" id="tab1">
-                                        <div class="filter active row">
-                                            <div class="col-md-6">
+                                        <div class="filter row">
+                                            <div class="col-xs-12 col-md-6 col-sm-6">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <span class="fa fa-search"></span>
@@ -395,14 +395,14 @@
                                                     <input type="text" class="form-control" placeholder="Поиск по ключевым словам">
                                                 </div>
                                             </div>
-                                            <div class="form-group col-md-3">                                        
+                                            <div class="form-group col-xs-6  col-sm-3 col-md-3">                                        
                                                 <select multiple class="form-control select">
-                                                    <span class="status status-draft"><option></span>Черновики</option>
-                                                    <span class="status status-aproved"><option></span>Одобренные</option>
-                                                    <span class="status status-published"><option></span>Опубликованные</option>
+                                                    <option>Черновики</option>
+                                                    <option>Одобренные</option>
+                                                    <option>Опубликованные</option>
                                                 </select>   
                                             </div>
-                                            <div class="btn-group col-md-3 dropdown-group">
+                                            <div class="btn-group col-xs-6  col-sm-3 col-md-3 dropdown-group">
                                                 <!-- <button type="button" class="btn btn-primary  btn-block">Primary</button> -->
                                                 <a href="#" class="btn btn-primary dropdown-toggle  btn-block"><i class="fa fa-calendar"></i> Дата</a>
                                                 <div class="panel panel-primary dropdown-panel animated zoomIn xn-drop-left">
@@ -414,8 +414,8 @@
                                                     </div>
                                                     <div class="panel-body">
                                                         <div class="form-group">
-                                                            <label class="col-md-3 control-label">Интервал</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-xs-3 control-label">Интервал</label>
+                                                            <div class="col-xs-9">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control datepicker" value="2015-01-01">
                                                                     <span class="input-group-addon add-on"> - </span>
@@ -433,6 +433,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                         <div class="article">
                                             <div class="article-info">
                                                 <span class="status status-aproved" data-toggle="tooltip" data-placement="left" title="Одобрена"></span>
