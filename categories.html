@@ -646,7 +646,7 @@
 
                             <div class="article-legend">  
                                 <div class="panel-body">                              
-                                    <span class="fa fa-circle text-defult"> Черновик&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="fa fa-circle text-default"> Черновик&nbsp;&nbsp;&nbsp;</span>
                                     <span class="fa fa-circle text-success"> Одобрена&nbsp;&nbsp;&nbsp;</span>
                                     <span class="fa fa-circle text-info"> Опубликована&nbsp;&nbsp;&nbsp;</span>
                                     <!-- <span class="fa fa-circle text-danger"> Устарела&nbsp;&nbsp;&nbsp;</span> -->
@@ -672,13 +672,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group col-xs-6  col-sm-3 col-md-3">                                        
-                                            <select multiple class="form-control select">
-                                                <option>Черновики</option>
-                                                <option>Одобренные</option>
-                                                <option>Опубликованные</option>
+                                            <select multiple title="Стаус статей" data-selected-text-format="count>1" class="form-control select">
+                                                <option  data-content="<span class='fa fa-circle text-default'> Черновики</span>" title="123">Черновики</option>
+                                                <option data-content="<span class='fa fa-circle text-success'> Одобренные</span>">Одобренные</option>
+                                                <option data-content="<span class='fa fa-circle text-info'> Опубликованные</span>">Опубликованные</option>
                                             </select>   
                                         </div>
-                                        <div class="btn-group col-xs-6  col-sm-3 col-md-3 dropdown-group">
+                                        <div class="btn-group filter-date col-xs-6  col-sm-3 col-md-3 dropdown-group">
                                             <!-- <button type="button" class="btn btn-primary  btn-block">Primary</button> -->
                                             <a href="#" class="btn btn-primary dropdown-toggle  btn-block"><i class="fa fa-calendar"></i> Дата</a>
                                             <div class="panel panel-primary dropdown-panel animated zoomIn xn-drop-left">

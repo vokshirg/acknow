@@ -216,8 +216,18 @@
 
     .form-group {
         margin-bottom: 0;
+        padding-right: 10px;
+        padding-left: 10px;
 
         .control-label {margin-top: 5px;}
+        .filter-option {
+            // font-size: 10px;
+        }
+    }
+    .filter-date {
+        padding-right: 10px;
+        padding-left: 10px;
+
     }
 }
 
@@ -826,6 +836,11 @@ table.table.profile-info {
             line-height: 22px;
             bottom: 0;
             z-index: 2;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
 
             &:hover {
                 background-color: #F1F1F1;

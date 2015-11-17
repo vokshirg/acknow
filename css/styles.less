@@ -1167,7 +1167,7 @@ body{
             
             .dropdown-header{padding: 10px 15px; border-bottom: 1px solid #E5E5E5; color: #777;}
             
-            .dropdown-menu .fa{margin-right: 5px;}
+            .dropdown-menu .fa{margin-right: 15px;}
             .dropdown-menu .divider{background: #F5F5F5; margin: 0px; padding: 15px 0px 0px; border-bottom: 1px solid #E5E5E5;}
         /* EOF DROP DOWN */
         
@@ -2498,7 +2498,13 @@ body{
             .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 220px;}
             .bootstrap-select.form-control:not([class*="span"]) {width: 100%;}
             .bootstrap-select.show-menu-arrow.open > .btn {z-index: 2051;}
-            .bootstrap-select.btn-group .btn .filter-option {display: inline-block;overflow: hidden;width: 100%;text-align: left;}
+            .bootstrap-select.btn-group .btn .filter-option {
+                display: inline-block;overflow: hidden;width: 100%;text-align: left; 
+
+                .fa, .glyphicon {
+                    font-size:10px;
+                }
+            }
             .bootstrap-select.btn-group .btn .caret {position: absolute;top: 50%;right: 12px;margin-top: -2px;vertical-align: middle;}
             .bootstrap-select.btn-group > .disabled,.bootstrap-select.btn-group .dropdown-menu li.disabled > a {cursor: not-allowed;}
             .bootstrap-select.btn-group > .disabled:focus {outline: none !important;}
