@@ -209,7 +209,6 @@
                         </div>                                                                                
                         
                         <div class="pull-right">                            
-                            <button class="btn btn-default"><span class="fa fa-cogs"></span> Settings</button>
                             <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span></button>
                         </div>                        
                     </div>
@@ -257,8 +256,6 @@
                                         <option>Option 5</option>
                                     </select>   
                                 </div>   
-                                <button class="btn btn-default"><span class="fa fa-code-fork"></span> Версии документа</button>
-
                             </form>
                         </div>
                         <div class="block">
@@ -305,7 +302,7 @@
                             <div class="form-group pull-right">
                                 <div class="my-files-chekbox btn btn-primary pull-right">
                                     <input id="my-files-checkbox" type="checkbox">
-                                    <label for="my-files-checkbox"  data-toggle="tooltip" data-placement="top" title="Показать загруженные мной / показать все файлы"></label>
+                                    <label for="my-files-checkbox" data-toggle="tooltip" data-placement="top" title="Показать загруженные мной / показать все файлы"></label>
                                 </div> 
                                 <div class="starred-checkdox btn btn-primary pull-right">
                                     <input id="starred-checkdox" type="checkbox">
@@ -337,13 +334,11 @@
                                     <input type="checkbox" class="icheckbox"/>
                                 </label>
 
-                                    <button class="btn btn-default"><span class="fa fa-download"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-trash"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-mail-forward"></span></button>
+                                    <button class="btn btn-default btn-condensed" data-toggle="tooltip" data-placement="top" title="Скачать выбранные файлы"><span class="fa fa-download"></span></button>
+                                    <button class="btn btn-danger btn-condensed" data-toggle="tooltip" data-placement="top" title="Удалить выбранные файлы"><span class="fa fa-trash"></span></button>
 
                                 <ul class="panel-controls">
-                                    <li><a href="#" class="filter-btn"><i class="fa fa-sort-amount-desc"></i></a></li>
+                                    <li><a href="#" class="filter-btn" data-toggle="tooltip" data-placement="top" title="Фильтр"><i class="fa fa-filter"></i></a></li>
                                 </ul>
 
                             </div>
@@ -408,13 +403,14 @@
                                     <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
+                                    <div class="file-type"><span class="fa fa-file-excel-o"></span></div>
                                     <a href="#" class="file-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nam, iure, quaerat id doloremque quo aspernatur! Tenetur hic error commodi, repudiandae, illum dolores sit fugit excepturi, iusto quos, natus id.</a>
                                     <div class="file-user">Dmitry Ivaniuk</div> 
                                                                         
-                                    <div class="file-date">Сегодня, 11:21</div>
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">Сегодня, 11:21 <span class="fa fa-code-fork"></span></a></div>
 
                                     <div class="file-size">
-                                        <a href="#download"><span class="fa fa-paperclip"></span> 11Kb</a>
+                                        <a href="#download">11Kb <span class="fa fa-download"></span></a>
                                     </div>
                                 </div>
                                 
@@ -425,13 +421,14 @@
                                     <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
+                                    <div class="file-type"><span class="fa fa-file-pdf-o"></span></div>
                                     <a href="#" class="file-title">Lorem ipsum dolor sit </a>
                                     <div class="file-user">Dmitry Ivaniuk</div> 
                                         
-                                    <div class="file-date">Сегодня, 11:21</div>
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">Сегодня, 11:21 <span class="fa fa-code-fork"></span></a></div>
 
                                     <div class="file-size">
-                                        <a href="#download"><span class="fa fa-paperclip"></span> 1100Kb</a>
+                                        <a href="#download">1100Kb <span class="fa fa-download"></span></a>
                                     </div>
                                 </div>
                                 
@@ -442,13 +439,14 @@
                                     <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
+                                    <div class="file-type"><span class="fa fa-file-powerpoint-o"></span></div>
                                     <a href="#" class="file-title">Lorem ipsum dolor sit </a>
                                     <div class="file-user">Dmitry Ivaniuk</div> 
                                         
-                                    <div class="file-date">Сегодня, 11:21</div>
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">Сегодня, 11:21 <span class="fa fa-code-fork"></span></a></div>
 
                                     <div class="file-size">
-                                        <a href="#download"><span class="fa fa-paperclip"></span> 58Mb</a>
+                                        <a href="#download">58Mb <span class="fa fa-download"></span></a>
                                     </div>
                                 </div>
 
@@ -459,13 +457,50 @@
                                     <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
+                                    <div class="file-type"><span class="fa fa-file-word-o"></span></div>
                                     <a href="#" class="file-title">Lorem ipsum dolor sit </a>
                                     <div class="file-user">Dmitry Ivaniuk</div> 
                                         
-                                    <div class="file-date">Сегодня, 11:21</div>
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">Сегодня, 11:21 <span class="fa fa-code-fork"></span></a></div>
 
                                     <div class="file-size">
-                                        <a href="#download"><span class="fa fa-paperclip"></span> 1.2MB</a>
+                                        <a href="#download">1.2MB <span class="fa fa-download"></span></a>
+                                    </div>
+                                </div>
+
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
+                                    </div>
+                                    <div class="file-star">
+                                        <span class="fa fa-star-o"></span>
+                                    </div>
+                                    <div class="file-type"><span class="fa fa-file-archive-o"></span></div>
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit </a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                        
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">21.00.15, 11:21 <span class="fa fa-code-fork"></span></a></div>
+
+                                    <div class="file-size">
+                                        <a href="#download">1.2MB <span class="fa fa-download"></span></a>
+                                    </div>
+                                </div>
+
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
+                                    </div>
+                                    <div class="file-star">
+                                        <span class="fa fa-star-o"></span>
+                                    </div>
+                                    <div class="file-type"><span class="fa fa-file-video-o"></span></div>
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit </a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                        
+                                    <div class="file-date"><a href="#versions"  data-toggle="tooltip" data-placement="top" title="Все версии документа">Сегодня, 11:21 <span class="fa fa-code-fork"></span></a></div>
+
+                                    <div class="file-size">
+                                        <a href="#download">1.2MB <span class="fa fa-download"></span></a>
                                     </div>
                                 </div>
 
@@ -478,10 +513,8 @@
                                     <input type="checkbox" class="icheckbox"/>
                                 </label>
 
-                                    <button class="btn btn-default"><span class="fa fa-download"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-trash"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-mail-forward"></span></button>
+                                    <button class="btn btn-default btn-condensed" data-toggle="tooltip" data-placement="top" title="Скачать выбранные файлы"><span class="fa fa-download"></span></button>
+                                    <button class="btn btn-danger btn-condensed" data-toggle="tooltip" data-placement="top" title="Удалить выбранные файлы"><span class="fa fa-trash"></span></button>
                                 
                                 <ul class="pagination pagination-sm pull-right">
                                     <li class="disabled"><a href="#">«</a></li>
@@ -555,7 +588,7 @@
         $(function(){
             //tags input
             $('#file-tags').tagsInput({
-                'defaultText':'добваить тэг',
+                'defaultText':'добавить тэг',
                 'height':'auto',
                 'width':'100%'
             });
