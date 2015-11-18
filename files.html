@@ -223,6 +223,7 @@
                             </form>
                         </div>
                         <div class="block">
+                            <h4>Детали файла</h4>
                             <form role="form">
                                 <div class="form-group">
                                     <label>Название</label>
@@ -242,10 +243,16 @@
                                 </div> 
                                 <div class="form-group">                                        
                                     <label class="control-label">Категории</label>
-                                    <select multiple class="form-control select">
+                                    <select multiple title="Выберите категории" multiple data-selected-text-format="count" class="form-control select">
                                         <option>Option 1</option>
                                         <option>Option 2</option>
                                         <option>Option 3</option>
+                                        <option class="nested-lvl-1">Option 3-1</option>
+                                        <option class="nested-lvl-2">Option 3-2</option>
+                                        <option class="nested-lvl-3">Option 3-3</option>
+                                        <option class="nested-lvl-4">Option 3-4</option>
+                                        <option class="nested-lvl-3">Option 3-3</option>
+                                        <option class="nested-lvl-4">Option 3-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptas.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, quaerat.</option>
                                         <option>Option 4</option>
                                         <option>Option 5</option>
                                     </select>   
@@ -254,22 +261,48 @@
 
                             </form>
                         </div>
+                        <div class="block">
+                            <h4>Используется в статьях</h4>
+                            <ul class="users-articles">
+                                <li>
+                                    Управление знаниями
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_10">
+                                        <a class="published" href="/articles/10">Документирование знаний: фантастика, миф или работающий инструмент?</a>
+                                    </li>
+                                    <li class="article" id="article_19">
+                                        <a class="published" href="/articles/19">Знания компании — используйте с умом</a>
+                                    </li>
+                                </ul>
+                                <li>
+                                    Телекоммуникации
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_23">
+                                        <a class="unpublished" href="/articles/23">мощность</a>
+                                    </li>
+                                    <li class="article" id="article_25">
+                                        <a class="unpublished" href="/articles/25">Не работает принтер</a>
+                                    </li>
+                                </ul>
+                                <li>
+                                    Электроэнергетика
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_28">
+                                        <a class="unpublished" href="/articles/28">Химия твердого тела</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
 
                     </div>
                     
 
                     <div class="content-frame-body content-frame-body-left">
                         <form >
-                            <div class="form-group col-xs-10">                                        
-                                <select multiple title="Выберите категории" class="form-control select">
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                    <option>Option 5</option>
-                                </select>   
-                            </div>
-                            <div class="form-group col-xs-2">
+                            <div class="form-group pull-right">
                                 <div class="my-files-chekbox btn btn-primary pull-right">
                                     <input id="my-files-checkbox" type="checkbox">
                                     <label for="my-files-checkbox"  data-toggle="tooltip" data-placement="top" title="Показать загруженные мной / показать все файлы"></label>
@@ -279,6 +312,22 @@
                                     <label for="starred-checkdox"  data-toggle="tooltip" data-placement="top" title="Показать помеченные мной / показать все"></label>
                                 </div> 
                             </div>
+                            <div class="form-group" style="margin-right:80px;">                                        
+                                <select multiple title="Выберите категории" multiple data-selected-text-format="count" class="form-control select">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option class="nested-lvl-1">Option 3-1</option>
+                                    <option class="nested-lvl-2">Option 3-2</option>
+                                    <option class="nested-lvl-3">Option 3-3</option>
+                                    <option class="nested-lvl-4">Option 3-4</option>
+                                    <option class="nested-lvl-3">Option 3-3</option>
+                                    <option class="nested-lvl-4">Option 3-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, iusto?</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                            
                         </form>
 
 
