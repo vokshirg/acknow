@@ -402,6 +402,29 @@ var page_actions = function(){
             }
         );        
     }
+
+
+    $(".file-item").on("click", function() {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(".file-details.opened").removeClass("opened");
+        }
+        else {
+            if ($(".file-item.active").length > 0) {
+                $(".file-details.opened").removeClass("opened");
+                $(".file-item.active").removeClass("active")
+                $(this).addClass("active");
+                setTimeout (function(){
+                    $(".file-details").addClass("opened");
+                }, 200);
+            } else {
+                $(this).addClass("active");
+                $(".file-details").addClass("opened");
+            }
+        }
+    });
+
+
 }
 
 $(document).ready(function(){        
