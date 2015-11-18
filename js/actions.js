@@ -495,7 +495,7 @@ function page_content_onresize(){
            
            var cfM = vpH-fbm < cfH-80 ? cfH-80 : vpH-fbm;
                    
-           $(".content-frame-body,.content-frame-right,.content-frame-left").height(cfM);
+           $(".content-frame-body,.content-frame-right,.content-frame-left").height(cfM+20);
            
        }else{
            $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height());
