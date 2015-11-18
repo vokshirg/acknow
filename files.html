@@ -33,7 +33,7 @@
                             <span class="xn-text"> Создать статью</span>
                         </button>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="index.html">
                             <i class="fa fa-desktop"></i>
                             <span class="xn-text">Главная</span>
@@ -46,8 +46,8 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="#">
-                            <i class="fa fa-picture-o"></i>
+                        <a href="files.html">
+                            <i class="fa fa-files-o"></i>
                             <span class="xn-text">Файлы</span>
                         </a>
                     </li>
@@ -205,602 +205,234 @@
                 <div class="content-frame">
                     <div class="content-frame-top">                        
                         <div class="page-title">                    
-                            <h2><span class="fa fa-inbox"></span> Inbox <small>(3 unread)</small></h2>
+                            <h2><span class="fa fa-files-o"></span> Файлы <small>(457)</small></h2>
                         </div>                                                                                
                         
                         <div class="pull-right">                            
                             <button class="btn btn-default"><span class="fa fa-cogs"></span> Settings</button>
-                            <button class="btn btn-default content-frame-left-toggle"><span class="fa fa-bars"></span></button>
                             <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span></button>
                         </div>                        
                     </div>
-                    
-                    <div class="content-frame-left">
-                        <h3 class="panel-title">Категории</h3>
-                        <div class="pull-right">
-                            <button class="btn btn-primary btn-condensed btn-cat-open" data-toggle="tooltip" data-placement="top" title="Раскрыть все категории"><span class="fa fa-folder"></span></button>
-                            <button class="btn btn-info btn-condensed btn-all-articles" data-toggle="tooltip" data-placement="top" title="Показать все статьи"><span class="fa fa-file-text-o"></span></button>
-                            <a href="categories-edit.html" class="btn btn-danger btn-condensed" data-toggle="tooltip" data-placement="top" title="Редактирвоать категории"><span class="fa fa-pencil"></span></a>
+
+                    <div class="content-frame-right">
+                        <div class="block push-up-10">
+                            <form action="#" class="dropzone dropzone-mini dz-clickable">
+                                <div class="dz-default dz-message">
+                                    <span>Перенесите файлы для загрузки</span>
+                                </div>
+                            </form>
                         </div>
-                        <ol class="list-group-category categories">
-                            <li class="list-group-item cat-openable">                                    
-                                <span class="category-title"><a href="#">Lorem ipsum dolor sit amet.</a>
-                                    <span id="need-for-openable"></span>
-                                    <div class="category-permissions">
-                                        <div class="permission-radio candidate">
-                                          <input name="permission-cat-1" type="radio" value="None" checked id="cat-1-candidate"   />
-                                          <label for="cat-1-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                        </div>
-                                        <div class="permission-radio contributor">
-                                          <input name="permission-cat-1" type="radio" value="None" id="cat-1-contributor"   />
-                                          <label for="cat-1-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                        </div>
-                                        <div class="permission-radio publisher">
-                                          <input name="permission-cat-1" type="radio" value="None" id="cat-1-publisher"   />
-                                          <label for="cat-1-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                        </div>
-                                        <div class="permission-radio expert">
-                                            <input name="permission-cat-1" type="radio" value="None" id="cat-1-expert"   />
-                                            <label for="cat-1-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                        </div>
-                                    </div>
-                                </span>
+                        <div class="block">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Название</label>
+                                    <input type="text" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Описание</label>
+                                    <textarea class="form-control"> </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Дата</label>
+                                    <input type="date" disabled class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Теги</label>
+                                    <input type="text" id="file-tags" value="First,Second"/>
+                                </div> 
+                                <div class="form-group">                                        
+                                    <label class="control-label">Категории</label>
+                                    <select multiple class="form-control select">
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                        <option>Option 5</option>
+                                    </select>   
+                                </div>   
+                                <button class="btn btn-default"><span class="fa fa-code-fork"></span> Версии документа</button>
 
-                                <ol class="list-group-category nested">
-                                    <li class="list-group-item ">                                    
-                                        
-                                        <span class="category-title"><a href="#">Soluta distinctio, dignissimos ipsam officia.</a>
-                                            <span id="need-for-openable"></span>
-                                            <div class="category-permissions">
-                                                <div class="permission-radio candidate">
-                                                  <input name="permission-cat-1-1" type="radio" value="None"  id="cat-1-1-candidate"   />
-                                                  <label for="cat-1-1-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                </div>
-                                                <div class="permission-radio contributor">
-                                                  <input name="permission-cat-1-1" type="radio" value="None" id="cat-1-1-contributor"   />
-                                                  <label for="cat-1-1-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                </div>
-                                                <div class="permission-radio publisher">
-                                                  <input name="permission-cat-1-1" type="radio" value="None" checked id="cat-1-1-publisher"   />
-                                                  <label for="cat-1-1-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                </div>
-                                                <div class="permission-radio expert">
-                                                    <input name="permission-cat-1-1" type="radio" value="None" id="cat-1-1-expert"   />
-                                                    <label for="cat-1-1-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </li>                       
-                                    <li class="list-group-item">                                    
-                                        
-                                        <span class="category-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing el</a>
-                                            <span id="need-for-openable"></span>
-                                            <div class="category-permissions">
-                                                <div class="permission-radio candidate">
-                                                  <input name="permission-cat-1-2" type="radio" value="None" id="cat-1-2-candidate"   />
-                                                  <label for="cat-1-2-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                </div>
-                                                <div class="permission-radio contributor">
-                                                  <input name="permission-cat-1-2" type="radio" checked value="None" id="cat-1-2-contributor"   />
-                                                  <label for="cat-1-2-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                </div>
-                                                <div class="permission-radio publisher">
-                                                  <input name="permission-cat-1-2" type="radio" value="None" id="cat-1-2-publisher"   />
-                                                  <label for="cat-1-2-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                </div>
-                                                <div class="permission-radio expert">
-                                                    <input name="permission-cat-1-2" type="radio" value="None" id="cat-1-2-expert"   />
-                                                    <label for="cat-1-2-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        
-                                    </li>
-                                    <li class="list-group-item cat-openable">                                    
-                                        
-                                        <span class="category-title"><a href="#">Lorem ipsum dolor sit amet, consectet</a>
-                                            <span id="need-for-openable"></span>
-                                            <div class="category-permissions">
-                                                <div class="permission-radio candidate">
-                                                  <input name="permission-cat-1-3" type="radio" value="None" id="cat-1-3-candidate"   />
-                                                  <label for="cat-1-3-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                </div>
-                                                <div class="permission-radio contributor">
-                                                  <input name="permission-cat-1-3" type="radio" value="None" id="cat-1-3-contributor"   />
-                                                  <label for="cat-1-3-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                </div>
-                                                <div class="permission-radio publisher">
-                                                  <input name="permission-cat-1-3" type="radio" value="None" id="cat-1-3-publisher"   />
-                                                  <label for="cat-1-3-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                </div>
-                                                <div class="permission-radio expert">
-                                                    <input name="permission-cat-1-3" type="radio" value="None" checked id="cat-1-3-expert"   />
-                                                    <label for="cat-1-3-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <ol class="list-group-category nested">
-                                            <li class="list-group-item cat-openable">                                    
-                                                
-                                                <span class="category-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur illum omnis amet quo voluptatum laudantium quae debitis, quisquam quas dic</a>
-                                                    <span id="need-for-openable"></span>
-                                                    <div class="category-permissions">
-                                                        <div class="permission-radio candidate">
-                                                          <input name="permission-cat-1-3-1" type="radio" value="None" checked id="cat-1-3-1-candidate"   />
-                                                          <label for="cat-1-3-1-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                        </div>
-                                                        <div class="permission-radio contributor">
-                                                          <input name="permission-cat-1-3-1" type="radio" value="None" id="cat-1-3-1-contributor"   />
-                                                          <label for="cat-1-3-1-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                        </div>
-                                                        <div class="permission-radio publisher">
-                                                          <input name="permission-cat-1-3-1" type="radio" value="None" id="cat-1-3-1-publisher"   />
-                                                          <label for="cat-1-3-1-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                        </div>
-                                                        <div class="permission-radio expert">
-                                                            <input name="permission-cat-1-3-1" type="radio" value="None" id="cat-1-3-1-expert"   />
-                                                            <label for="cat-1-3-1-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                        </div>
-                                                    </div>
-                                                </span>
-                                                <ol class="list-group-category nested">
-                                                    <li class="list-group-item">
-                                                        
-                                                        <span class="category-title"><a href="#">Fugit delectus repellat voluptate aperi</a>
-                                                            <span id="need-for-openable"></span>
-                                                            <div class="category-permissions">
-                                                                <div class="permission-radio candidate">
-                                                                  <input name="permission-cat-1-3-1-1" type="radio" value="None" checked id="cat-1-3-1-1-candidate"   />
-                                                                  <label for="cat-1-3-1-1-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                </div>
-                                                                <div class="permission-radio contributor">
-                                                                  <input name="permission-cat-1-3-1-1" type="radio" value="None" id="cat-1-3-1-1-contributor"   />
-                                                                  <label for="cat-1-3-1-1-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                </div>
-                                                                <div class="permission-radio publisher">
-                                                                  <input name="permission-cat-1-3-1-1" type="radio" value="None" id="cat-1-3-1-1-publisher"   />
-                                                                  <label for="cat-1-3-1-1-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                </div>
-                                                                <div class="permission-radio expert">
-                                                                    <input name="permission-cat-1-3-1-1" type="radio" value="None" id="cat-1-3-1-1-expert"   />
-                                                                    <label for="cat-1-3-1-1-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                </div>
-                                                            </div>
-                                                        </span>
-                                                        
-                                                    </li>                                
-                                                    <li class="list-group-item">
-                                                        
-                                                        <span class="category-title"><a href="#">Laboriosam sint dolor, facilis esse, repellat vitae il</a>
-                                                            <span id="need-for-openable"></span>
-                                                            <div class="category-permissions">
-                                                                <div class="permission-radio candidate">
-                                                                  <input name="permission-cat-1-3-1-2" type="radio" value="None" checked id="cat-1-3-1-2-candidate"   />
-                                                                  <label for="cat-1-3-1-2-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                </div>
-                                                                <div class="permission-radio contributor">
-                                                                  <input name="permission-cat-1-3-1-2" type="radio" value="None" id="cat-1-3-1-2-contributor"   />
-                                                                  <label for="cat-1-3-1-2-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                </div>
-                                                                <div class="permission-radio publisher">
-                                                                  <input name="permission-cat-1-3-1-2" type="radio" value="None" id="cat-1-3-1-2-publisher"   />
-                                                                  <label for="cat-1-3-1-2-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                </div>
-                                                                <div class="permission-radio expert">
-                                                                    <input name="permission-cat-1-3-1-2" type="radio" value="None" id="cat-1-3-1-2-expert"   />
-                                                                    <label for="cat-1-3-1-2-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                </div>
-                                                            </div>
-                                                        </span>
-                                                        
-                                                    </li>
-                                                    <li class="list-group-item cat-openable">
-                                                        
-                                                        <span class="category-title"><a href="#">Ipsum nostrum, incidunt porro odit laborios</a>
-                                                            <span id="need-for-openable"></span>
-                                                            <div class="category-permissions">
-                                                                <div class="permission-radio candidate">
-                                                                  <input name="permission-cat-1-3-1-3" type="radio" value="None" checked id="cat-1-3-1-3-candidate"   />
-                                                                  <label for="cat-1-3-1-3-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                </div>
-                                                                <div class="permission-radio contributor">
-                                                                  <input name="permission-cat-1-3-1-3" type="radio" value="None" id="cat-1-3-1-3-contributor"   />
-                                                                  <label for="cat-1-3-1-3-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                </div>
-                                                                <div class="permission-radio publisher">
-                                                                  <input name="permission-cat-1-3-1-3" type="radio" value="None" id="cat-1-3-1-3-publisher"   />
-                                                                  <label for="cat-1-3-1-3-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                </div>
-                                                                <div class="permission-radio expert">
-                                                                    <input name="permission-cat-1-3-1-3" type="radio" value="None" id="cat-1-3-1-3-expert"   />
-                                                                    <label for="cat-1-3-1-3-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                </div>
-                                                            </div>
-                                                        </span>
+                            </form>
+                        </div>
 
-                                                        <ol class="list-group-category nested">
-                                                            <li class="list-group-item">                                    
-                                                                
-                                                                <span class="category-title"><a href="#">Aliquam id placeat, illo itaq</a>
-                                                                    <span id="need-for-openable"></span>
-                                                                    <div class="category-permissions">
-                                                                        <div class="permission-radio candidate">
-                                                                          <input name="permission-cat-1-3-1-3-1" type="radio" value="None" checked id="cat-1-3-1-3-1-candidate"   />
-                                                                          <label for="cat-1-3-1-3-1-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio contributor">
-                                                                          <input name="permission-cat-1-3-1-3-1" type="radio" value="None" id="cat-1-3-1-3-1-contributor"   />
-                                                                          <label for="cat-1-3-1-3-1-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio publisher">
-                                                                          <input name="permission-cat-1-3-1-3-1" type="radio" value="None" id="cat-1-3-1-3-1-publisher"   />
-                                                                          <label for="cat-1-3-1-3-1-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio expert">
-                                                                            <input name="permission-cat-1-3-1-3-1" type="radio" value="None" id="cat-1-3-1-3-1-expert"   />
-                                                                            <label for="cat-1-3-1-3-1-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                        </div>
-                                                                    </div>
-                                                                </span>
-                                                                
-                                                            </li>                                
-                                                            <li class="list-group-item ">                                    
-                                                                
-                                                                <span class="category-title"><a href="#">Facere exercitationem tempore labore. Ad enim, distinctio q</a>
-                                                                    <span id="need-for-openable"></span>
-                                                                    <div class="category-permissions">
-                                                                        <div class="permission-radio candidate">
-                                                                            <input name="permission-cat-1-3-1-3-2" type="radio" value="None" checked id="cat-1-3-1-3-2-candidate"   />
-                                                                            <label for="cat-1-3-1-3-2-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio contributor">
-                                                                            <input name="permission-cat-1-3-1-3-2" type="radio" value="None" id="cat-1-3-1-3-2-contributor"   />
-                                                                            <label for="cat-1-3-1-3-2-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio publisher">
-                                                                            <input name="permission-cat-1-3-1-3-2" type="radio" value="None" id="cat-1-3-1-3-2-publisher"   />
-                                                                            <label for="cat-1-3-1-3-2-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio expert">
-                                                                            <input name="permission-cat-1-3-1-3-2" type="radio" value="None" id="cat-1-3-1-3-2-expert"   />
-                                                                            <label for="cat-1-3-1-3-2-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                        </div>
-                                                                    </div>
-                                                                </span>
-                                                                
-                                                            </li>
-                                                            <li class="list-group-item">                                    
-                                                                <span class="category-title"><a href="#">Voluptate, eius magni fugiat nesciunt itaq</a>
-                                                                    <span id="need-for-openable"></span>
-                                                                    <div class="category-permissions">
-                                                                        <div class="permission-radio candidate">
-                                                                          <input name="permission-cat-1-3-1-3-3" type="radio" value="None" checked id="cat-1-3-1-3-3-candidate"   />
-                                                                          <label for="cat-1-3-1-3-3-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio contributor">
-                                                                          <input name="permission-cat-1-3-1-3-3" type="radio" value="None" id="cat-1-3-1-3-3-contributor"   />
-                                                                          <label for="cat-1-3-1-3-3-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio publisher">
-                                                                          <input name="permission-cat-1-3-1-3-3" type="radio" value="None" id="cat-1-3-1-3-3-publisher"   />
-                                                                          <label for="cat-1-3-1-3-3-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                                        </div>
-                                                                        <div class="permission-radio expert">
-                                                                            <input name="permission-cat-1-3-1-3-3" type="radio" value="None" id="cat-1-3-1-3-3-expert"   />
-                                                                            <label for="cat-1-3-1-3-3-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                                        </div>
-                                                                    </div>
-                                                                </span>
-                                                                
-                                                            </li>
-                                                        </ol> 
-                                                    </li>
-                                                </ol> 
-                                                
-                                            </li>                                
-                                            <li class="list-group-item">                                    
-                                                
-                                                <span class="category-title"><a href="#">Ipsum commodi aut, soluta, et labore ducimus volupt</a>
-                                                    <span id="need-for-openable"></span>
-                                                    <div class="category-permissions">
-                                                        <div class="permission-radio candidate">
-                                                          <input name="permission-cat-1-3-2" type="radio" value="None" checked id="cat-1-3-2-candidate"   />
-                                                          <label for="cat-1-3-2-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                        </div>
-                                                        <div class="permission-radio contributor">
-                                                          <input name="permission-cat-1-3-2" type="radio" value="None" id="cat-1-3-2-contributor"   />
-                                                          <label for="cat-1-3-2-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                        </div>
-                                                        <div class="permission-radio publisher">
-                                                          <input name="permission-cat-1-3-2" type="radio" value="None" id="cat-1-3-2-publisher"   />
-                                                          <label for="cat-1-3-2-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                        </div>
-                                                        <div class="permission-radio expert">
-                                                            <input name="permission-cat-1-3-2" type="radio" value="None" id="cat-1-3-2-expert"   />
-                                                            <label for="cat-1-3-2-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                        </div>
-                                                    </div>
-                                                </span>
-                                            </li>
-                                            <li class="list-group-item">                                    
-                                                
-                                                <span class="category-title"><a href="#">Beatae in odio totam, recusandae offici</a>
-                                                    <span id="need-for-openable"></span>
-                                                    <div class="category-permissions">
-                                                        <div class="permission-radio candidate">
-                                                          <input name="permission-cat-1-3-3" type="radio" value="None" checked id="cat-1-3-3-candidate"   />
-                                                          <label for="cat-1-3-3-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                                        </div>
-                                                        <div class="permission-radio contributor">
-                                                          <input name="permission-cat-1-3-3" type="radio" value="None" id="cat-1-3-3-contributor"   />
-                                                          <label for="cat-1-3-3-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                                        </div>
-                                                        <div class="permission-radio publisher">
-                                                          <input name="permission-cat-1-3-3" type="radio" value="None" id="cat-1-3-3-publisher"   />
-                                                          <label for="cat-1-3-3-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                                        </div>
-                                                        <div class="permission-radio expert">
-                                                            <input name="permission-cat-1-3-3" type="radio" value="None" id="cat-1-3-3-expert"   />
-                                                            <label for="cat-1-3-3-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                                        </div>
-                                                    </div>
-                                                </span>
-                                            </li>
-                                        </ol>  
-                                        
-                                    </li>
-                                </ol>                                   
-                            </li>                                
-                            <li class="list-group-item">                                    
-                                
-                                <span class="category-title"><a href="#">Voluptatibus quas adipisci, assumenda rerum distinctio quidem tot</a>
-                                    <span id="need-for-openable"></span>
-                                    <div class="category-permissions">
-                                        <div class="permission-radio candidate">
-                                          <input name="permission-cat-2" type="radio" value="None" checked id="cat-2-candidate"   />
-                                          <label for="cat-2-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                        </div>
-                                        <div class="permission-radio contributor">
-                                          <input name="permission-cat-2" type="radio" value="None" id="cat-2-contributor"   />
-                                          <label for="cat-2-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                        </div>
-                                        <div class="permission-radio publisher">
-                                          <input name="permission-cat-2" type="radio" value="None" id="cat-2-publisher"   />
-                                          <label for="cat-2-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                        </div>
-                                        <div class="permission-radio expert">
-                                            <input name="permission-cat-2" type="radio" value="None" id="cat-2-expert"   />
-                                            <label for="cat-2-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                            
-                                        </div>
-                                    </div>
-                                </span>
-                            </li>
-                            <li class="list-group-item">                                    
-                                
-                                <span class="category-title"><a href="#">Facilis repudiandae numquam, vitae cupiditate ratio</a>
-                                    <span id="need-for-openable"></span>
-                                    <div class="category-permissions">
-                                        <div class="permission-radio candidate">
-                                          <input name="permission-cat-3" type="radio" value="None" checked id="cat-3-candidate"   />
-                                          <label for="cat-3-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                        </div>
-                                        <div class="permission-radio contributor">
-                                          <input name="permission-cat-3" type="radio" value="None" id="cat-3-contributor"   />
-                                          <label for="cat-3-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                        </div>
-                                        <div class="permission-radio publisher">
-                                          <input name="permission-cat-3" type="radio" value="None" id="cat-3-publisher"   />
-                                          <label for="cat-3-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                        </div>
-                                        <div class="permission-radio expert">
-                                            <input name="permission-cat-3" type="radio" value="None" id="cat-3-expert"   />
-                                            <label for="cat-3-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                        </div>
-                                    </div>
-                                </span>
-                            </li>
-                        </ol>
-                        <br/>
-                        <ol class="list-group-category categories">
-                            <li class="list-group-item ">                                    
-                                
-                                <span class="category-title"><a href="#">Статьи без категории</a>
-                                    <span id="need-for-openable"></span>
-                                    <div class="category-permissions">
-                                        <div class="permission-radio candidate">
-                                          <input name="permission-cat-wocat" type="radio" value="None"  id="cat-wocat-candidate"   />
-                                          <label for="cat-wocat-candidate" data-toggle="tooltip" data-placement="top" title="Сотрудник"></label>
-                                        </div>
-                                        <div class="permission-radio contributor">
-                                          <input name="permission-cat-wocat" type="radio" value="None" id="cat-wocat-contributor"   />
-                                          <label for="cat-wocat-contributor" data-toggle="tooltip" data-placement="top" title="Помощник редактора"></label>
-                                        </div>
-                                        <div class="permission-radio publisher">
-                                          <input name="permission-cat-wocat" type="radio" value="None" checked id="cat-wocat-publisher"   />
-                                          <label for="cat-wocat-publisher" data-toggle="tooltip" data-placement="top" title="Редактор"></label>
-                                        </div>
-                                        <div class="permission-radio expert">
-                                            <input name="permission-cat-wocat" type="radio" value="None" id="cat-wocat-expert"   />
-                                            <label for="cat-wocat-expert" data-toggle="tooltip" data-placement="top" title="Эксперт"></label>
-                                        </div>
-                                    </div>
-                                </span>
-                            </li> 
-                        </ol>
                     </div>
-
                     
 
-                    <div class="content-frame-body">
+                    <div class="content-frame-body content-frame-body-left">
+                        <form >
+                            <div class="form-group col-xs-10">                                        
+                                <select multiple title="Выберите категории" class="form-control select">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>   
+                            </div>
+                            <div class="form-group col-xs-2">
+                                <div class="my-files-chekbox btn btn-primary pull-right">
+                                    <input id="my-files-checkbox" type="checkbox">
+                                    <label for="my-files-checkbox"  data-toggle="tooltip" data-placement="top" title="Показать загруженные мной / показать все файлы"></label>
+                                </div> 
+                                <div class="starred-checkdox btn btn-primary pull-right">
+                                    <input id="starred-checkdox" type="checkbox">
+                                    <label for="starred-checkdox"  data-toggle="tooltip" data-placement="top" title="Показать помеченные мной / показать все"></label>
+                                </div> 
+                            </div>
+                        </form>
+
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <label class="check mail-checkall">
-                                    <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                                <label class="check file-checkall">
+                                    <input type="checkbox" class="icheckbox"/>
                                 </label>
-                                <div class="btn-group">
-                                    <button class="btn btn-default"><span class="fa fa-mail-reply"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-mail-reply-all"></span></button>
+
+                                    <button class="btn btn-default"><span class="fa fa-download"></span></button>
+                                    <button class="btn btn-default"><span class="fa fa-trash"></span></button>
+                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>
                                     <button class="btn btn-default"><span class="fa fa-mail-forward"></span></button>
-                                </div>
-                                <div class="btn-group">
-                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>                                    
-                                    <button class="btn btn-default"><span class="fa fa-flag"></span></button>
-                                </div>                                
-                                <button class="btn btn-default"><span class="fa fa-warning"></span></button>
-                                <button class="btn btn-default"><span class="fa fa-trash-o"></span></button>                                                                    
-                                <div class="pull-right" style="width: 150px;">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
-                                        <input class="form-control " type="text" data-orientation="left">                                    
-                                    </div>
-                                </div>
+
+                                <ul class="panel-controls">
+                                    <li><a href="#" class="filter-btn"><i class="fa fa-sort-amount-desc"></i></a></li>
+                                </ul>
+
                             </div>
-                            <div class="panel-body mail">
-                                
-                                <div class="mail-item mail-unread mail-info">                                    
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                            <div class="panel-body mail files">
+                                <div class="filter row">
+                                    <div class="col-xs-12 col-md-6 col-sm-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="fa fa-search"></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Поиск по ключевым словам">
+                                        </div>
                                     </div>
-                                    <div class="mail-star">
-                                        <span class="fa fa-star-o"></span>
+                                    <div class="form-group col-xs-6  col-sm-3 col-md-3">                                        
+                                        <select  title="Размер" data-selected-text-format="count>1" class="form-control select">
+                                            <option>Любой размер</option>
+                                            <option>До 1Мб</option>
+                                            <option>1 - 10Мб</option>
+                                            <option>10 - 50Мб</option>
+                                            <option>50 - 100Мб</option>
+                                            <option>100 - 200Мб</option>
+                                            <option>200 - 500Мб</option>
+                                            <option>Более 500Мб</option>
+                                        </select>   
                                     </div>
-                                    <div class="mail-user">Dmitry Ivaniuk</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">Product development</a>                                    
-                                    <div class="mail-date">Today, 11:21</div>
-                                </div>
-                                
-                                <div class="mail-item mail-unread mail-danger">                                    
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
-                                    </div>
-                                    <div class="mail-star">
-                                        <span class="fa fa-star-o"></span>
-                                    </div>
-                                    <div class="mail-user">John Doe</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">New Windows 9 App</a>                                    
-                                    <div class="mail-date">Today, 10:36</div>
-                                </div>
-                                
-                                <div class="mail-item mail-success">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
-                                    </div>
-                                    <div class="mail-star">
-                                        <span class="fa fa-star-o"></span>
-                                    </div>
-                                    <div class="mail-user">Nadia Ali</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">Check my new song</a>                                    
-                                    <div class="mail-date">Yesterday, 20:19</div>
-                                </div>
-                                
-                                <div class="mail-item mail-warning">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
-                                    </div>
-                                    <div class="mail-star starred">
-                                        <span class="fa fa-star-o"></span>
-                                    </div>
-                                    <div class="mail-user">Brad Pitt</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">How are you? Need some work?</a>                                    
-                                    <div class="mail-date">Sep 15</div>
-                                </div>
-                                
-                                <div class="mail-item mail-info">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
-                                    </div>
-                                    <div class="mail-star">
-                                        <span class="fa fa-star-o"></span>
-                                    </div>
-                                    <div class="mail-user">Dmitry Ivaniuk</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">Can you check this docs?</a>                                    
-                                    <div class="mail-date">Sep 14</div>
-                                    <div class="mail-attachments">
-                                        <span class="fa fa-paperclip"></span> 11Kb
+                                    <div class="btn-group filter-date col-xs-6  col-sm-3 col-md-3 dropdown-group">
+                                        <!-- <button type="button" class="btn btn-primary  btn-block">Primary</button> -->
+                                        <a href="#" class="btn btn-primary dropdown-toggle  btn-block"><i class="fa fa-calendar"></i> Дата</a>
+                                        <div class="panel panel-primary dropdown-panel animated zoomIn xn-drop-left">
+                                            <div class="panel-heading">
+                                                <div class="panel-title-box">
+                                                    <h3><i class="fa fa-calendar"></i> Фильтр по дате</h3>
+                                                    <span>Выберите интервал или период </span>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-xs-3 control-label">Интервал</label>
+                                                    <div class="col-xs-9">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control datepicker" value="2015-01-01">
+                                                            <span class="input-group-addon add-on"> - </span>
+                                                            <input type="text" class="form-control datepicker" value="2015-01-05">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group" role="group" aria-label="...">
+                                                    <button type="button" class="btn btn-primary">День</button>
+                                                    <button type="button" class="btn btn-primary">Неделя</button>
+                                                    <button type="button" class="btn btn-primary">Месяц</button>
+                                                    <button type="button" class="btn btn-primary">3 месяца</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="mail-item">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
                                     </div>
-                                    <div class="mail-star starred">
+                                    <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
-                                    <div class="mail-user">HTC</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">New updates on your phone HD7</a>
-                                    <div class="mail-date">Sep 13</div>
-                                    <div class="mail-attachments">
-                                        <span class="fa fa-paperclip"></span> 58Mb
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nam, iure, quaerat id doloremque quo aspernatur! Tenetur hic error commodi, repudiandae, illum dolores sit fugit excepturi, iusto quos, natus id.</a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                                                        
+                                    <div class="file-date">Сегодня, 11:21</div>
+
+                                    <div class="file-size">
+                                        <a href="#download"><span class="fa fa-paperclip"></span> 11Kb</a>
                                     </div>
                                 </div>
                                 
-                                <div class="mail-item mail-unread">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
                                     </div>
-                                    <div class="mail-star">
+                                    <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
-                                    <div class="mail-user">Unknown</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">You won $15,000,000</a>
-                                    <div class="mail-date">Sep 13</div>
-                                </div>
-                                
-                                <div class="mail-item mail-success">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
-                                    </div>
-                                    <div class="mail-star">
-                                        <span class="fa fa-star-o"></span>
-                                    </div>
-                                    <div class="mail-user">Nadia Ali</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">Your tickets</a>
-                                    <div class="mail-date">Sep 11</div>
-                                    <div class="mail-attachments">
-                                        <span class="fa fa-paperclip"></span> 1.2Mb
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit </a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                        
+                                    <div class="file-date">Сегодня, 11:21</div>
+
+                                    <div class="file-size">
+                                        <a href="#download"><span class="fa fa-paperclip"></span> 1100Kb</a>
                                     </div>
                                 </div>
                                 
-                                <div class="mail-item mail-info">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
                                     </div>
-                                    <div class="mail-star">
+                                    <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
-                                    <div class="mail-user">Dmitry Ivaniuk</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">New bug founded</a>
-                                    <div class="mail-date">Sep 11</div>
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit </a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                        
+                                    <div class="file-date">Сегодня, 11:21</div>
+
+                                    <div class="file-size">
+                                        <a href="#download"><span class="fa fa-paperclip"></span> 58Mb</a>
+                                    </div>
                                 </div>
-                                
-                                <div class="mail-item">
-                                    <div class="mail-checkbox">
-                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+
+                                <div class="file-item">                                    
+                                    <div class="file-checkbox">
+                                        <input type="checkbox" class="icheckbox"/>
                                     </div>
-                                    <div class="mail-star">
+                                    <div class="file-star">
                                         <span class="fa fa-star-o"></span>
                                     </div>
-                                    <div class="mail-user">Darth Vader</div>                                    
-                                    <a href="pages-mailbox-message.html" class="mail-text">Where drawings of the new spaceship?</a>
-                                    <div class="mail-date">Sep 10</div>
-                                </div>                                
+                                    <a href="#" class="file-title">Lorem ipsum dolor sit </a>
+                                    <div class="file-user">Dmitry Ivaniuk</div> 
+                                        
+                                    <div class="file-date">Сегодня, 11:21</div>
+
+                                    <div class="file-size">
+                                        <a href="#download"><span class="fa fa-paperclip"></span> 1.2MB</a>
+                                    </div>
+                                </div>
+
+
+                                                               
                                 
                             </div>
                             <div class="panel-footer">                                
-                                <div class="btn-group">
-                                    <button class="btn btn-default"><span class="fa fa-mail-reply"></span></button>
-                                    <button class="btn btn-default"><span class="fa fa-mail-reply-all"></span></button>
+                                <label class="check mail-checkall">
+                                    <input type="checkbox" class="icheckbox"/>
+                                </label>
+
+                                    <button class="btn btn-default"><span class="fa fa-download"></span></button>
+                                    <button class="btn btn-default"><span class="fa fa-trash"></span></button>
+                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>
                                     <button class="btn btn-default"><span class="fa fa-mail-forward"></span></button>
-                                </div>
-                                <div class="btn-group">
-                                    <button class="btn btn-default"><span class="fa fa-star"></span></button>                                    
-                                    <button class="btn btn-default"><span class="fa fa-flag"></span></button>
-                                </div>
-                                
-                                <button class="btn btn-default"><span class="fa fa-warning"></span></button>
-                                <button class="btn btn-default"><span class="fa fa-trash-o"></span></button>                                    
                                 
                                 <ul class="pagination pagination-sm pull-right">
                                     <li class="disabled"><a href="#">«</a></li>
@@ -813,13 +445,8 @@
                             </div>                            
                         </div>
                     </div>
+
                     
-                    <div class="content-frame-right">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">123</div>
-                            <div class="panel-body">321</div>
-                        </div>
-                    </div>
 
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->                
@@ -861,8 +488,12 @@
         <!-- END PLUGINS -->
 
         <!-- THIS PAGE PLUGINS -->
-        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>  
+        <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
 
         <!-- END PAGE PLUGINS -->         
 
@@ -870,6 +501,18 @@
         <script type="text/javascript" src="js/plugins.js"></script>        
         <script type="text/javascript" src="js/actions.js"></script>        
         <!-- END TEMPLATE -->
+
+        <script>
+        $(function(){
+            //tags input
+            $('#file-tags').tagsInput({
+                'defaultText':'добваить тэг',
+                'height':'auto',
+                'width':'100%'
+            });
+            //EOF tagsinput
+        });
+        </script>
     <!-- END SCRIPTS -->         
     </body>
 </html>

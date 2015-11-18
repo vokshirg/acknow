@@ -215,6 +215,23 @@ var page_actions = function(){
     });
     /* END MAILBOX */
 
+    /* FIlEBOX */
+    $(".files .file-star").on("click",function(){
+        $(this).toggleClass("starred");
+    });
+
+    $(".file-checkall .iCheck-helper").on("click",function(){
+
+        var prop = $(this).prev("input").prop("checked");
+
+        $(".files .file-item").each(function(){            
+            var cl = $(this).find(".file-checkbox > div");            
+            cl.toggleClass("checked",prop).find("input").prop("checked",prop);                        
+        }); 
+
+    });
+    /* END fileBOX */
+
     /* PANELS */
 
     $(".panel-fullscreen").on("click",function(){
@@ -681,7 +698,7 @@ function x_navigation(){
         event.stopPropagation();
         event.preventDefault();
 
-        var filter = $(this).closest(".panel").children(".articles").children(".filter");
+        var filter = $(this).closest(".panel").children(".panel-body").children(".filter");
 
         if(filter.hasClass("active")){
             filter.removeClass("active");
