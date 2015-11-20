@@ -161,6 +161,9 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
     &.active {
         padding: 5px;
         max-height: 500px;
@@ -357,7 +360,7 @@
             overflow: hidden;
         }
         #need-for-openable {
-            display: none;
+            // display: none;
         }
 
         &.cat-openable {
@@ -453,7 +456,7 @@
     }
 }
 
-.list-group-category.categories, .list-group-category.permissions  {
+.list-group-category.categories, .list-group-category.profile-permissions  {
     a {
         color: @base-background;
     }
@@ -463,12 +466,17 @@
     .list-group-item.active {
         
 
-        a {color: white;}
+        // a {color: white;}
+        a {color: @xn-icon-color-hover;}
 
         &.cat-openable {
 
            > .category-title span#need-for-openable{    
                 width: 30px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
             }
 
             &:hover:before {
@@ -477,6 +485,7 @@
 
             &:before {
                 color: #FFF;
+                color: @xn-icon-color-hover;
             }
         }
 
@@ -490,7 +499,7 @@
     .list-group-item.cat-openable {
 
         &:hover:before {
-            background-color: #F3F3F3;
+            background-color: #ddd;
         }
 
         &:before {
@@ -572,6 +581,10 @@
     .list-group-item.cat-openable {
         span#need-for-openable{    
             width: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
         }
 
     }
@@ -794,8 +807,6 @@ table.table.profile-info {
 
         &:first-child {
             border-top: 0;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
         }
 
         &:last-child {
@@ -1176,6 +1187,14 @@ table.table.profile-info {
         transition: all 200ms ease;
         &.opened {
             left: 0;
+        }
+        .file-articles {
+            list-style: none;
+            padding-left: 5px;
+
+            & > ul {
+                padding-left: 25px;
+            }
         }
     }
 }
