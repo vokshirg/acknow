@@ -868,13 +868,17 @@ $(".categories .list-group-item .category-title").click(function(event){
 
         $(".categories").find(".active").not(par).removeClass("active"); // удаляем активность у всех других категорий
 
-    if (!$(par).hasClass("active")) 
+    if (!$(par).hasClass("active")) {
         $(par).addClass("active"); 
 
-    if ($(par).hasClass("active"))
-        $(".cat-description").addClass("active");
-    else {
-        $(".cat-description").removeClass("active");
+        if ($(par).hasClass("active")) {
+            $(".cat-description").removeClass("active");
+            setTimeout(function(){
+                $(".cat-description").addClass("active");
+            },200);
+        } else {
+            $(".cat-description").removeClass("active");
+        }
     }
     onresize();
 });
