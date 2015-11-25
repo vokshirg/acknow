@@ -8,6 +8,7 @@
 
 @import "summernote/summernote.css";
 @import "codemirror/codemirror.css";
+@import "codemirror/theme/monokai.css";
 @import "nvd3/nv.d3.css";
 @import "mcustomscrollbar/jquery.mCustomScrollbar.css";
 @import "fullcalendar/fullcalendar.css";
@@ -153,7 +154,7 @@ html,body{min-height: 100%; padding: 0px; margin: 0px; background: @body-backgro
     .page-content{min-height: 100%; margin-left: 220px; background: @body-background url('../img/bg.png') left top repeat; position: relative; .clearfix;
         .content-frame{float: left; width:100%; position: relative; background: @body-background url('../img/bg.png') left top repeat;
             .content-frame-top{float: left; width: 100%; line-height: 30px; padding: 13px 15px 15px; background: rgba(0,0,0,0.02); border-bottom: 1px solid #DDD; border-top: 1px solid #DDD;
-                .page-title{padding: 0px; width: auto;
+                .page-title{padding: 0px;// width: auto;
                     h2{margin-bottom: 0px; font-size: 22px;}
                 }
             }
@@ -1360,13 +1361,12 @@ body{
         //.table > thead > tr > th{border-bottom-color: #E5E5E5;}
         .table-responsive{border: 0px;}
         .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, 
-        .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{border-color: #E5E5E5; border-width: 1px;}
-        .table-striped > tbody > tr:nth-child(odd), .table-striped > tbody > tr:nth-child(odd){background: #F8FAFC;}
-        .table > thead > tr > th{background: #FFF; color: #333; font-size: 11px; white-space: nowrap;}
+        .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{/*border-color: transparent; background: #F0F4F9; color: #656C78;*/ padding: 16px 20px; font-size: 13px;}
+        .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{background: #F8FAFC;}
+        .table > thead > tr > th{background: #FFF; color: #333; font-size: 12px; white-space: nowrap; font-weight: 600; text-transform: uppercase;}
         
         .panel-body.panel-body-table{padding: 0px;
             h1,h2,h3,h4,h5,h6{padding-left: 10px; margin-bottom: 10px;}
-            tr:first-child > td{border-top: 0px;}
         }
         .panel-body.panel-body-table .table{margin-bottom: 0px; border: 0px;}
             .panel-body.panel-body-table .table tr > td:first-child,
@@ -1374,11 +1374,12 @@ body{
             .panel-body.panel-body-table .table tr > td:last-child,
             .panel-body.panel-body-table .table tr > th:last-child{border-right: 0px;}            
             .panel-body.panel-body-table .table > tbody > tr:last-child > td{border-bottom: 0px;}
-            .panel-body.panel-body-table td, .panel-body.panel-body-table th{padding: 8px 10px;}
+            //.panel-body.panel-body-table td, .panel-body.panel-body-table th{padding: 8px 10px;}
             
             .table.table-actions td{line-height: 28px;}
             .table .progress-small{margin: 7px 0px 8px;}
-
+            
+            
             .table.table-bordered{                                
                 > thead > tr > th, 
                 > tbody > tr > th, 
@@ -1407,22 +1408,23 @@ body{
         /* EOF TABLES */
         
         /* Datatables */
-        .dataTable{float: left; border-bottom: 1px solid #E5E5E5 !important; margin-bottom: 5px;}        
+        .dataTable{float: left; margin-bottom: 10px;}        
         .dataTable div.checker, .dataTable div.radio{display: inherit;}
 
         .dataTables_wrapper{float: left; width: 100%;}
 
-        .dataTables_length{width: 50%; float: left; padding: 0px 0px 5px; border-bottom: 1px solid #E5E5E5; font-size: 12px;}
-            .dataTables_length label,.dataTables_filter label{padding: 0px; line-height: 26px; height: auto; margin: 0px; font-weight: normal;}
-            .dataTables_length select{width: 70px; display: inline; margin: 0px 5px;}
-        .dataTables_filter{width: 50%; float: right; padding-left: 5px; padding: 0px 0px 5px; border-bottom: 1px solid #E5E5E5; font-size: 12px;}
+        .dataTables_length{width: 50%; float: left; padding: 0px 0px 5px; }
+            .dataTables_length label,.dataTables_filter label{padding: 0px; line-height: 30px; height: auto; margin: 0px; font-size: 12px; color: #999999; font-weight: 600; text-transform: uppercase;}
+            .dataTables_length select{width: 70px; display: inline; margin: 0px 5px; height: 30px; border-color: #CED8E3; border-radius: 3px; padding: 0px 10px;}
+            
+        .dataTables_filter{width: 50%; float: right; padding-left: 5px; padding: 0px 0px 5px;}
             .dataTables_filter label{float: right;}
-            .dataTables_filter label input{width: 150px; display: inline; margin-left: 5px;}
+            .dataTables_filter label input{width: 150px; display: inline; margin-left: 5px;  height: 30px; border: 1px solid #CED8E3; border-radius: 3px; padding: 0px 10px;}
 
             td.dataTables_empty{font-size: 11px; text-align: center; color: #333;}
 
-        .dataTables_info{float: left; font-size: 12px; padding: 0px; line-height: 30px;}        
-        .dataTables_paginate{padding: 0px; text-align: right; float: right;}
+        .dataTables_info{float: left; font-size: 12px; padding: 0px; line-height: 30px; padding: 5px 20px;}        
+        .dataTables_paginate{padding: 0px; text-align: right; float: right; padding: 5px 0px;}
         
             .dataTables_paginate a.paginate_disabled_previous,.dataTables_paginate a.paginate_disabled_next,.dataTables_paginate a.paginate_button,.paginate_enabled_next,.paginate_active,.paginate_enabled_previous
             {padding: 5px 10px; font-size: 12px; .border-radius(3px); float: left; text-decoration: none; background-color: #fff; border: 1px solid #ddd; color: @base-color; margin-left: 3px; cursor: pointer;}
@@ -1436,7 +1438,7 @@ body{
 
         .sorting_desc,.sorting_asc,.sorting{position: relative; cursor: pointer; padding-right: 20px !important;}
             .sorting:before,.sorting_desc:before,.sorting_asc:before
-            {position: absolute; top: 8px; right: 5px; font-family: 'FontAwesome'; .opacity(0.9,90); width: 10px; height: 10px; display: block;}
+            {position: absolute; top: 18px; right: 5px; font-family: 'FontAwesome'; .opacity(0.9,90); width: 10px; height: 10px; display: block;}
             .sorting:before{content: "\f0dc"; .opacity(0.3,30);}
             .sorting_desc:before{content: "\f0d8";}
             .sorting_asc:before{content: "\f0d7";}

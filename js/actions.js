@@ -8,7 +8,8 @@ var page_actions = function(){
 
     $("html").on("click", function(){
         if(html_click_avail)
-            $(".x-navigation-horizontal li,.x-navigation-minimized li,.x-features .x-features-search,.x-features .x-features-profile, .filter-date").removeClass('active');
+            // $(".x-navigation-horizontal li,.x-navigation-minimized li,.x-features .x-features-search,.x-features .x-features-profile, .filter-date").removeClass('active');
+            $(".x-navigation-horizontal li,.x-navigation-minimized li,.x-features .x-features-search,.x-features .x-features-profile").removeClass('active');
     });
 
     $(".x-features-nav-open").on("click",function(e){

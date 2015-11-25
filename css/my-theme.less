@@ -89,13 +89,30 @@
 }
 
 
-.xn-button{
+.article-new{
     width: 100%!important;
     
-    button{
+    .btn{
+        color: #FFF!important;
         margin: 5px 5%;
         width: 89%;
-        padding: 12px 17px!important;
+        padding: 12px 11px!important;
+        border: 0px;
+        .fa {
+            color: #FFF!important;
+            margin-right: 1px;
+        }
+
+        &:hover,&:focus,&:active, &.btn-danger.active, .open > .dropdown-toggle.btn-danger{
+            background-color: darken(@base-danger,5%)!important;
+            border-color: darken(@base-danger,5%)!important;
+            // background-color: #a43f3e!important;
+            // border-color: #a43f3e;
+            border-width: 1px!important;
+            .fa {
+                color: #FFF!important;
+            }
+        }
     }
 }
 
@@ -1207,5 +1224,21 @@ table.table.profile-info {
     .nested-lvl-5 {padding-left: 100px}
 }
 
+#tab24 {
+    th {
+        width: 20%;
+        white-space: normal;
+        vertical-align: middle;
+        &.sorting:before, &.sorting_desc:before, &.sorting_asc:before {
+            top: 50%;
+            margin-top: -10px;
+        }
+    }
+}
 
+@media only screen and (max-width: 768px){
+    .push-right-xs {
+        margin-right: 60px;
+    }
+}
 

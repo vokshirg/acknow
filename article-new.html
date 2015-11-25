@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>        
+        <!-- META SECTION -->
+        <title>Инвейдерс Знания - Наш новый Template</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+
+        <!-- LESSCSS INCLUDE -->   
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
+        <script type="text/javascript" src="js/plugins/lesscss/less.min.js"></script>                
+        <!-- EOF LESSCSS INCLUDE -->   
+
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container page-container-wide page-navigation-toggled page-navigation-toggled-hover page-navigation-top-fixed">
+
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar page-sidebar-fixed scroll">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation x-navigation-minimized x-navigation-custom ">
+                    <li class="xn-logo">
+                        <a href="#">Инвейдерс Знания</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li class="xn-button article-new">
+                        <a href="article-new.html" class="btn btn-lg btn-block btn-danger">
+                            <span class="fa fa-edit"></span>
+                            <span class="xn-text"> Создать статью</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-desktop"></i>
+                            <span class="xn-text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="articles.html">
+                            <i class="fa fa fa-file-text-o"></i>
+                            <span class="xn-text">Статьи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="files.html">
+                            <i class="fa fa-files-o"></i>
+                            <span class="xn-text">Файлы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="xn-text">Словарь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html">
+                            <i class="fa fa-users"></i>
+                            <span class="xn-text">Пользователи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span class="xn-text">Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="statistic.html">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="xn-text">Статистика</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+
+    
+                <!-- NAVIGATION -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                   
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button hidden">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li><!-- END TOGGLE NAVIGATION -->
+                   
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Поиск...">
+                        </form>
+                    </li><!-- END SEARCH -->                  
+                    
+                    <!-- POWER OFF -->
+                    <li class="xn-icon-button pull-right last">
+                        <a href="#"><span class="fa fa-power-off"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Экран блокировки</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+                        </ul>                        
+                    </li><!-- END POWER OFF -->
+                    
+                    <!-- USER --
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-user"></span></a>                      
+                    </li>
+                    <!-- USER -->
+                    <li class="xn-profile pull-right">
+                        <a href="profile.html" class="profile-mini">
+                            <img src="assets/images/users/avatar.jpg" alt="John Doe" class="mCS_img_loaded">
+                        </a>
+                    </li>
+                    <!-- END USER --> 
+
+                    <!-- NOTIFICATIONS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><i class="fa fa-bell-o"></i></a>
+                        <div class="informer informer-danger">4</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging notifications">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bell"></i> Уведомления</h3>                                
+                                <div class="pull-right">
+                                    <span class="label label-danger">4 новых</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+                                <span href="#" class="list-group-item">
+                                    <button class="btn btn-news btn-primary"><span class="fa fa-user"></span></button>
+                                    <span class="contacts-title">Изменение статуса статьи</span>
+                                    <p>Статья <a href="http://demo.kcs.guru/articles/19">Знания компании — используйте с умом</a> была опубликована пользователем <a href="http://demo.kcs.guru/users/3">Ольга </a></p>
+                                    <a href="#" class="notification-check"><span class="fa fa-check"></span></a>
+                                    <!-- <button type="button" class="btn btn-xs btn-success  btn-rounded"><span class="fa fa-check"></span></button> -->
+                                </span>
+
+                            </div>  
+                            <div class="panel-footer text-center">
+                                <a href="pages-messages.html">Показать все уведомления</a>
+                            </div>                            
+                        </div>                        
+                    </li><!-- END NOTIFICATIONS -->
+
+                    <!-- SETTINGS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-cogs"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                            <li>
+                                <a href="#"><span class="fa fa-language"></span> Язык</a>
+                                <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                                    <li><a href="#"><span class="flag flag-ru"></span> Русский</a></li>
+                                    <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
+                                    <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages-lock-screen.html"><span class="fa fa-lock"></span> Заблокировать экран</a></li>
+                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Выйти</a></li>
+
+                        </ul>                        
+                    </li><!-- END SETTINGS -->  
+                
+                </ul><!-- EOF NAVIGATION -->
+
+
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb push-down-0">
+                    <li><a href="#">Главная</a></li>                    
+                    <li><a href="#">Статьи</a></li>                    
+                    <li class="active">Новая статья</li>
+                </ul><!-- END BREADCRUMB -->  
+
+                <!-- <div class="page-title">                    
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Page Title</h2>
+                </div>  --> 
+
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="content-frame">
+                    <div class="content-frame-top">                        
+                        <div class="page-title">                    
+                            <!-- <form class="form-horizontal"> -->
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" placeholder="Введите Заголовок статьи...">
+                                    </div>
+                                    <div class="col-md-8">
+
+                                        <div class="pull-right">
+                                            <button class="btn btn-default content-frame-right-toggle">
+                                                <span class="fa fa-bars"></span>
+                                            </button>
+                                        </div>
+                                        <div class="push-right-xs">
+                                            
+                                            <select multiple title="Выберите категории" data-live-search="true" multiple data-selected-text-format="count" class="form-control select">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                                <option class="nested-lvl-1">Option 3-1</option>
+                                                <option class="nested-lvl-2">Option 3-2</option>
+                                                <option class="nested-lvl-3">Option 3-3</option>
+                                                <option class="nested-lvl-4">Option 3-4</option>
+                                                <option class="nested-lvl-3">Option 3-3</option>
+                                                <option class="nested-lvl-4">Option 3-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, iusto?</option>
+                                                <option>Option 4</option>
+                                                <option>Option 5</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+                        </div>                                                                                
+                        
+                                               
+                    </div>
+                    <div class="content-frame-right">
+                        <div class="block push-up-10">
+                            <form action="#" class="dropzone dropzone-mini dz-clickable">
+                                <div class="dz-default dz-message">
+                                    <span>Перенесите файлы для загрузки</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="block file-details">
+                            <h4>Детали файла</h4>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Название</label>
+                                    <input type="text" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Описание</label>
+                                    <textarea class="form-control"> </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Дата</label>
+                                    <input type="date" disabled class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Теги</label>
+                                    <input type="text" id="file-tags" value="First,Second"/>
+                                </div> 
+                                
+                            </form>
+                            <h4 class="push-up-30">Используется в статьях</h4>
+                            <ul class="file-articles">
+                                <li>
+                                    Управление знаниями
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_10">
+                                        <a class="published" href="/articles/10">Документирование знаний: фантастика, миф или работающий инструмент?</a>
+                                    </li>
+                                    <li class="article" id="article_19">
+                                        <a class="published" href="/articles/19">Знания компании — используйте с умом</a>
+                                    </li>
+                                </ul>
+                                <li>
+                                    Телекоммуникации
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_23">
+                                        <a class="unpublished" href="/articles/23">мощность</a>
+                                    </li>
+                                    <li class="article" id="article_25">
+                                        <a class="unpublished" href="/articles/25">Не работает принтер</a>
+                                    </li>
+                                </ul>
+                                <li>
+                                    Электроэнергетика
+                                </li>
+                                <ul>
+                                    <li class="article" id="article_28">
+                                        <a class="unpublished" href="/articles/28">Химия твердого тела</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="content-frame-body content-frame-body-left">
+                        
+
+
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-body" style="padding:0px;">
+                                
+
+
+                                <textarea id="summernote"><h4>Also subhearder available too</h4>
+                                    <p><span style="font-weight: bold;">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Ut vel consequat massa. <span style="color: rgb(99, 0, 0); font-weight: bold;">Aliquam augue odio, vulputate non tempus et, sollicitudin in magna</span>. Sed dignissim, tellus sagittis varius vestibulum, erat sapien varius dolor, non elementum sem velit ut nunc. Sed gravida vehicula ipsum, sit amet auctor nunc ultricies et. <a href="http://#">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a> <span style="font-style: italic;">Morbi dapibus massa faucibus</span>, euismod augue non, facilisis odio. In blandit consectetur nibh, eu venenatis ligula condimentum sed. Nullam magna velit, eleifend ut tincidunt sit amet, sagittis id ligula. Aenean eget metus auctor, fringilla nunc in, lacinia nisi. Suspendisse potenti. Suspendisse vel vulputate lectus.</p>
+                                    <blockquote><span style="text-decoration: underline;">
+                                        Cras posuere scelerisque faucibus</span>. Fusce consectetur elit at nisi accumsan rutrum. Sed quis risus vel purus hendrerit mattis. In hac habitasse platea dictumst. Morbi volutpat justo in nunc tincidunt, sed auctor dui ullamcorper. <span style="color: rgb(41, 82, 24);">Praesent eleifend adipiscing nisi</span>. <a href="http://#">Aliquam mi elit, cursus nec posuere vel, varius in tortor</a>. Nullam fermentum nunc felis, sed varius ante auctor et.
+                                    </blockquote>
+                                    <p>Curabitur urna neque, pharetra vel felis commodo, dictum bibendum odio.<a href="http://#"> Suspendisse mauris augue</a>, volutpat vel augue in, pellentesque semper turpis. Donec congue, magna quis condimentum facilisis, dolor mauris suscipit enim, eu aliquam risus elit vel diam.</p>
+                                
+
+                                    </textarea>
+
+
+                                                               
+                                
+                            </div>
+                                                       
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Выход</div>
+                    <div class="mb-content">
+                        <p>Вы уверены что хотите выйти?</p>                    
+                        <p>Нажмите Нет если вы хотите продолжить работу. Нажмите Да если вы хотите выйти из текущего профиля.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Да</a>
+                            <button class="btn btn-default btn-lg mb-control-close">Нет</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                 
+        
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+
+        <!-- THIS PAGE PLUGINS -->
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>  
+        <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
+
+
+        <script type="text/javascript" src="js/plugins/codemirror/codemirror.js"></script>        
+        <script type='text/javascript' src="js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script type='text/javascript' src="js/plugins/codemirror/mode/xml/xml.js"></script>
+        <script type='text/javascript' src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
+        <script type='text/javascript' src="js/plugins/codemirror/mode/css/css.js"></script>
+        <script type='text/javascript' src="js/plugins/codemirror/mode/clike/clike.js"></script>
+        <script type='text/javascript' src="js/plugins/codemirror/mode/php/php.js"></script>  
+        <script type="text/javascript" src="js/plugins/summernote/summernote.js"></script>
+        <script type="text/javascript" src="js/plugins/summernote/summernote-ru-RU.js"></script>
+
+
+        <!-- END PAGE PLUGINS -->         
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>        
+        <!-- END TEMPLATE -->
+
+        <script>
+        $(function(){
+            //tags input
+            $('#file-tags').tagsInput({
+                'defaultText':'добавить тэг',
+                'height':'auto',
+                'width':'100%'
+            });
+            //EOF tagsinput
+
+        });
+        var windh = window.innerHeight  -240 || $(document).height() -240;
+        // $(document).ready(function() {
+          $("#summernote").summernote({
+            
+            height: windh,
+            minHeight: windh,
+            lang: 'ru-RU', // default: 'en-US'
+            codemirror: { // codemirror options
+                theme: 'monokai',
+                minHeight: windh,
+                // height: windh
+
+                // viewportMargin: 'Infinity'
+              }
+          });
+        // });
+
+
+
+        </script>
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
