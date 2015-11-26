@@ -472,7 +472,7 @@ function page_content_onresize(){
     }        
     
     if(sidebar.height() > content.height()){        
-        content.height(sidebar.height());
+        content.height(sidebar.height()-50);
     }
     
     if($(".page-content-adaptive").length > 0)
@@ -497,10 +497,12 @@ function page_content_onresize(){
            
            var cfM = vpH-fbm < cfH-80 ? cfH-80 : vpH-fbm;
                    
-           $(".content-frame-body,.content-frame-right,.content-frame-left").height(cfM+15);
+           $(".content-frame-body").height(cfM-100);
+           $(".content-frame-left").height(cfM-20);
+           $(".content-frame-right").height(cfM);
            
        }else{
-           $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height());
+           $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height()-20);
        }
         
         $(".content-frame-left").show();

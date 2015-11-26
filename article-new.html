@@ -243,68 +243,118 @@
                         
                                                
                     </div>
-                    <div class="content-frame-right">
-                        <div class="block push-up-10">
+                    <div class="content-frame-right scroll" style="height: 200px;">
+                        
+                        <div class="block">
+                            <h4>Авторы </h4>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Главные авторы</label>
+                                    <select multiple title="Выберите людей из списка" data-live-search="true" multiple data-selected-text-format="count" class="form-control select">
+                                        <option>Lorem.</option>
+                                        <option>Earum!</option>
+                                        <option>Ex.</option>
+                                        <option>Similique!</option>
+                                        <option>Repudiandae.</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Авторы</label>
+                                    <select id="tokenize" multiple class=" ">
+    
+                                        <option><img src="assets/images/users/avatar.jpg" alt="John Doe" class="mCS_img_loaded">Ванькоу</option>
+                                        <option>A!</option>
+                                        <option>Explicabo!</option>
+                                        <option>Doloribus.</option>
+                                        <option>Veniam!</option>
+                                        <option>Error.</option>
+                                        <option>Necessitatibus.</option>
+                                        <option>Ad.</option>
+                                        <option>Ea.</option>
+                                        <option>Consequuntur.</option>
+                                        <option>Numquam!</option>
+                                        <option>Consequatur!</option>
+                                        <option>Unde.</option>
+                                        <option>Placeat.</option>
+                                        <option>Id.</option>
+                                        <option>Aut!</option>
+                                        <option>Aspernatur?</option>
+                                        <option>Quam.</option>
+                                        <option>A!</option>
+                                        <option>Dolor.</option>
+                                        <option>Laborum.</option>
+                                        <option>Nam!</option>
+                                        <option>Veritatis!</option>
+                                        <option>Hic.</option>
+                                        <option>Veritatis!</option>
+                                        <option>Nisi.</option>
+                                        <option>Illo.</option>
+                                        <option>Nostrum.</option>
+                                        <option>Accusantium!</option>
+                                        <option>Cumque.</option>
+                                        <option>Minus.</option>
+                                        <option>Tempora.</option>
+                                        <option>Quod!</option>
+                                        <option>Obcaecati.</option>
+                                        <option>Saepe.</option>
+                                        <option>Voluptate?</option>
+                                        <option>Illo.</option>
+                                        <option>Ipsa.</option>
+                                        <option>Fugit?</option>
+                                        <option>Unde.</option>
+                                        <option>Neque!</option>
+                                        <option>Qui.</option>
+                                        <option>Nihil?</option>
+                                        <option>Facere.</option>
+                                        <option>Minus.</option>
+                                        <option>Quaerat.</option>
+                                        <option>Nisi.</option>
+                                        <option>Vero.</option>
+                                        <option>Et?</option>
+                                        <option>Quisquam!</option>
+                                        <option>Minima!</option>
+                                        <option>Optio.</option>
+                                        <option>Perspiciatis.</option>
+                                        <option>Voluptate.</option>
+                                        <option>Omnis.</option>
+                                        <option>Obcaecati!</option>
+                                        <option>Molestiae.</option>
+                                        <option>Deserunt.</option>
+                                        <option>Porro?</option>
+                                        <option>Maxime.</option>
+                                        <option>Aperiam.</option>
+                                        <option>Deserunt.</option>
+                                        <option>Aut.</option>
+                                        <option>Cumque.</option>
+                                        <option>Nesciunt.</option>
+                                        <option>A!</option>
+                                        <option>Blanditiis!</option>
+                                        <option>Accusamus.</option>
+                                        <option>Amet.</option>
+                                        <option>Architecto.</option>
+
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Теги</label>
+                                    <input type="text" id="article-tags" value="First,Second"/>
+                                </div> 
+                                
+                            </form>
+                            
+                        </div>
+                        <div class="block">
+                            <label> Прикрепить к статье файлы</label>
                             <form action="#" class="dropzone dropzone-mini dz-clickable">
                                 <div class="dz-default dz-message">
                                     <span>Перенесите файлы для загрузки</span>
                                 </div>
                             </form>
-                        </div>
-                        <div class="block file-details">
-                            <h4>Детали файла</h4>
-                            <form role="form">
-                                <div class="form-group">
-                                    <label>Название</label>
-                                    <input type="text" class="form-control"/>
-                                </div>
-                                <div class="form-group">
-                                    <label>Описание</label>
-                                    <textarea class="form-control"> </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Дата</label>
-                                    <input type="date" disabled class="form-control"/>
-                                </div>
-                                <div class="form-group">
-                                    <label>Теги</label>
-                                    <input type="text" id="file-tags" value="First,Second"/>
-                                </div> 
-                                
-                            </form>
-                            <h4 class="push-up-30">Используется в статьях</h4>
-                            <ul class="file-articles">
-                                <li>
-                                    Управление знаниями
-                                </li>
-                                <ul>
-                                    <li class="article" id="article_10">
-                                        <a class="published" href="/articles/10">Документирование знаний: фантастика, миф или работающий инструмент?</a>
-                                    </li>
-                                    <li class="article" id="article_19">
-                                        <a class="published" href="/articles/19">Знания компании — используйте с умом</a>
-                                    </li>
-                                </ul>
-                                <li>
-                                    Телекоммуникации
-                                </li>
-                                <ul>
-                                    <li class="article" id="article_23">
-                                        <a class="unpublished" href="/articles/23">мощность</a>
-                                    </li>
-                                    <li class="article" id="article_25">
-                                        <a class="unpublished" href="/articles/25">Не работает принтер</a>
-                                    </li>
-                                </ul>
-                                <li>
-                                    Электроэнергетика
-                                </li>
-                                <ul>
-                                    <li class="article" id="article_28">
-                                        <a class="unpublished" href="/articles/28">Химия твердого тела</a>
-                                    </li>
-                                </ul>
-                            </ul>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                         </div>
 
                     </div>
@@ -312,14 +362,10 @@
 
                     <div class="content-frame-body content-frame-body-left">
                         
-
-
-                        <div class="panel panel-default">
+                        <div class="panel panel-default push-down-0">
                             
                             <div class="panel-body" style="padding:0px;">
                                 
-
-
                                 <textarea id="summernote"><h4>Also subhearder available too</h4>
                                     <p><span style="font-weight: bold;">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Ut vel consequat massa. <span style="color: rgb(99, 0, 0); font-weight: bold;">Aliquam augue odio, vulputate non tempus et, sollicitudin in magna</span>. Sed dignissim, tellus sagittis varius vestibulum, erat sapien varius dolor, non elementum sem velit ut nunc. Sed gravida vehicula ipsum, sit amet auctor nunc ultricies et. <a href="http://#">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a> <span style="font-style: italic;">Morbi dapibus massa faucibus</span>, euismod augue non, facilisis odio. In blandit consectetur nibh, eu venenatis ligula condimentum sed. Nullam magna velit, eleifend ut tincidunt sit amet, sagittis id ligula. Aenean eget metus auctor, fringilla nunc in, lacinia nisi. Suspendisse potenti. Suspendisse vel vulputate lectus.</p>
                                     <blockquote><span style="text-decoration: underline;">
@@ -327,18 +373,12 @@
                                     </blockquote>
                                     <p>Curabitur urna neque, pharetra vel felis commodo, dictum bibendum odio.<a href="http://#"> Suspendisse mauris augue</a>, volutpat vel augue in, pellentesque semper turpis. Donec congue, magna quis condimentum facilisis, dolor mauris suscipit enim, eu aliquam risus elit vel diam.</p>
                                 
-
                                     </textarea>
 
-
-                                                               
-                                
                             </div>
                                                        
                         </div>
                     </div>
-
-                    
 
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->                
@@ -386,6 +426,7 @@
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>  
         <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
+        <script type="text/javascript" src="js/plugins/tokenize/jquery.tokenize.js"></script>
 
 
         <script type="text/javascript" src="js/plugins/codemirror/codemirror.js"></script>        
@@ -409,7 +450,7 @@
         <script>
         $(function(){
             //tags input
-            $('#file-tags').tagsInput({
+            $('#article-tags').tagsInput({
                 'defaultText':'добавить тэг',
                 'height':'auto',
                 'width':'100%'
@@ -433,8 +474,11 @@
               }
           });
         // });
-
-
+    
+        $('#tokenize').tokenize({
+            autosize: true,
+            // newElements: false
+        });
 
         </script>
     <!-- END SCRIPTS -->         
