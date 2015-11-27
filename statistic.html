@@ -238,67 +238,68 @@
                                         
                                     </div>
                                     <div class="tab-pane" id="tab24">
-                                        <div class="table-responsive">
-                                            <table class="table datatable">
+                                        <div class="table-responsive search-anal">
+                                            <table class="table datatable" data-order='[[ 1, "desc" ]]'>
                                                 <thead>
-                                                <tr>
-                                                  <th>Текст запроса</th>
-                                                  <th>Количество запросов</th>
-                                                  <th>Количество успешных запросов</th>
-                                                  <th>Конверсия</th>
-                                                  <th>Среднее количество результатов по запросу</th>
-                                                </tr>
+                                                    <tr>
+                                                      <th>Текст запроса</th>
+                                                      <th>Количество запросов</th>
+                                                      <th>Количество успешных запросов</th>
+                                                      <th>Конверсия</th>
+                                                      <th>Среднее количество результатов по запросу</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                      <td>нагрузка</td>
-                                                      <td>4</td>
-                                                      <td>2</td>
-                                                      <td>50%</td>
+                                                    <tr class="danger">
+                                                      <td>Не работает принтер</td>
+                                                      <td>136</td>
+                                                      <td>1</td>
+                                                      <td>0%</td>
                                                       <td>38</td>
                                                     </tr>
-                                                    <tr>
-                                                      <td>cpc</td>
-                                                      <td>3</td>
-                                                      <td>2</td>
-                                                      <td>67%</td>
-                                                      <td>13</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Тест</td>
-                                                      <td>3</td>
+                                                    <tr class="danger">
+                                                      <td>Согласование заявок</td>
+                                                      <td>106</td>
                                                       <td>0</td>
                                                       <td>0%</td>
+                                                      <td>0</td>
+                                                    </tr>
+                                                    <tr class="warning">
+                                                      <td>Как запустить приложение</td>
+                                                      <td>75</td>
+                                                      <td>30</td>
+                                                      <td>40%</td>
+                                                      <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Синий экран windows</td>
+                                                      <td>54</td>
+                                                      <td>45</td>
+                                                      <td>83%</td>
+                                                      <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Настройка автозапуска</td>
+                                                      <td>27</td>
+                                                      <td>20</td>
+                                                      <td>74%</td>
+                                                      <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Восстановление данных</td>
                                                       <td>25</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>rstp</td>
-                                                      <td>2</td>
-                                                      <td>2</td>
-                                                      <td>100%</td>
-                                                      <td>16</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>восстановление</td>
-                                                      <td>2</td>
-                                                      <td>2</td>
-                                                      <td>100%</td>
+                                                      <td>22</td>
+                                                      <td>88%</td>
                                                       <td>12</td>
                                                     </tr>
                                                     <tr>
-                                                      <td>зеркало</td>
-                                                      <td>2</td>
-                                                      <td>0</td>
-                                                      <td>0%</td>
-                                                      <td>0</td>
+                                                      <td>Регламенты описания проектной документации</td>
+                                                      <td>22</td>
+                                                      <td>17</td>
+                                                      <td>77%</td>
+                                                      <td>1</td>
                                                     </tr>
-                                                    <tr>
-                                                      <td>многоканальный номер</td>
-                                                      <td>2</td>
-                                                      <td>0</td>
-                                                      <td>0%</td>
-                                                      <td>2</td>
-                                                    </tr>
+                                                    
                                                     
                                                 </tbody>
                                               </table>
@@ -395,7 +396,7 @@
         // Keep track of the node that is currently being displayed as the root.
         var node;
 
-        d3.json("js/flare.json", function(error, root) {
+        d3.json("js/stat.json", function(error, root) {
           node = root;
           var path = svg.datum(root).selectAll("path")
               .data(partition.nodes)
@@ -405,8 +406,12 @@
               .style("opacity", 1)
               .on("click", click)
               .on("mouseover", hover)
+              // .on("mouseleave", mouseleave)
+              // .on("mouseleave", function(d) {d3.selectAll("path").on("mouseover", null);})
               .each(stash);
 
+          // Add the mouseleave handler to the bounding circle.
+          d3.select("#tab22").on("mouseleave", mouseleave);
 
           d3.selectAll("input").on("change", function change() {
             var value = this.value === "count"
@@ -429,7 +434,21 @@
                 path.unshift(current);
                 current = current.parent;
               }
+              // console.log(path);
+
               return path;
+            }
+
+            function firstparent(node) {
+              var path = [];
+              var current = node;
+              while (current.parent) {
+                path.unshift(current);
+                current = current.parent;
+              }
+              // console.log(path);
+
+              return current;
             }
 
           function click(d) {
@@ -461,6 +480,30 @@
                               })
                       .style("opacity", .4);
                 }
+
+        function mouseleave(d) {
+
+          // Hide the breadcrumb trail
+          // d3.select("#trail")
+              // .style("visibility", "hidden");
+
+          // Deactivate all segments during transition.
+          d3.selectAll("path").on("mouseover", null);
+
+          // Transition each segment to full opacity and then reactivate it.
+          d3.selectAll("path")
+              .transition()
+              .duration(1000)
+              .style("opacity", 1)
+              .each("end", function() {
+                      d3.select(this).on("mouseover", hover);
+                    });
+
+          // d3.firstparent;
+
+          // d3.select("#explanation")
+              // .style("visibility", "hidden");
+        }
 
         });
 
@@ -518,6 +561,10 @@
         <script>
         $(function () {
             $('#tab23').highcharts({
+                 chart: {
+                    width: '800',
+                    height: 400
+                },
                 title: {
                     text: ''
                 },
