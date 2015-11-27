@@ -225,11 +225,14 @@
                                 </ul>                    
                                 <div class="panel-body tab-content" style="min-width: 85%;">
                                     <div class="tab-pane active" id="tab22">
-                                         <form>
+                                        <div id="explanation">Защита интеллектуальной собственности</div>
+
+                                        <form>
                                          Размер делений:<br>
                                           <label><input type="radio" name="mode" value="size"> По объему данных</label><br>
                                           <label><input type="radio" name="mode" value="count" checked> По количеству</label>
                                         </form>
+
                                     </div>
                                     <div class="tab-pane" id="tab23">
                                         
@@ -399,8 +402,11 @@
             .enter().append("path")
               .attr("d", arc)
               .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+              .style("opacity", 1)
               .on("click", click)
+              .on("mouseover", hover)
               .each(stash);
+
 
           d3.selectAll("input").on("change", function change() {
             var value = this.value === "count"
@@ -414,13 +420,53 @@
                 .attrTween("d", arcTweenData);
           });
 
+          // Given a node in a partition layout, return an array of all of its ancestor
+            // nodes, highest first, but excluding the root.
+            function getAncestors(node) {
+              var path = [];
+              var current = node;
+              while (current.parent) {
+                path.unshift(current);
+                current = current.parent;
+              }
+              return path;
+            }
+
           function click(d) {
             node = d;
             path.transition()
               .duration(1000)
-              .attrTween("d", arcTweenZoom(d));
+              .attrTween("d", arcTweenZoom(node));
+            // d3.select("#explanation")
+            //   .text(node.name);
+              
           }
+          function hover(d) {
+                node = d;
+                // d3.select("#explanation")
+                d3.select("#explanation")
+                  .text(node.name);
+
+                  var sequenceArray = getAncestors(node);
+                  // updateBreadcrumbs(sequenceArray, percentageString);
+
+                  // Fade all the segments.
+                  d3.selectAll("path")
+                      .style("opacity", 1);
+
+                  // Then highlight only those that are an ancestor of the current segment.
+                  svg.selectAll("path")
+                      .filter(function(node) {
+                                return (sequenceArray.indexOf(node) >= 0);
+                              })
+                      .style("opacity", .4);
+                }
+
         });
+
+
+
+
 
         d3.select(self.frameElement).style("height", height + "px");
 
