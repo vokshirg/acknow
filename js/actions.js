@@ -233,6 +233,8 @@ var page_actions = function(){
     });
     /* END fileBOX */
 
+
+
     /* PANELS */
 
     $(".panel-fullscreen").on("click",function(){
@@ -426,6 +428,20 @@ var page_actions = function(){
     });
 
 
+    $(".btn-sibebar-hide").on("click", function() {
+
+        if ($(this).children(".fa-angle-double-right").length > 0) {
+            console.log ("hi");
+            $(this).children(".fa-angle-double-right").removeClass("fa-angle-double-right").addClass("fa-angle-double-left");
+        } else {
+            console.log ("yo");
+            $(this).children(".fa-angle-double-left").removeClass("fa-dedent").addClass("fa-angle-double-right");
+        }
+
+        $(".content-frame-right, .content-frame-body").toggleClass("sidebar-hide")
+    });
+
+
     var hash = window.location.hash.substring(1);
     $("#cat-"+hash).trigger("click");
 
@@ -490,19 +506,19 @@ function page_content_onresize(){
            
        }
        
-       var fbm = $("body").hasClass("page-container-boxed") ? 200 : 162;       
+       var fbm = $("body").hasClass("page-container-boxed") ? 200 : 141;       
        
        var cfH = $(".content-frame").height();       
-       if($(".content-frame-body").height() < vpH-162){           
+       if($(".content-frame-body").height() < vpH-141){           
            
-           var cfM = vpH-fbm < cfH-80 ? cfH-80 : vpH-fbm;
+           var cfM = vpH-fbm < cfH-50 ? cfH-30 : vpH-fbm;
                    
-           $(".content-frame-body").height(cfM-100);
+           $(".content-frame-body").height(cfM-20);
            $(".content-frame-left").height(cfM-20);
-           $(".content-frame-right").height(cfM);
+           $(".content-frame-right").height(cfM+0);
            
        }else{
-           $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height()-20);
+           $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height()-120);
        }
         
         $(".content-frame-left").show();
@@ -750,6 +766,10 @@ function x_navigation(){
 
     $(".filter .selectpicker").click(function(){
         $(".filter .dropdown-group").removeClass("active");
+    });
+
+    $(".article-star").on("click",function(){
+        $(this).toggleClass("starred");
     });
        
     $(".x-navigation li").click(function(event){

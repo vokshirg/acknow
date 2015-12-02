@@ -209,16 +209,12 @@
                         <div class="page-title">                    
                             <!-- <form class="form-horizontal"> -->
                                 <div class="form-group">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-12 col-xs-12">
                                         <input type="text" class="form-control" placeholder="Введите Заголовок статьи...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
 
-                                        <div class="pull-right">
-                                            <button class="btn btn-default content-frame-right-toggle">
-                                                <span class="fa fa-bars"></span>
-                                            </button>
-                                        </div>
+                                        
                                         <div class="push-right-xs">
                                             
                                             <select multiple title="Выберите категории" data-live-search="true" multiple data-selected-text-format="count" class="form-control select">
@@ -237,6 +233,44 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                            
+                                            <button class="btn btn-success btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Сохранить">
+                                                <span class="fa fa-floppy-o"></span>
+                                            </button>
+
+                                            <div class="btn-group">
+                                                 
+                                                <button class="btn btn-primary btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Отправить на модерацию">
+                                                    <span class="fa fa-exclamation"></span>
+                                                </button>
+                                                <button class="btn btn-success btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Одобрить статью">
+                                                    <span class="fa fa-check"></span>
+                                                </button>
+                                                <button class="btn btn-info btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Опубликовать статью">
+                                                    <span class="fa fa-share"></span>
+                                                </button>
+                                            </div>
+
+                                            <button class="btn btn-primary btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Экспортировать черновик в PDF">
+                                                <span class="fa fa-file-pdf-o"></span>
+                                            </button>
+                                            <button class="btn btn-danger btn-condensed" data-toggle="tooltip" data-placement="top" data-original-title="Удалить статью">
+                                                <span class="fa fa-trash-o"></span>
+                                            </button>
+
+                                        <div class="pull-right  hidden-xs">
+                                            <button class="btn btn-default btn-condensed btn-sibebar-hide" data-toggle="tooltip" data-placement="top" data-original-title="Скрыть/показать боковую панель">
+                                                <span class="fa fa-angle-double-right"></span>
+                                            </button>
+                                        </div>
+
+                                        <div class="pull-right">
+                                            <button class="btn btn-default btn-condensed content-frame-right-toggle">
+                                                <span class="fa fa-bars"></span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             <!-- </form> -->
                         </div>                                                                                
@@ -245,7 +279,8 @@
                     </div>
                     <div class="content-frame-right scroll">
                         
-                        <div class="block" style="padding-right: 15px;">
+                        <div class="block">
+                            
                             <h4>Авторы </h4>
                             <form role="form">
                                 <div class="form-group">
@@ -336,26 +371,22 @@
 
                                     </select>
                                 </div>
-                                
+                            </form>
+
+                            <h4>Теги </h4>
+                            <form role="form">
                                 <div class="form-group">
-                                    <label>Теги</label>
                                     <input type="text" id="article-tags" value="First,Second"/>
                                 </div> 
-                                
                             </form>
-                            
-                        </div>
-                        <div class="block" style="padding-right: 15px;">
-                            <label> Прикрепить к статье файлы</label>
+
+                            <h4>Прикрепить к статье файлы</h4>
                             <form action="#" class="dropzone dropzone-mini dz-clickable">
                                 <div class="dz-default dz-message">
                                     <span>Перенесите файлы для загрузки</span>
                                 </div>
                             </form>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                            
                         </div>
 
                     </div>
