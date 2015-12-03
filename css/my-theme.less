@@ -1294,7 +1294,7 @@ select[multiple], select[size] {
     word-wrap: normal;
 }
 
-
+// ARTICLE SIDEBAR
 .page-container .page-content .content-frame {
     .content-frame-right {
 
@@ -1313,6 +1313,7 @@ select[multiple], select[size] {
         .block {
             padding: 7px 15px;
             width: 300px;
+            margin-bottom: 0;
 
             h4 {
                 margin-top: 15px;
@@ -1333,6 +1334,41 @@ select[multiple], select[size] {
     }
 }
 
+.article-chat {
+    display: none;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+
+    .messages {
+        // position: absolute;
+        // width: 270px;
+        // bottom: 0;
+    }
+}
+
+.article-meta {
+
+}
+
+// EOF ARTICLE SIDEBAR
+
+
+// BOOTSTRAP FIXES
+
+.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a i.check-mark {
+    margin-top: -7px;
+    top: 50%;
+}
+
+// EOF BOOTSTRAP FIXES
+
+
+// MEDIA
 
 @media only screen and (max-width: 768px){
     // .push-right-xs {

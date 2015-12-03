@@ -427,19 +427,53 @@ var page_actions = function(){
         }
     });
 
-
+    // ARTICLE SIDEBAR  
     $(".btn-sibebar-hide").on("click", function() {
 
         if ($(this).children(".fa-angle-double-right").length > 0) {
-            console.log ("hi");
             $(this).children(".fa-angle-double-right").removeClass("fa-angle-double-right").addClass("fa-angle-double-left");
+            $(".btn-article-chat-meta").css("display","none");
         } else {
-            console.log ("yo");
-            $(this).children(".fa-angle-double-left").removeClass("fa-dedent").addClass("fa-angle-double-right");
+            $(this).children(".fa-angle-double-left").removeClass("fa-angle-double-left").addClass("fa-angle-double-right");
+            $(".btn-article-chat-meta").css("display","inline-block");
+
         }
 
         $(".content-frame-right, .content-frame-body").toggleClass("sidebar-hide")
     });
+
+    $(".btn-article-chat-meta").on("click", function() {
+            
+        if ($(this).children(".fa-comments").length > 0) {
+            $(this).children(".fa-comments").removeClass("fa-comments").addClass("fa-info");
+            $(".article-meta").css("display","none");
+            $(".article-chat").css("display","block");
+            $(this).attr("data-original-title", "Показать информацию о статье");
+            $(".article-chat").animate({ scrollTop: $(".article-chat .messages").height() }, 0);
+        } else {
+            // $(".scroll").mCustomScrollbar("scrollTo","bottom");
+            $(this).children(".fa-info").removeClass("fa-info").addClass("fa-comments");
+            $(".article-chat").css("display","none");
+            $(".article-meta").css("display","block");
+            $(this).attr("data-original-title", "Открыть чат");
+        }
+    });
+
+    // console.log("up");
+    // var lastScrollTop = 0;
+    // $(".article-chat").scroll(function(event){
+    //    var st = $(this).scrollTop();
+    //    if (st > lastScrollTop){
+    //        // downscroll code
+    //        console.log("up");
+    //    } else {
+    //       // upscroll code
+    //       console.log("down");
+    //    }
+    //    lastScrollTop = st;
+    // });
+
+    // EOF ARTICLE SIDEBAR
 
 
     var hash = window.location.hash.substring(1);
@@ -451,6 +485,8 @@ var page_actions = function(){
 $(document).ready(function(){        
     page_actions();
     onload();
+            
+
 
 });
 
