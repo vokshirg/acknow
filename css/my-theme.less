@@ -1402,6 +1402,11 @@ select[multiple], select[size] {
         .messages {
             height: 285px;
             overflow: scroll;
+
+            &::-webkit-scrollbar { 
+                display: none; 
+            }
+
         }
 
         .message-new {
