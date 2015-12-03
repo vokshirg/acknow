@@ -459,20 +459,6 @@ var page_actions = function(){
         }
     });
 
-    // console.log("up");
-    // var lastScrollTop = 0;
-    // $(".article-chat").scroll(function(event){
-    //    var st = $(this).scrollTop();
-    //    if (st > lastScrollTop){
-    //        // downscroll code
-    //        console.log("up");
-    //    } else {
-    //       // upscroll code
-    //       console.log("down");
-    //    }
-    //    lastScrollTop = st;
-    // });
-
     // EOF ARTICLE SIDEBAR
 
 

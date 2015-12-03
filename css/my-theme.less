@@ -1303,6 +1303,7 @@ select[multiple], select[size] {
         -ms-transition: all 200ms ease;
         -o-transition: all 200ms ease;
         transition: all 200ms ease;
+        position: relative;
 
         &.sidebar-hide {
             width: 0px;
@@ -1341,9 +1342,18 @@ select[multiple], select[size] {
     position: relative;
 
     .messages {
-        // position: absolute;
-        // width: 270px;
-        // bottom: 0;
+       padding-bottom: 50px;
+    }
+    .message-new {
+        background:  darken(@body-background,2%) url('../img/bg.png') left top repeat;
+        box-shadow: 4px -7px 6px #ebebea;
+        border-left: 1px solid #DDD;
+        height: 50px;
+        position: fixed;
+        bottom: -15px;
+        right: 15px;
+        width: 285px;
+        padding: 10px 0 33px 15px;
     }
 }
 
