@@ -449,11 +449,13 @@ var page_actions = function(){
             $(".article-meta").css("display","none");
             $(".article-chat").css("display","block");
             $(this).attr("data-original-title", "Показать информацию о статье");
-            // $(".article-chat").animate({ scrollTop: $(".article-chat .messages").height() }, 0);
             
             // TODO: костыль 
             $("#mCSB_3_container").css('top', -($(".article-chat").innerHeight()-$(".content-frame-right").height()));
             $("#mCSB_3_dragger_vertical").css('top', '').css('bottom', 0);
+
+            // $(".messages").mCustomScrollbar("scrollTo", "last");
+            $(".messages").animate({ scrollTop: $(".article-chat .messages")[0].scrollHeight }, 0);
             // EOF TODO: костыль
 
         } else {

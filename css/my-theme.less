@@ -1393,6 +1393,25 @@ select[multiple], select[size] {
             }
         }
     }
+
+    .article-chat {
+        max-height: 300px;
+        position: relative;
+
+        .messages {
+            height: 285px;
+            overflow: scroll;
+        }
+
+        .message-new {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 15px;
+            border-bottom: 1px solid #DDD;
+        }
+    }
 }
 
 
