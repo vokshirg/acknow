@@ -1065,15 +1065,49 @@ table.table.profile-info {
 // SINGLE ARTICLE
 .posts .post-item .post-row .post-info {
     float: right;
+    font-size: 14px;
+    color: lighten(@base-color, 5%);
 
     a {
-        color: #aaa;
+        color: lighten(@base-color, 5%);
+        
+        .fa-thumbs-up {
+            color: lighten(@base-success, 10%);
+        }
+        .fa-thumbs-down {
+            color: lighten(@base-danger, 20%);
+        }
 
-        &:hover {
+        &:hover, &:focus, &:active {
             color: @base-background; 
+            text-decoration: none;
+
+            .fa-thumbs-up {
+                color: @base-success;
+            }
+            .fa-thumbs-down {
+                color: @base-danger;
+            }
         }
     }
 }
+
+.article-authors {
+    li {
+        a {padding: 0px 6px 3px;}
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px;
+            border: 1px solid #FFF;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
 // EOF SINGLE ARTICLE
 
 
@@ -1428,6 +1462,10 @@ select[multiple], select[size] {
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
+    
+    &:focus {
+        text-decoration: none;
+    }
 
     &:hover {
         background-color: @base-background-active!important;
