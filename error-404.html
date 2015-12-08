@@ -18,23 +18,31 @@
     <body>
         <div class="error-container">
             <div class="error-code">404</div>
-            <div class="error-text">page not found</div>
-            <div class="error-subtext">Unfortunately we're having trouble loading the page you are looking for. Please wait a moment and try again or use action below.</div>
+            <div class="error-text">cтраница не найдена :(</div>
+            <!-- <div class="error-subtext">Unfortunately we're having trouble loading the page you are looking for. Please wait a moment and try again or use action below.</div> -->
+            <div class="error-subtext"><b>Винни-Пух: </b>Оё-ёй!<br>
+<b>Пятачок:</b> Разве я не попал?<br>
+<b>Винни-Пух:</b> Оой, не то чтобы совсем не попал - просто не попал в шарик!
+
+</div>
             <div class="error-actions">                                
                 <div class="row">
                     <div class="col-md-6">
-                        <button class="btn btn-info btn-block btn-lg" onClick="document.location.href = 'index.html';">Back to dashboard</button>
+                        <!-- <button class="btn btn-info btn-block btn-lg" onClick="document.location.href = 'index.html';">Back to dashboard</button> -->
+                        <button class="btn btn-info btn-block btn-lg" onClick="document.location.href = 'index.html';">Вернуться на главную</button>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-primary btn-block btn-lg" onClick="history.back();">Previous page</button>
+                        <!-- <button class="btn btn-primary btn-block btn-lg" onClick="history.back();">Previous page</button> -->
+                        <button class="btn btn-primary btn-block btn-lg" onClick="history.back();">Предыдущая страница</button>
                     </div>
                 </div>                                
             </div>
-            <div class="error-subtext">Or you can use search to find anything you need.</div>
+            <div class="error-subtext">Или вы можете воспользоваться поиском, чтобы найти то, что вам нужно.</div>
+            <!-- <div class="error-subtext">Or you can use search to find anything you need.</div> -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="input-group">
-                        <input type="text" placeholder="Search..." class="form-control"/>
+                        <input type="text" placeholder="Поиск..." class="form-control"/>
                         <div class="input-group-btn">
                             <button class="btn btn-primary"><span class="fa fa-search"></span></button>
                         </div>
