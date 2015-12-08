@@ -222,6 +222,7 @@
                                     <li class="active"><a href="#tab22" data-toggle="tab">Кластеризация знаний</a></li>
                                     <li><a href="#tab23" data-toggle="tab">Динамика создания и публикации статей</a></li>
                                     <li><a href="#tab24" data-toggle="tab">Поисковая Аналитика</a></li>
+                                    <li><a href="#tab25" data-toggle="tab">Тренды развития областей знаний</a></li>
                                 </ul>                    
                                 <div class="panel-body tab-content" style="min-width: 85%;">
                                     <div class="tab-pane active" id="tab22">
@@ -234,9 +235,13 @@
                                         </form>
 
                                     </div>
+
+
                                     <div class="tab-pane" id="tab23">
                                         
                                     </div>
+
+
                                     <div class="tab-pane" id="tab24">
                                         <div class="table-responsive search-anal">
                                             <table class="table datatable" data-order='[[ 1, "desc" ]]'>
@@ -304,7 +309,14 @@
                                                 </tbody>
                                               </table>
                                           </div>
-                                    </div>                        
+                                    </div>  
+
+
+                                    <div class="tab-pane" id="tab25">
+                                        
+                                    </div>
+
+                                                          
                                 </div>
                             </div>                        
                             <!-- END VERTICAL TABS -->
@@ -483,10 +495,6 @@
 
         function mouseleave(d) {
 
-          // Hide the breadcrumb trail
-          // d3.select("#trail")
-              // .style("visibility", "hidden");
-
           // Deactivate all segments during transition.
           d3.selectAll("path").on("mouseover", null);
 
@@ -496,13 +504,8 @@
               .duration(1000)
               .style("opacity", 1)
               .each("end", function() {
-                      d3.select(this).on("mouseover", hover);
-                    });
-
-          // d3.firstparent;
-
-          // d3.select("#explanation")
-              // .style("visibility", "hidden");
+                d3.select(this).on("mouseover", hover);
+              });
         }
 
         });
@@ -559,80 +562,164 @@
         <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
         <script>
-        $(function () {
-            $('#tab23').highcharts({
-                 chart: {
+            $(function () {
+                $('#tab23').highcharts({
+                     chart: {
+                        width: '800',
+                        height: 400
+                    },
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май']
+                    },
+
+                    series: [{
+                        type: 'column',
+                        name: 'Черновики',
+                        color: Highcharts.getOptions().colors[1],
+                        data: [3, 14, 11, 3, 4]
+                    }, {
+                        type: 'column',
+                        color: Highcharts.getOptions().colors[2],
+                        name: 'Одобрено',
+                        data: [1, 6, 3, 9, 11]
+                    }, {
+                        type: 'column',
+                        name: 'Опубликованно',
+                        color: Highcharts.getOptions().colors[0],
+
+                        data: [2, 3, 5, 7, 6]
+                    }, {
+                        type: 'spline',
+                        name: 'Всего черновиков',
+                        color: Highcharts.getOptions().colors[1],
+                        data: [3, 17, 25, 19, 13],
+                        marker: {
+                            lineWidth: 2,
+                            lineColor: Highcharts.getOptions().colors[1],
+                            fillColor: 'white'
+                        }
+                    }, {
+                        type: 'spline',
+                        color: Highcharts.getOptions().colors[2],
+                        name: 'Всего одобрено',
+                        data: [1, 7, 10, 19, 30],
+                        marker: {
+                            lineWidth: 2,
+                            lineColor: Highcharts.getOptions().colors[2],
+                            fillColor: 'white'
+                        }
+                    }, {
+                        type: 'spline',
+                        color: Highcharts.getOptions().colors[0],
+                        name: 'Всего опубликованных',
+                        data: [2, 5, 10, 17, 23],
+                        marker: {
+                            lineWidth: 2,
+                            lineColor: Highcharts.getOptions().colors[0],
+                            fillColor: 'white'
+                        }
+                    }, {
+                        type: 'spline',
+                        color: Highcharts.getOptions().colors[5],
+                        name: 'Всего статей',
+                        data: [6, 29, 45, 55, 66],
+                        marker: {
+                            lineWidth: 2,
+                            lineColor: Highcharts.getOptions().colors[5],
+                            fillColor: 'white'
+                        }
+                    }]
+                });
+            });
+
+        </script>
+
+        <script>
+            $(function() {
+              $('#tab25').highcharts({
+                  chart: {
                     width: '800',
                     height: 400
-                },
-                title: {
-                    text: ''
-                },
-                xAxis: {
-                    categories: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май']
-                },
+                  },
+                  title: {
+                    text: 'Тренды развития областей знаний'
+                  },
+                  xAxis: {
+                    categories: ['2005', '2010', '2015', '2020', '2025']
+                  },
+                  yAxis: [{ // Primary yAxis
+                      labels: {
+                        format: '{value}%',
+                        style: {
+                          color: Highcharts.getOptions().colors[1]
+                        }
+                      },
+                      title: {
+                        text: '',
+                        style: {
+                          color: Highcharts.getOptions().colors[1]
+                        }
+                      }
+                    }],
 
-                series: [{
-                    type: 'column',
-                    name: 'Черновики',
-                    color: Highcharts.getOptions().colors[1],
-                    data: [3, 14, 11, 3, 4]
-                }, {
-                    type: 'column',
-                    color: Highcharts.getOptions().colors[2],
-                    name: 'Одобрено',
-                    data: [1, 6, 3, 9, 11]
-                }, {
-                    type: 'column',
-                    name: 'Опубликованно',
-                    color: Highcharts.getOptions().colors[0],
-
-                    data: [2, 3, 5, 7, 6]
-                }, {
-                    type: 'spline',
-                    name: 'Всего черновиков',
-                    color: Highcharts.getOptions().colors[1],
-                    data: [3, 17, 25, 19, 13],
-                    marker: {
+                    series: [{
+                      type: 'spline',
+                      name: 'Big-Data',
+                      color: Highcharts.getOptions().colors[4],
+                      data: [3, 95, 57, 36, 35],
+                      marker: {
                         lineWidth: 2,
-                        lineColor: Highcharts.getOptions().colors[1],
+                        lineColor: Highcharts.getOptions().colors[4],
                         fillColor: 'white'
-                    }
-                }, {
-                    type: 'spline',
-                    color: Highcharts.getOptions().colors[2],
-                    name: 'Всего одобрено',
-                    data: [1, 7, 10, 19, 30],
-                    marker: {
+                      }
+                    }, {
+                      type: 'spline',
+                      color: Highcharts.getOptions().colors[3],
+                      name: 'Интернет-вещи',
+                      data: [1, 25, 45, 75, 23],
+                      marker: {
+                        lineWidth: 2,
+                        lineColor: Highcharts.getOptions().colors[3],
+                        fillColor: 'white'
+                      }
+                    }, {
+                      type: 'spline',
+                      color: Highcharts.getOptions().colors[6],
+                      name: 'Солнечная энергетика',
+                      data: [0, 3, 6, 23, 82],
+                      marker: {
+                        lineWidth: 2,
+                        lineColor: Highcharts.getOptions().colors[6],
+                        fillColor: 'white'
+                      }
+                    }, {
+                      type: 'spline',
+                      color: Highcharts.getOptions().colors[2],
+                      name: 'Умный дом',
+                      data: [0, 13, 27, 44, 66],
+                      marker: {
                         lineWidth: 2,
                         lineColor: Highcharts.getOptions().colors[2],
                         fillColor: 'white'
-                    }
-                }, {
-                    type: 'spline',
-                    color: Highcharts.getOptions().colors[0],
-                    name: 'Всего опубликованных',
-                    data: [2, 5, 10, 17, 23],
-                    marker: {
+                      }
+                    }, {
+                      type: 'spline',
+                      color: Highcharts.getOptions().colors[8],
+                      name: '3D - printing',
+                      data: [16, 49, 51, 52, 55],
+                      marker: {
                         lineWidth: 2,
-                        lineColor: Highcharts.getOptions().colors[0],
+                        lineColor: Highcharts.getOptions().colors[8],
                         fillColor: 'white'
-                    }
-                }, {
-                    type: 'spline',
-                    color: Highcharts.getOptions().colors[5],
-                    name: 'Всего статей',
-                    data: [6, 29, 45, 55, 66],
-                    marker: {
-                        lineWidth: 2,
-                        lineColor: Highcharts.getOptions().colors[5],
-                        fillColor: 'white'
-                    }
-                }]
-            });
-        });
+                      }
+                    }]
+                  });
+              });
 
-</script>
+        </script>
 
     <!-- END SCRIPTS -->         
     </body>
