@@ -23,5 +23,5 @@ doc/
 .project
 .idea
 .secret
-.DS_Store
+*.DS_Store
 /.DS_Store
