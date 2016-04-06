@@ -540,11 +540,12 @@ function page_content_onresize(){
        var cfH = $(".content-frame").height();       
        if($(".content-frame-body").height() < vpH-141){           
            
-           var cfM = vpH-fbm < cfH-50 ? cfH-30 : vpH-fbm;
+           var cfM = vpH-fbm < cfH-50 ? cfH-80 : vpH-fbm;
                    
            $(".content-frame-body").height(cfM-20);
            $(".content-frame-left").height(cfM-20);
-           $(".content-frame-right").height(cfM+0);
+           $(".content-frame-right").height(cfM+20);
+           $(".file-details").height(cfM-440);
            
        }else{
            $(".content-frame-right,.content-frame-left").height($(".content-frame-body").height()-120);
