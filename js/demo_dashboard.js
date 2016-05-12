@@ -1,7 +1,7 @@
-$(function(){        
+$(function(){
     /* reportrange */
-    if($("#reportrange").length > 0){   
-        $("#reportrange").daterangepicker({                    
+    if($("#reportrange").length > 0){
+        $("#reportrange").daterangepicker({
             ranges: {
                'Today': [moment(), moment()],
                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -17,67 +17,67 @@ $(function(){
             format: 'MM.DD.YYYY',
             separator: ' to ',
             startDate: moment().subtract('days', 29),
-            endDate: moment()            
+            endDate: moment()
           },function(start, end) {
               $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         });
-        
+
         $("#reportrange span").html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
     }
     /* end reportrange */
-    
+
     /* Rickshaw dashboard chart */
-    var seriesData = [ [], [] ];
-    var random = new Rickshaw.Fixtures.RandomData(1000);
-
-    for(var i = 0; i < 100; i++) {
-        random.addData(seriesData);
-    }
-
-    var rdc = new Rickshaw.Graph( {
-            element: document.getElementById("dashboard-chart"),
-            renderer: 'area',
-            width: $("#dashboard-chart").width(),
-            height: 250,
-            series: [{color: "#33414E",data: seriesData[0],name: 'New'}, 
-                     {color: "#3FBAE4",data: seriesData[1],name: 'Returned'}]
-    } );
-
-    rdc.render();
-
-    var legend = new Rickshaw.Graph.Legend({graph: rdc, element: document.getElementById('dashboard-legend')});
-    var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({graph: rdc,legend: legend});
-    var order = new Rickshaw.Graph.Behavior.Series.Order({graph: rdc,legend: legend});
-    var highlight = new Rickshaw.Graph.Behavior.Series.Highlight( {graph: rdc,legend: legend} );        
-
-    var rdc_resize = function() {                
-            rdc.configure({
-                    width: $("#dashboard-chart").width(),
-                    height: $("#dashboard-chart").height()
-            });
-            rdc.render();
-    }
-
-    var hoverDetail = new Rickshaw.Graph.HoverDetail({graph: rdc});
-
-    window.addEventListener('resize', rdc_resize);        
-
-    rdc_resize();
+    // var seriesData = [ [], [] ];
+    // var random = new Rickshaw.Fixtures.RandomData(1000);
+    //
+    // for(var i = 0; i < 100; i++) {
+    //     random.addData(seriesData);
+    // }
+    //
+    // var rdc = new Rickshaw.Graph( {
+    //         element: document.getElementById("dashboard-chart"),
+    //         renderer: 'area',
+    //         width: $("#dashboard-chart").width(),
+    //         height: 250,
+    //         series: [{color: "#33414E",data: seriesData[0],name: 'New'},
+    //                  {color: "#3FBAE4",data: seriesData[1],name: 'Returned'}]
+    // } );
+    //
+    // rdc.render();
+    //
+    // var legend = new Rickshaw.Graph.Legend({graph: rdc, element: document.getElementById('dashboard-legend')});
+    // var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({graph: rdc,legend: legend});
+    // var order = new Rickshaw.Graph.Behavior.Series.Order({graph: rdc,legend: legend});
+    // var highlight = new Rickshaw.Graph.Behavior.Series.Highlight( {graph: rdc,legend: legend} );
+    //
+    // var rdc_resize = function() {
+    //         rdc.configure({
+    //                 width: $("#dashboard-chart").width(),
+    //                 height: $("#dashboard-chart").height()
+    //         });
+    //         rdc.render();
+    // }
+    //
+    // var hoverDetail = new Rickshaw.Graph.HoverDetail({graph: rdc});
+    //
+    // window.addEventListener('resize', rdc_resize);
+    //
+    // rdc_resize();
     /* END Rickshaw dashboard chart */
-    
+
     /* Donut dashboard chart */
     Morris.Donut({
         element: 'dashboard-donut-1',
         data: [
-            {label: "Returned", value: 2513},
-            {label: "New", value: 764},
-            {label: "Registred", value: 311}
+            {label: "Черновики", value: 2513},
+            {label: "Одобренные", value: 764},
+            {label: "Опубликованные", value: 311}
         ],
         colors: ['#33414E', '#3FBAE4', '#FEA223'],
         resize: true
     });
     /* END Donut dashboard chart */
-    
+
     /* Bar dashboard chart */
     Morris.Bar({
         element: 'dashboard-bar-1',
@@ -100,7 +100,7 @@ $(function(){
         gridLineColor: '#E5E5E5'
     });
     /* END Bar dashboard chart */
-    
+
     /* Line dashboard chart */
     Morris.Line({
       element: 'dashboard-line-1',
@@ -122,37 +122,36 @@ $(function(){
       gridTextSize: '10px',
       lineColors: ['#3FBAE4','#33414E'],
       gridLineColor: '#E5E5E5'
-    });   
+    });
     /* EMD Line dashboard chart */
-    
+
     /* Vector Map */
     var jvm_wm = new jvm.WorldMap({container: $('#dashboard-map-seles'),
-                                    map: 'world_mill_en', 
-                                    backgroundColor: '#FFFFFF',                                      
+                                    map: 'world_mill_en',
+                                    backgroundColor: '#FFFFFF',
                                     regionsSelectable: true,
                                     regionStyle: {selected: {fill: '#B64645'},
                                                     initial: {fill: '#33414E'}},
-                                    markerStyle: {initial: {fill: '#3FBAE4',
-                                                   stroke: '#3FBAE4'}},
-                                    markers: [{latLng: [50.27, 30.31], name: 'Kyiv - 1'},                                              
-                                              {latLng: [52.52, 13.40], name: 'Berlin - 2'},
-                                              {latLng: [48.85, 2.35], name: 'Paris - 1'},                                            
-                                              {latLng: [51.51, -0.13], name: 'London - 3'},                                                                                                      
-                                              {latLng: [40.71, -74.00], name: 'New York - 5'},
-                                              {latLng: [35.38, 139.69], name: 'Tokyo - 12'},
-                                              {latLng: [37.78, -122.41], name: 'San Francisco - 8'},
-                                              {latLng: [28.61, 77.20], name: 'New Delhi - 4'},
-                                              {latLng: [39.91, 116.39], name: 'Beijing - 3'}]
-                                });    
+                                    markerStyle: {initial: {fill: '#B64645',
+                                                   stroke: '#B64645'}},
+                                    markers: [{latLng: [54.96, 82.66], name: 'Новосибирск - 1'},
+                                              {latLng: [55.74, 37.07], name: 'Москва - 2'},
+                                              {latLng: [45.05, 38.87], name: 'Краснодар - 1'},
+                                              {latLng: [69.34, 87.95], name: 'Норильск - 3'},
+                                              {latLng: [52.2985144,104.1270739], name: 'Иркутск - 5'},
+                                              {latLng: [51.7910686,54.9623391], name: 'Оренбург - 12'},
+                                              {latLng: [51.5343656,45.7299552], name: 'Саратов - 8'},
+                                              {latLng: [54.7117271,20.3244463], name: 'Калининград - 4'},
+                                              {latLng: [56.8597424,35.7493869], name: 'Тверь - 3'}]
+                                });
     /* END Vector Map */
 
-    
+
     $(".x-navigation-minimize").on("click",function(){
         setTimeout(function(){
             rdc_resize();
-        },200);    
+        },200);
     });
-    
-    
-});
 
+
+});
